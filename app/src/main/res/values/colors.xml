@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F44336</color>
+    <color name="colorPrimaryDark">#FF5B4B</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="textWhite">#FFFFFF</color>
+    <color name="gray">#aaa</color>
+    <color name="editcoloraccount">#9B9B9B</color>
+    <color name="darkgray">#555</color>
+    <color name="BigTextColor">#737373</color>
+    <color name="BigTextaccount">#626262</color>
+
+    <color name="black">#000</color>
+    <color name="white">#fff</color>
+    <color name="red">#F00</color>
+
+</resources>

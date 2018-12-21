@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:background="@drawable/pay_boarder"
+    android:layout_width="match_parent"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp"
+    android:paddingTop="10dp"
+    android:id="@+id/container"
+    android:focusable="true"
+    android:padding="@dimen/_10sdp"
+    android:focusableInTouchMode="true"
+    android:paddingBottom="10dp"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:id="@+id/header"
+        android:text="@string/backpacker_no"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Who_is_going"
+        android:textColor="@color/Wisteria_Purple"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="@dimen/med_text_size"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/user_name"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/background_transparent"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/white"
+        android:layout_marginBottom="@dimen/_5sdp"
+        ></View>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mobile_no"
+        android:textColor="@color/white"
+        android:inputType="phone"
+        android:textStyle="bold"
+        android:textSize="@dimen/med_text_size"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:id="@+id/phone"
+        android:inputType="phone"
+        android:backgroundTint="@color/background_transparent"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/white"
+        android:layout_marginBottom="@dimen/_5sdp"
+        ></View>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="@dimen/med_text_size"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/email"
+        android:backgroundTint="@color/white"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/white"
+        android:layout_marginBottom="@dimen/_5sdp"
+        ></View>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/add_ones"
+        android:textColor="@color/gray"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/addons_list"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

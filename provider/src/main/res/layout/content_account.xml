@@ -1,0 +1,199 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_60sdp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingEnd="@dimen/_16sdp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingTop="@dimen/_80sdp">
+
+
+            <com.loopeer.shadow.ShadowView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="70dp"
+                app:shadowMarginBottom="5dp"
+                app:shadowMarginTop=".5dp"
+                android:layout_marginLeft="20dp"
+                app:shadowMarginLeft="1dp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                app:shadowMarginRight="1dp"
+                app:shadowColor="#4a000000"
+                android:foreground="?attr/selectableItemBackground"
+                app:cornerRadius="6dp"
+                app:shadowRadius="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:padding="@dimen/_10sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp">
+
+                    <EditText
+                        android:backgroundTint="@color/background_transparent"
+                        android:id="@+id/user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@id/edit_user_name"
+                        android:text="mahmoud rashad"
+                        android:imeOptions="actionDone"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/edit_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="end"
+                        android:text="@string/edit_btn"
+                        android:layout_centerVertical="true"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/gray" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@color/gray" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp">
+
+                    <EditText
+                        android:backgroundTint="@color/background_transparent"
+                        android:id="@+id/user_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@id/edit_user_phone"
+                        android:text="+9661 2122255"
+                        android:background="@android:color/transparent"
+                        android:imeOptions="actionDone"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/black" />
+
+
+                    <TextView
+                        android:id="@+id/edit_user_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="end|center_vertical"
+                        android:text="@string/edit_btn"
+                        android:layout_centerVertical="true"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/gray" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@color/gray" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp">
+
+                    <EditText
+                        android:id="@+id/user_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:imeOptions="actionDone"
+                        android:background="@android:color/transparent"
+                        android:layout_toStartOf="@id/edit_email"
+                        android:text="mahmoud.rashad7010@gmail.com"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/edit_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="end"
+                        android:text="@string/edit_btn"
+                        android:layout_centerVertical="true"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/gray" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+            </com.loopeer.shadow.ShadowView>
+
+
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_img"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_gravity="center_horizontal"
+                android:src="@color/gray"
+                app:civ_border_color="@color/colorPrimaryDark"
+                app:civ_border_width="@dimen/_3sdp"
+                />
+
+
+            <ImageButton
+                android:id="@+id/edit_image"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="end|bottom"
+                android:src="@drawable/backpack_icon_gray_watermark" />
+        </FrameLayout>
+
+
+
+        <ImageView
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp" />
+    </FrameLayout>
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:background="@color/background_transparent"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/boardr"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:text="@string/Price_per_individual"
+            android:paddingHorizontal="30dp"
+            android:textSize="@dimen/big_text_size"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@color/gray"
+            android:layout_height="2dp">
+        </LinearLayout>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:id="@+id/category_name"
+            android:hint="@string/category_name"
+            android:inputType="text"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:backgroundTint="@color/background_transparent"
+            android:layout_width="match_parent"
+            android:id="@+id/ticket_price"
+            android:hint="@string/ticket_price"
+            android:inputType="number"
+            android:layout_height="wrap_content" />
+
+
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Add_addons_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/next"
+        android:textColor="@color/white"
+        android:padding="@dimen/_10sdp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:text="@string/add"
+        />
+
+</LinearLayout>

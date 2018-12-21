@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:orientation="vertical"
+    android:layout_marginHorizontal="20dp"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:id="@+id/container5"
+          android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#666666"
+            android:textSize="@dimen/big_text_size"
+            android:textStyle="bold"
+            android:text="@string/The_trip_will_include_the_following" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#BABABA"
+            android:textSize="@dimen/big_text_size"
+            android:textStyle="bold"
+            android:text="@string/The_trip_will_include_the_following_disc" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+            android:id="@+id/Add_addons"
+            android:orientation="horizontal"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:layout_width="30dp"
+                android:src="@drawable/add_circel"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:textColor="@color/colorAccent"
+                android:layout_gravity="center_vertical"
+                android:text="@string/Add_add_ons" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

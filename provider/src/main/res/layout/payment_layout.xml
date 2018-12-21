@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:id="@+id/header"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_gravity="center"
+            android:id="@+id/close"
+            android:src="@drawable/close_white"
+            android:layout_height="30dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+
+            android:textColor="@color/white"
+
+            android:text="@string/payment"
+
+            />
+
+
+    </LinearLayout>
+    <ScrollView
+        android:paddingRight="@dimen/_15sdp"
+        android:padding="10dp"
+        android:id="@+id/s"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/header"
+        android:layout_above="@+id/confirm1"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/pay_list"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:background="#3BFFFFFF"
+            android:layout_height="1.5dp">
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:text="@string/add_promo_code"
+            android:layout_marginVertical="@dimen/_12sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/med_text_size"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="#3BFFFFFF"
+            android:layout_height="1.5dp">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginVertical="15dp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/payment_method"
+                android:textColor="@color/white"
+                android:textSize="@dimen/med_text_size" />
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:text="@string/cash"
+                android:textSize="@dimen/big_text_size"
+                android:gravity="right"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="#3BFFFFFF"
+            android:layout_height="1.5dp">
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginVertical="15dp"
+
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/big_text_size"
+                />
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="@string/sr"
+                android:textSize="@dimen/_22sdp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+
+
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/paid"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/big_text_size"
+                />
+            <TextView
+                android:id="@+id/paid"
+                android:layout_width="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="@string/sr"
+                android:textSize="@dimen/_22sdp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+    </ScrollView>
+
+
+
+    <LinearLayout
+        android:id="@+id/confirm1"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp">
+
+        <com.loopeer.shadow.ShadowView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="70dp"
+            android:layout_marginTop="@dimen/_6sdp"
+            app:shadowColor="#4a000000"
+            app:backgroundColor="@color/background_transparent"
+            app:shadowRadius="20dp">
+            <LinearLayout
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent">
+                <TextView
+                    android:id="@+id/confirm"
+                    android:text="@string/confirm_payment"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_20sdp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+    </com.loopeer.shadow.ShadowView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

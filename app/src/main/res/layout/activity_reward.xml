@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RewardActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF5B4B">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.backbuttonwhite"
+            app:title="" />
+
+        <ImageView
+            android:layout_width="@dimen/_56sdp"
+            android:layout_height="@dimen/_57sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/rewards_icon_burgermenu"
+
+            />
+
+        <TextView
+            android:layout_marginTop="14px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="28dp"
+            android:text="Get Reward"
+            android:textColor="#FFFFFF"
+            android:textSize="28dp" />
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_reward" />
+
+</android.support.design.widget.CoordinatorLayout>

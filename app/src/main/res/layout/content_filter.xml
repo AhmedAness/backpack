@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:rsb="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/_16sdp"
+        android:paddingStart="@dimen/_16sdp"
+        android:paddingTop="@dimen/_5sdp"
+        tools:showIn="@layout/activity_filter">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:text="@string/activates_for_txt"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="#FFFFFF" />
+
+        <com.wasltec.backpack.utils.Checkbox2
+            android:id="@+id/familyCheck"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:paddingStart="@dimen/_5sdp"
+            app:subtitleColor="#efe"
+            app:subtitleText="Family freindly activities.Kids would enjoy it as mush as adults"
+            app:titleColor="#FFFFFF"
+            app:titleText="Families"
+
+            />
+
+        <com.wasltec.backpack.utils.Checkbox2
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/femaleCheck"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:paddingStart="@dimen/_5sdp"
+            app:subtitleColor="#efe"
+            app:subtitleText="Thinking of girls dat/night out? this for only female activities"
+            app:titleColor="#FFFFFF"
+            app:titleText="Female Only"
+
+            />
+
+        <com.wasltec.backpack.utils.Checkbox2
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/maleCheck"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:paddingStart="@dimen/_5sdp"
+            app:subtitleColor="#FFFFFF"
+            app:subtitleText="You and your guys will enjoy your time in our only for male trips"
+            app:titleColor="#FFFFFF"
+            app:titleText="Male Only" />
+
+        <com.wasltec.backpack.utils.Checkbox2
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/groupCheck"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:paddingStart="@dimen/_5sdp"
+            app:subtitleColor="#FFFFFF"
+            app:subtitleText="A well organized trip for our big groups of friends"
+            app:titleColor="#FFFFFF"
+            app:titleText="Groups Trips" />
+
+        <com.wasltec.backpack.utils.Checkbox2
+            android:id="@+id/females_and_maleCheck"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:paddingStart="@dimen/_5sdp"
+            app:subtitleColor="#FFFFFF"
+            app:subtitleText="A well organized trip for our big groups of friends"
+            app:titleColor="#FFFFFF"
+            app:titleText="Females and Males" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:alpha=".36"
+            android:background="#FFFFFF" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:text="@string/price_for_activity"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="#FFFFFF" />
+
+        <org.florescu.android.rangeseekbar.RangeSeekBar
+            android:id="@+id/price_range"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            app:textAboveThumbsColor="@color/textWhite"
+            rsb:absoluteMaxValue="40"
+            rsb:absoluteMinValue="200" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:alpha=".36"
+            android:background="#FFFFFF" />
+
+        <com.wasltec.backpack.utils.Checkbox2
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:subtitleColor="#fff"
+            app:subtitleText="Activites on"
+            app:titleColor="#fff" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp">
+
+            <TextView
+                android:id="@+id/start_month"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_toStartOf="@+id/start_year"
+                android:paddingEnd="@dimen/_5sdp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="#fff"
+                android:textSize="@dimen/_18ssp" />
+
+            <TextView
+                android:id="@+id/start_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toStartOf="@+id/line4"
+                android:maxLines="1"
+
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="#fff" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:alpha=".36"
+                android:background="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/end_month"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_toEndOf="@+id/line4"
+                android:maxLines="1"
+                android:paddingEnd="@dimen/_5sdp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="#fff"
+                android:textSize="@dimen/_18ssp" />
+
+            <TextView
+                android:id="@+id/end_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toEndOf="@+id/end_month"
+                android:maxLines="1"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="#fff" />
+
+        </RelativeLayout>
+
+        <com.applikeysolutions.cosmocalendar.view.CalendarView
+
+            android:id="@+id/calendar_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            app:calendarBackgroundColor="@color/colorPrimaryDark"
+            app:currentDayTextColor="@color/textWhite"
+            app:dayTextColor="@color/textWhite"
+            app:monthTextColor="@color/textWhite"
+            app:orientation="horizontal"
+            app:otherDayTextColor="@color/textWhite"
+            app:selectedDayBackgroundColor="#aaa"
+            app:selectedDayBackgroundEndColor="#aaa"
+            app:selectedDayBackgroundStartColor="#bbb"
+            android:background="@drawable/filter_btn"
+
+
+            app:selectionType="range" />
+
+        <Button
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:id="@+id/filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/filter_btn"
+            android:text="33 Activity"
+            android:textColor="@color/textWhite" />
+
+    </LinearLayout>
+
+</ScrollView>

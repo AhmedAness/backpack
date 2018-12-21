@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_activities"
+            android:icon="@drawable/backpack_icon_gray_watermark"
+            android:title="@string/backbag_menu" />
+        <item
+            android:id="@+id/nav_messages"
+            android:icon="@drawable/msgs_icon_burgermenu"
+            android:title="@string/messages_menu" />
+
+        <item
+            android:id="@+id/nav_favourite"
+            android:icon="@drawable/favorites_icon"
+            android:title="@string/favourites_menu" />
+        <item
+            android:id="@+id/nav_payment"
+            android:icon="@drawable/payments_icon"
+            android:title="@string/payments_menu" />
+
+        <item
+            android:id="@+id/nav_redeem"
+            android:icon="@drawable/rewards_icon"
+            android:title="@string/rewards_menu" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/logout"
+            android:title="@string/log_out" />
+
+        <item
+            android:id="@+id/lang"
+
+
+            android:title="@string/lang"
+            app:showAsAction="always" />
+
+    </group>
+
+
+</menu>

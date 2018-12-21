@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@android:color/transparent"
+    android:paddingEnd="@dimen/_10sdp"
+    android:paddingStart="@dimen/_10sdp">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="0dp"
+        app:cardMaxElevation="0dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="@dimen/_40sdp"
+        android:paddingBottom="@dimen/_6sdp"
+        android:paddingEnd="@dimen/_6sdp"
+        android:paddingStart="@dimen/_6sdp"
+        tools:context=".fragment.UserDataFragment">
+
+
+        <LinearLayout
+            android:id="@+id/Linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/first_name"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:padding="@dimen/_5sdp"
+
+                android:background="@color/gray"
+                android:hint="@string/firstname" />
+
+            <EditText
+                android:id="@+id/last_name"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_weight="1"
+                android:padding="@dimen/_5sdp"
+                android:background="@color/gray"
+                android:hint="@string/lastname" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@id/Linear"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@color/gray"
+            android:padding="@dimen/_5sdp"
+
+            android:hint="@string/emailaddress" />
+
+        <TextView
+            android:id="@+id/reg_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/email"
+            android:layout_marginBottom="@dimen/_10sdp"
+
+            android:text="Do you Have A Registration code ?"
+            android:textSize="@dimen/mid_text" />
+
+        <Button
+            android:id="@+id/save_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reg_code"
+            android:layout_marginBottom="@dimen/_10sdp"
+
+            android:background="@drawable/filter_btn"
+            android:text="@string/save_btn"
+            android:textColor="@color/white"
+
+
+            />
+
+        <LinearLayout
+            android:id="@+id/Linear2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/save_btn"
+            android:layout_marginBottom="@dimen/_10sdp"
+
+            android:orientation="horizontal"
+            android:weightSum="9"
+
+            >
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_2sdp"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:background="@color/gray"
+
+                />
+
+            <TextView
+                android:id="@+id/OR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Or"
+
+                android:textSize="@dimen/mid_text" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_2sdp"
+                android:layout_alignParentEnd="true"
+
+                android:layout_below="@id/save_btn"
+                android:layout_gravity="center"
+                android:layout_toEndOf="@id/OR"
+                android:layout_weight="4"
+                android:background="@color/gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Linear3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Linear2"
+
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/fb_btn"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:background="#2338f5"
+                android:text="connect with Facebook"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_8ssp" />
+
+            <Button
+                android:id="@+id/google_btn"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_weight="1"
+                android:background="@drawable/common_google_signin_btn_text_light_normal"
+                android:text="connect with Google"
+                android:textSize="@dimen/_8ssp"
+
+
+                />
+        </LinearLayout>
+    </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_img"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_gravity="center_horizontal"
+        android:src="@color/gray"
+        app:civ_border_color="@color/colorPrimaryDark"
+        app:civ_border_width="@dimen/_1sdp"
+        app:civ_circle_background_color="@color/gray"
+
+        />
+
+</FrameLayout>

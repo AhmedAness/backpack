@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".Activities.confirmation">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:weightSum="100"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_weight="50"
+            android:layout_height="0dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_above="@+id/text1"
+                android:src="@drawable/backpack_icon_gray_watermark"
+                />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/text1"
+                android:textColor="@color/white"
+                android:layout_above="@+id/text2"
+                android:layout_marginHorizontal="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/sendSMS"
+                android:gravity="center"
+                android:textSize="@dimen/med_text_size"
+                android:layout_centerHorizontal="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/big_text_size"
+                android:textColor="@color/white"
+                android:layout_margin="10dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/text2"
+                android:text="@string/phone"
+                android:layout_alignParentBottom="true"
+                />
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_weight="50"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_height="0dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/gray"
+                android:text="@string/worng_phone_number"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textSize="@dimen/big_text_size"
+                android:id="@+id/worng_phone_number_txt"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/pinvview"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:layout_below="@+id/worng_phone_number_txt"
+                android:layout_height="wrap_content">
+                <me.philio.pinentry.PinEntryView
+                    android:id="@+id/pin_entry_border"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:accentType="character"
+                    app:digitBackground="@drawable/rateboared"
+                    app:digitTextSize="16sp"
+                    app:mask=""
+                    app:pinInputType="text" />
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/verify"
+                android:layout_below="@+id/pinvview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_margin="20dp"
+                android:textSize="@dimen/big_text_size"
+                android:textColor="@color/white"
+                android:paddingHorizontal="50dp"
+                android:background="@color/bg_color"
+                android:text="@string/verify"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="20dp"
+                android:textSize="@dimen/min_text_size"
+                android:textColor="@color/gray"
+                android:text="@string/confrim_update"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

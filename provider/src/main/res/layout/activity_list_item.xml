@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:weightSum="100"
+    android:layout_margin="10dp"
+    android:layoutDirection="ltr"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="10dp"
+    android:layout_height="110dp">
+
+    <com.loopeer.shadow.ShadowView
+        android:id="@+id/shadow_view"
+        android:layout_width="@dimen/_100sdp"
+
+        android:layout_height="match_parent"
+        android:elevation="70dp"
+        app:shadowMarginBottom="5dp"
+        app:shadowColor="#4a000000"
+        app:cornerRadius="6dp"
+        app:shadowRadius="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layoutDirection="ltr"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/image"
+                android:background="@color/gray"
+                android:src="@drawable/card"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:layoutDirection="ltr"
+                android:layout_weight="3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="#BABABA"
+                    android:background="@color/white"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="20dp"
+                    android:text="Land"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.loopeer.shadow.ShadowView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layoutDirection="ltr"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/title"
+            android:text="Title"
+            android:textSize="18dp"
+            android:textColor="@color/bg_color_text"
+            android:textStyle="bold"
+            android:layout_marginRight="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/image" />
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/desc"
+            android:text="Title"
+            android:layout_marginRight="14dp"
+            android:textSize="16dp"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_height="wrap_content"
+            android:textColor="#BABABA"
+            android:maxLines="3"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/image" />
+        <LinearLayout
+            android:id="@+id/reload_layout"
+            android:layoutDirection="ltr"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:weightSum="60"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/reload"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAllCaps="true"
+                android:paddingLeft="10dp"
+                android:textSize="17dp"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:text="Go Online"/>
+        </LinearLayout>
+
+
+        <com.loopeer.shadow.ShadowView
+            android:layout_weight="1"
+            android:id="@+id/preview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="70dp"
+            app:shadowMarginBottom="5dp"
+            app:shadowMarginTop=".5dp"
+            android:layout_marginLeft="20dp"
+            app:shadowMarginLeft="1dp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:shadowMarginRight="1dp"
+            app:shadowColor="#4a000000"
+            android:foreground="?attr/selectableItemBackground"
+            app:cornerRadius="6dp"
+            app:shadowRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            app:layout_gravity="center"
+            android:layoutDirection="ltr"
+            android:paddingLeft="10dp"
+            android:id="@+id/reviews_LL"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/reviews"
+                android:layout_gravity="center"
+                android:paddingEnd="5dp"
+                android:gravity="center"
+                android:textColor="@color/gray"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp" />
+
+            <RatingBar
+                android:id="@+id/rate_vote"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_gravity="center"
+                android:numStars="5"
+                android:max="5"
+                android:rating="3"
+                android:stepSize="0.0"
+                style="?android:attr/ratingBarStyleSmall"
+
+
+                />
+            <TextView
+                android:id="@+id/vote_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="5"
+                android:singleLine="true"
+                 android:gravity="center"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical|end"
+                />
+
+        </LinearLayout>
+        </com.loopeer.shadow.ShadowView>
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

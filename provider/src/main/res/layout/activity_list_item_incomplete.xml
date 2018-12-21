@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:weightSum="100"
+    android:layoutDirection="ltr"
+    android:layout_margin="5dp"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="5dp"
+    android:layout_height="110dp">
+
+    <com.loopeer.shadow.ShadowView
+        android:layout_width="@dimen/_100sdp"
+
+        android:layout_height="match_parent"
+        android:elevation="70dp"
+        app:shadowMarginBottom="5dp"
+        app:shadowColor="#4a000000"
+        app:cornerRadius="6dp"
+        app:shadowRadius="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layoutDirection="ltr"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/image_in"
+                android:src="@drawable/card"
+                android:background="@color/gray"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:layout_weight="3"
+                android:layoutDirection="ltr"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center_vertical"
+                    android:textColor="#BABABA"
+                    android:paddingRight="20dp"
+                    android:text="Land"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </com.loopeer.shadow.ShadowView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layoutDirection="ltr"
+
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layoutDirection="ltr"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_toRightOf="@id/image"
+                android:layout_weight="1"
+                android:text="Title555"
+                android:textColor="@color/bg_color_text"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutDirection="ltr"
+                android:layout_weight="4"
+                android:orientation="vertical"
+                android:paddingBottom="7dp"
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp">
+
+                <ImageView
+                    android:id="@+id/Unverify_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:layout_weight="1"
+                    android:src="@drawable/cxi_mark" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/_3sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textSize="16dp"
+            android:textColor="#BABABA"
+            android:text="Location" />
+
+z
+        <com.loopeer.shadow.ShadowView
+            android:layout_weight="1"
+            android:id="@+id/preview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="70dp"
+            app:shadowMarginBottom="5dp"
+            app:shadowMarginTop=".5dp"
+            android:layout_marginLeft="20dp"
+            app:shadowMarginLeft="1dp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:shadowMarginRight="1dp"
+            app:shadowColor="#4a000000"
+            android:foreground="?attr/selectableItemBackground"
+            app:cornerRadius="6dp"
+            app:shadowRadius="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textColor="#BABABA"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:text="@string/not_verified"
+                android:weightSum="60" />
+
+
+            <LinearLayout
+                android:id="@+id/reviews_LL"
+                android:layout_width="wrap_content"
+                android:layoutDirection="ltr"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:weightSum="60">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="@string/reviews" />
+
+                <RatingBar
+                    android:id="@+id/rate_vote"
+
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:max="5"
+                    android:numStars="5"
+                    android:rating="5"
+                    android:stepSize="0.0"
+
+
+                    />
+
+                <TextView
+                    android:id="@+id/vote_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/rate_vote"
+                    android:gravity="center"
+                    android:text="5"
+                    android:textColor="@android:color/holo_orange_dark" />
+
+            </LinearLayout>
+        </com.loopeer.shadow.ShadowView>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

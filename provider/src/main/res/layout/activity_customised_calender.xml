@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/bg_color" >
+
+
+
+
+    <com.wasltec.provider.CalenderLib.CustomCalendarView
+        android:id="@+id/calendar_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Platinum"
+        app:calendarBackgroundColor="@color/Platinum"
+        app:calendarTitleTextColor="@color/black"
+        app:currentDayOfMonthColor="@color/blue"
+        app:dayOfMonthTextColor="@color/black"
+        app:dayOfWeekTextColor="@color/black"
+        app:disabledDayBackgroundColor="@color/Platinum"
+        app:disabledDayTextColor="@color/gray"
+        app:aval_day="@color/white"
+        app:not_aval_day="@color/gray"
+        app:red="@color/red"
+        app:selectedDayBackgroundColor="@color/blue"
+        app:titleLayoutBackgroundColor="@color/white"
+        app:weekLayoutBackgroundColor="@color/white"/>
+</LinearLayout>

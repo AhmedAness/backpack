@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:background="@color/background_transparent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_gravity="center"
+    android:minWidth="@dimen/_250sdp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/boardr"
+        android:padding="10dp"
+        android:gravity="center"
+        android:id="@+id/container"
+
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:text="@string/Price_per_individual"
+            android:paddingHorizontal="30dp"
+            android:textSize="@dimen/big_text_size"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:id="@+id/title"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@color/gray"
+            android:layout_height="2dp">
+        </LinearLayout>
+        <EditText
+            android:backgroundTint="@color/background_transparent"
+            android:layout_width="match_parent"
+            android:id="@+id/organizer_mail"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:backgroundTint="@color/background_transparent"
+            android:layout_width="match_parent"
+            android:id="@+id/organizer_name"
+            android:hint="@string/name"
+            android:inputType="text"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="100"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_weight="30"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:gravity="center"
+                android:id="@+id/nums"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:backgroundTint="@color/background_transparent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="70"
+                android:inputType="phone"
+
+                android:id="@+id/organizer_phone"
+                android:hint="@string/mobile_no"
+                />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Add_addons_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/next"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/invite"
+        android:padding="@dimen/_10sdp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        />
+
+</LinearLayout>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Backpack</string>
+    <string name="navigation_drawer_open">افتح درج التنقل</string>
+    <string name="navigation_drawer_close">إغلاق درج التنقل</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_desc">رأس التنقل</string>
+    <string name="title_activity_my_activites">انشتطي </string>
+    <string name="title_activity_all">كل الانشطه </string>
+    <string name="title_activity_filter">منقي</string>
+    <string name="title_activity_details">تفاصيل النشاط</string>
+    <string name="title_activity_details2">تفاصيل النشاط</string>
+
+
+    <string name="title_activity_review">راجع نشاطك</string>
+    <string name="title_activity_review_rules">مراجعة قواعد النشاط</string>
+    <string name="title_activity_payment">دفع</string>
+    <string name="title_activity_main">أنشطة بالقرب من جدة</string>
+    <string name="_37_ratings">37 تقييمات</string>
+    <string name="filter_btn">منقي</string>
+    <string name="activity_name">Heking in Heluis</string>
+    <string name="jfjfjfjfj">jfjfjfjfj</string>
+    <string name="dummy_desc">jfjfjfdfjkfshhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhjfj</string>
+    <string name="dummy_period">8 ساعات</string>
+    <string name="trip_rules">قواعد الرحلة</string>
+    <string name="important_notes">ملاحظات هامة</string>
+    <string name="similar_activities">أنشطة مماثلة</string>
+    <string name="dummy_price">150 ريال سعودي فردي</string>
+    <string name="check_option_btn">راجع الخيارات</string>
+    <string name="activity_provider_btn">كن مزودًا للأنشطة</string>
+    <string name="show_50_more">عرض (٪ د) المزيد</string>
+    <string name="search">بحث</string>
+    <string name="backbag_menu">الأنشطة الخاصة بك</string>
+    <string name="messages_menu">رسائل</string>
+    <string name="favourites_menu">المفضلة</string>
+    <string name="payments_menu">المدفوعات</string>
+    <string name="rewards_menu">المكافآت</string>
+    <string name="your_activity_string">اذهب والعثور على نشاط مستقبلك. ثم ، فقط على ظهره</string>
+    <string name="my_activity_find">ابحث عن نشاط</string>
+    <string name="dummy_count">لمدة 2 أفراد</string>
+    <string name="accept_btn">احجزه</string>
+    <string name="dummy_country_locatio">المملكة العربية السعودية</string>
+    <string name="dummy_location">كوليس ، محافظة مكة المكرمة</string>
+    <string name="dummy_povider">بواسطة كيلوغرام</string>
+
+    <string name="date_txt">تاريخ</string>
+    <string name="tickets">تذاكر</string>
+    <string name="time_txt">زمن</string>
+    <string name="all_activites_btn">كل ينشط</string>
+    <string name="price_holder">SR٪ .2f لكل فرد</string>
+    <string name="explore_holder">استكشف٪ s Near By</string>
+    <string name="activates_for_txt">ينشط</string>
+    <string name="price_for_activity">سعر للنشاط</string>
+    <string name="future_txt">مستقبل</string>
+    <string name="past_txt">الماضي</string>
+    <string name="individual_txt">فرد</string>
+    <string name="group_trip_txt">رحلة جماعية</string>
+    <string name="adult_txt">بالغ</string>
+    <string name="children_txt">الأطفال</string>
+    <string name="children_subtitle">6 سنوات - 13 سنة</string>
+    <string name="confirm_btn">تؤكد</string>
+    <string name="enter_promo_code_txt">أضف رمزًا ترويجيًا</string>
+    <string name="your_date_txt">تاريخك</string>
+    <string name="time_04_00_am_txt">الوقت 04:00 صباحا</string>
+    <string name="tickets_txt">تذاكر</string>
+    <string name="message_active_provider_txt">موفر الرسائل النشط</string>
+    <string name="add_ones_txt">أضف هؤلاء</string>
+    <string name="save_btn">حفظ</string>
+    <string name="counter_holder">للفرد د</string>
+    <string name="activity_period_holder">فترة النشاط٪ s</string>
+    <string name="rating_num_holder">تقييمات٪ .2f</string>
+    <string name="included_txt">شمل</string>
+    <string name="currency">ريال سعودى</string>
+    <string name="view_all_reviews_holder">عرض الكل٪ d الآراء</string>
+    <string name="family_frendly_txt">مناسب للعائلات</string>
+    <string name="group_activity">نشاط جماعي</string>
+    <string name="males_and_females_txt">الذكور والإناث</string>
+    <string name="fiter_btn_holder">٪ d أنشطة</string>
+    <string name="tickets_count_holder">٪ d تذاكر</string>
+    <string name="tickets_details_holder">الكبار٪ d الطفل٪ د</string>
+    <string name="Slots_remain_holder">(تبقى٪ d من الشرائح)</string>
+    <string name="total_price_payment_holder">SAR %.2f     </string>
+    <string name="no_internet">لا يوجد اتصال بالإنترنت</string>
+    <string name="no_data">لا يوجد \ n تم العثور على البيانات</string>
+    <string name="firstname">الاسم الاول</string>
+    <string name="lastname">الكنية</string>
+    <string name="emailaddress">عنوان البريد الإلكتروني (اختياري)</string>
+
+
+    <string name="accept_btn2">قبول</string>
+    <string name="added_to_favourite">وأضاف إلى المفضلة</string>
+    <string name="share">شارك</string>
+    <string name="total">مجموع</string>
+    <string name="help">مساعدة؟</string>
+    <string name="skip">تخطى</string>
+    <string name="sendSMs">لقد أرسلت إليك رمزًا مكونًا من 4 أرقام عبر رسالة SMS للتحقق من رقم الهاتف المحمول على.</string>
+    <string name="worng_phone_number">رقم هاتف خاطئ ؟</string>
+    <string name="verify">التحقق</string>
+    <string name="confrim_update">إعادة إرسال رمز جديد في 59 ثانية</string>
+
+
+    <string name="title_activity_account">الحساب</string>
+    <string name="edit_btn">تصحيح</string>
+    <string name="title_activity_favourite">مفضل</string>
+    <string name="tab_text_1">مفضل</string>
+    <string name="tab_text_2">قائمة</string>
+    <string name="action_settings">الإعدادات</string>
+    <string name="title_activity_payment_ref">دفع</string>
+    <string name="error_textview">هذه الخانة مطلوبه</string>
+    <string name="mail_txtview_error">بريد إلكتروني خاطئ</string>
+    <string name="account_present_holder">حسابك هو٪ d ٪٪ مكتمل</string>
+    <string name="title_activity_inbox">صندوق الوارد</string>
+    <string name="resend_code_holder">إعادة إرسال رمز جديد في ٪d</string>
+    <string name="enter_your_phone_number_hint">أدخل رقم هاتفك</string>
+    <string name="edit_fav_menu">تصحيح</string>
+    <string name="reward_rule_1">1. دعوة أصدقائك لتحميل والاشتراك في backPack</string>
+    <string name="reward_rule_2">2. سيحصل على &lt;b&gt; 10٪ &lt;/ b&gt; من نشاطه الأول</string>
+    <string name="reward_rule_3">3. ستحصل على 10 ريال سعودي بعد إكمال النشاط الأول</string>
+
+
+    <string name="hello_blank_fragment">مرحبا جزء فارغ</string>
+    <string name="title_activity_qr">QRActivity</string>
+    <string name="title_activity_licenses">LicensesActivity</string>
+    <string name="title_activity_add_license">إضافة ترخيص</string>
+    <string name="title_activity_add_new">AddNewActivity</string>
+    <string name="people_txt">20 الناس</string>
+    <string name="title_activity_decelration">Decelration</string>
+    <string name="title_activity_idverifcaion">معرف Verifcaion</string>
+    <string name="date_of_birth">تاريخ الولادة</string>
+    <string name="gender">جنس</string>
+    <string name="logTokenButton">زر logToken</string>
+    <string name="medical_condItion">حالة طبية</string>
+    <string name="have_you_over_have_thefolwing_medical_conditon">هل انتهيت من الحالة / الشروط الطبية التالية؟</string>
+    <string name="lastmessage">اخر رسالة</string>
+    <string name="dismiss">رفض</string>
+    <string name="lang">EN</string>
+    <string name="add_add_ons">إضافة الوظائف الإضافية</string>
+    <string name="ok">تم </string>
+    <string name="Warning_title">تحزير </string>
+    <string name="Warning_msg">هذا سيؤدي الي اعاده تشغيل التطبيق</string>
+    <string name="log_out">تسجيل الخروج </string>
+
+    <string-array name="gender_array">
+        <item>الذكر</item>
+        <item>إناثا</item>
+
+    </string-array>
+
+    <string-array name="nationality_type_array">
+        <item>الهوية الوطنية</item>
+        <item>جواز سفر</item>
+    </string-array>
+</resources>

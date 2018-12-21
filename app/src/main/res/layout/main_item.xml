@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginTop="@dimen/_15sdp"
+    android:layout_height="wrap_content">
+    <com.loopeer.shadow.ShadowView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="70dp"
+        app:shadowMarginBottom="3.5dp"
+        app:shadowMarginRight=".2dp"
+        app:shadowMarginLeft=".2dp"
+        app:shadowMarginTop=".2dp"
+        app:shadowColor="#7b7a7a"
+        app:cornerRadius="6dp"
+        app:shadowRadius="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:id="@+id/img_cont"
+        >
+        <ImageView
+            android:id="@+id/item_img"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:scaleType="fitXY"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+        <ImageButton
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:id="@+id/fav_btn"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/fav_btn"
+            android:scaleType="fitXY"
+            android:layout_gravity="end"
+            android:tint="@android:color/white"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp" />
+
+    </FrameLayout>
+        <TextView
+            android:layout_marginTop="@dimen/_10sdp"
+            android:paddingStart="@dimen/_10sdp"
+            android:id="@+id/item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_cont"
+            android:textColor="#4A4A4A"
+            android:textSize="@dimen/_20ssp"
+            tools:text="Heking in Heluis" />
+
+        <TextView
+            android:id="@+id/item_price"
+            android:paddingStart="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_name"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="#4A4A4A"
+            android:textSize="@dimen/_12ssp"
+            tools:text="150 SR individualL" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:paddingStart="@dimen/_10sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_below="@id/item_price"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:weightSum="10">
+
+            <RatingBar
+                android:id="@+id/item_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:rating="1"
+                android:stepSize="1"
+                android:layout_gravity="center"
+                style="@style/Widget.AppCompat.RatingBar.Small" />
+
+            <TextView
+                android:id="@+id/rating_count"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_5sdp"
+                android:textSize="@dimen/_10ssp"
+                android:textColor="#4A4A4A"
+                android:text="@string/_37_ratings" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    </com.loopeer.shadow.ShadowView>
+
+</RelativeLayout>

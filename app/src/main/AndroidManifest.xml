@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wasltec.backpack">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDiBA4pdVV66nyTo_1x_q-o_mmvm6P0KnU" />
+
+        <service
+            android:name=".Firebase.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".activities.SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="@string/title_activity_main"
+
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.MyActivites"
+            android:label="@string/title_activity_my_activites"
+            android:parentActivityName=".activities.MainActivity"
+            android:theme="@style/YourActivityTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wasltec.backpack.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.AllActivity"
+            android:label="@string/title_activity_all"
+            android:launchMode="singleTask"
+            android:parentActivityName=".activities.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wasltec.backpack.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.DetailsActivity"
+            android:label="@string/title_activity_details"
+            android:launchMode="singleTask"
+            android:parentActivityName=".activities.AllActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wasltec.backpack.activities.AllActivity" />
+        </activity>
+        <activity
+            android:name=".activities.Details2Activity"
+            android:label="@string/title_activity_details2"
+            android:launchMode="singleTask"
+            android:parentActivityName=".activities.DetailsActivity"
+            android:theme="@style/YourActivityTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wasltec.backpack.activities.DetailsActivity" />
+        </activity>
+        <activity
+            android:name=".activities.ReviewActivity"
+            android:label="@string/title_activity_review"
+            android:launchMode="singleTask"
+            android:parentActivityName=".activities.Details2Activity"
+            android:theme="@style/YourActivityTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wasltec.backpack.activities.Details2Activity" />
+        </activity>
+        <activity
+            android:name=".activities.ReviewRulesActivity"
+            android:label="@string/title_activity_review_rules"
+            android:launchMode="singleTask"
+            android:parentActivityName=".activities.ReviewActivity"
+            android:theme="@style/YourActivityTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wasltec.backpack.activities.ReviewActivity" />
+        </activity>
+        <activity
+            android:name=".activities.PaymentActivity"
+            android:label="@string/title_activity_payment"
+            android:launchMode="singleTask"
+            android:theme="@style/YourActivityTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wasltec.backpack.activities.ReviewRulesActivity" />
+        </activity>
+        <activity
+            android:name=".activities.LoginActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.VerifyActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AccountActivity"
+            android:label="@string/title_activity_account"
+            android:launchMode="singleTask"
+            android:parentActivityName=".activities.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wasltec.backpack.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".FavouriteActivity"
+            android:label="@string/title_activity_favourite"
+            android:launchMode="singleTask"
+            android:parentActivityName=".activities.MainActivity"
+            android:theme="@style/YourActivityTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wasltec.backpack.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".PaymentRefActivity"
+            android:label="@string/title_activity_payment_ref"
+            android:launchMode="singleTask"
+            android:parentActivityName=".activities.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wasltec.backpack.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".RewardActivity"
+            android:launchMode="singleTask"
+            android:parentActivityName=".activities.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wasltec.backpack.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".InboxActivity"
+            android:label="@string/title_activity_inbox"
+            android:launchMode="singleTask"
+            android:parentActivityName=".activities.MainActivity"
+            android:theme="@style/YourActivityTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wasltec.backpack.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".QRActivity"
+            android:label="@string/title_activity_qr"
+            android:launchMode="singleTask"
+            android:parentActivityName=".activities.PaymentActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wasltec.backpack.activities.PaymentActivity" />
+        </activity>
+        <activity
+            android:name=".LicensesActivity"
+            android:label="@string/title_activity_licenses"
+            android:launchMode="singleTask"
+            android:parentActivityName=".AccountActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wasltec.backpack.AccountActivity" />
+        </activity>
+        <activity
+            android:name=".AddLicenseActivity"
+            android:label="@string/title_activity_add_license"
+            android:launchMode="singleTask"
+            android:parentActivityName=".LicensesActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wasltec.backpack.LicensesActivity" />
+        </activity>
+        <activity
+            android:name=".AddNewActivity"
+            android:label="@string/title_activity_add_new"
+            android:launchMode="singleTask"
+            android:parentActivityName=".LicensesActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wasltec.backpack.LicensesActivity" />
+        </activity>
+        <activity
+            android:name=".DecelrationActivity"
+            android:label="@string/title_activity_decelration"
+            android:launchMode="singleTask"
+            android:parentActivityName=".AccountActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wasltec.backpack.AccountActivity" />
+        </activity>
+        <activity
+            android:name=".IDVerifcaionActivity"
+            android:label="@string/title_activity_idverifcaion"
+            android:launchMode="singleTask"
+            android:parentActivityName=".AccountActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wasltec.backpack.AccountActivity" />
+        </activity>
+
+        <activity
+            android:name=".activities.WebViewActivity"
+
+            android:launchMode="singleTask"
+
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".activities.ChatActivity"
+
+            android:launchMode="singleTask"
+
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+
+    </application>
+
+</manifest>

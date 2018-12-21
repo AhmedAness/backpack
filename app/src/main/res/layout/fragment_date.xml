@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.FilterDialog">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.PopupOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/white"
+            app:navigationIcon="@drawable/ic_close2"
+            app:title="When you wanna go ?"
+            app:titleTextColor="@android:color/black"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/_5sdp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="@dimen/_16ssp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:id="@+id/currentDate"
+        android:layout_alignParentTop="true"
+        android:paddingStart="@dimen/_16ssp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#888"
+        android:id="@+id/line1"
+        android:layout_below="@id/currentDate"
+        android:paddingEnd="@dimen/_16ssp"
+        android:paddingStart="@dimen/_16ssp" />
+
+    <com.applikeysolutions.cosmocalendar.view.CalendarView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/calendar_view"
+        app:selectionType="single"
+        android:layout_below="@id/line1"
+        app:calendarBackgroundColor="@android:color/white"
+        app:monthTextColor="@android:color/black"
+        app:dayTextColor="@android:color/black"
+        app:orientation="horizontal"
+        app:selectedDayBackgroundColor="@color/colorPrimary"
+        android:layout_above="@+id/line3"
+
+        />
+    <View
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+
+        android:layout_alignTop="@+id/item_price"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:background="#444" />
+
+
+    <TextView
+        android:id="@+id/item_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/counter"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:text="@string/dummy_price"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_12ssp"
+
+        />
+
+    <TextView
+        android:id="@+id/counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:text="@string/dummy_count"
+        android:textColor="@color/colorPrimary" />
+    <Button
+        android:id="@+id/save_btn"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line3"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:paddingStart="@dimen/_20sdp"
+        android:paddingEnd="@dimen/_20sdp"
+        android:background="@drawable/filter_btn"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/save_btn"
+        android:textColor="#fff"
+
+        />
+
+</RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

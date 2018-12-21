@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_30sdp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_marginEnd="@dimen/_30sdp"
+    android:layout_gravity="center"
+    android:background="@drawable/board2"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:layout_gravity="center"
+        android:gravity="center"
+        app:popupTheme="@style/AppTheme.AppBarOverlay"
+        app:title="@string/sendmessage" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:background="@color/gray"/>
+    <EditText
+        android:backgroundTint="@color/background_transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/send_your_message"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:minLines="2"
+        android:maxLines="5"
+        android:minHeight="@dimen/_100sdp"
+        android:paddingStart="@dimen/_5sdp"
+        android:paddingEnd="@dimen/_5sdp"
+        android:id="@+id/msg"
+
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Make it offline"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_margin="@dimen/_10sdp"
+        android:textSize="@dimen/big_text_size"
+        android:id="@+id/makeitofflinebtn"
+        />
+    <TextView
+        android:id="@+id/ok_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:layout_gravity="center"
+        android:background="@drawable/next"
+        android:gravity="center"
+        android:text="@string/send"
+        android:textColor="@color/white" />
+
+</LinearLayout>

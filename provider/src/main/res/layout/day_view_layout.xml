@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.loopeer.shadow.ShadowView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        app:shadowMarginBottom="1dp"
+        app:shadowMarginTop=".5dp"
+
+
+        app:shadowMarginLeft="1dp"
+        app:shadowMarginRight="1dp"
+        app:shadowColor="#4a000000"
+        android:foreground="?attr/selectableItemBackground"
+
+        >
+            <RelativeLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/preview"
+                >
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    tools:text="Female only" />
+
+                <TextView
+                    android:id="@+id/subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@id/title"
+                    android:textSize="8sp"
+                    android:padding="2dp"
+                    tools:ignore="SmallSp" />
+                <TextView
+                    android:id="@+id/subtitle2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@id/subtitle"
+                    android:textSize="8sp"
+                    android:padding="2dp"
+                    tools:ignore="SmallSp" />
+
+                <ImageView
+                    android:id="@+id/closed"
+                    android:visibility="gone"
+                    android:background="@color/day_disabled_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:src="@drawable/empty_cell"
+                    />
+
+            </RelativeLayout>
+    </com.loopeer.shadow.ShadowView>
+
+
+</merge>

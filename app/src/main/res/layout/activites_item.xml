@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_95sdp"
+    android:paddingLeft="@dimen/_15sdp"
+    android:paddingRight="@dimen/_15sdp"
+    android:layout_marginTop="@dimen/_15sdp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+  >
+
+    <com.loopeer.shadow.ShadowView
+        android:id="@+id/shadow_view"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:elevation="70dp"
+        app:shadowMarginBottom="5dp"
+        app:shadowColor="#4a000000"
+        app:cornerRadius="6dp"
+        app:shadowRadius="20dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layoutDirection="ltr"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/activity_img"
+                android:background="@color/gray"
+                android:src="@drawable/card"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:layoutDirection="ltr"
+                android:layout_weight="3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="#BABABA"
+                    android:background="@color/white"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="20dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.loopeer.shadow.ShadowView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/shadow_view"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/item_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_16ssp"
+            android:paddingStart="@dimen/_16ssp"
+            android:textColor="#4A4A4A"
+            android:textSize="@dimen/_20ssp"
+            tools:text="Heking " />
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/item_price"
+            android:textColor="#9B9B9B"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/item_name"
+            android:layout_toEndOf="@id/activity_img"
+
+            android:paddingBottom="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_16ssp"
+            android:paddingStart="@dimen/_16ssp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+
+            android:textSize="@dimen/_14ssp"
+            tools:text="150 SR " />
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/item_provider"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/item_price"
+            android:layout_toEndOf="@id/activity_img"
+            android:paddingBottom="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_16ssp"
+            android:textColor="#9B9B9B"
+            android:paddingStart="@dimen/_16ssp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textSize="@dimen/_10ssp"
+            tools:text="150 SR individualL" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_alignParentBottom="true"
+        android:background="#3B979797" />
+
+
+</RelativeLayout>

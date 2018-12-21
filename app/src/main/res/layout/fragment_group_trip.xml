@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.IndividualFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/count_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@android:color/transparent"
+            android:gravity="start|center_vertical"
+            android:paddingEnd="@dimen/_16sdp"
+            android:paddingStart="@dimen/_16sdp"
+            android:text="15 - 25 people in activity"
+            android:textAllCaps="false"
+            android:textColor="#000"
+
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:background="#eee" />
+
+        <Button
+            android:id="@+id/date_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@android:color/transparent"
+            android:drawableEnd="@drawable/calender_gray"
+            android:gravity="start|center_vertical"
+            android:paddingEnd="@dimen/_16sdp"
+
+            android:paddingStart="@dimen/_16sdp"
+            android:text="@string/your_date_txt"
+            android:textAllCaps="false"
+            android:textColor="#aaa" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:background="#eee" />
+
+        <Button
+            android:id="@+id/time_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@android:color/transparent"
+            android:drawableEnd="@drawable/time_gray"
+            android:gravity="start|center_vertical"
+            android:paddingEnd="@dimen/_16sdp"
+            android:paddingStart="@dimen/_16sdp"
+            android:textAllCaps="false"
+            android:textColor="#aaa" />
+
+        <Button
+            android:id="@+id/peaple_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@android:color/transparent"
+            android:drawableEnd="@drawable/ic_arrow_right"
+            android:gravity="start|center_vertical"
+            android:paddingEnd="@dimen/_16sdp"
+            android:paddingStart="@dimen/_16sdp"
+            android:text="@string/people_txt"
+            android:textAllCaps="false"
+            android:textColor="#aaa"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:background="#eee" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@android:color/transparent"
+            android:drawableEnd="@drawable/ic_arrow_right"
+            android:gravity="start"
+            android:visibility="gone"
+            android:paddingEnd="@dimen/_16sdp"
+            android:paddingStart="@dimen/_16sdp"
+            android:text="@string/add_ones_txt"
+            android:textAllCaps="false"
+            android:textColor="#aaa" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/feature_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <include layout="@layout/group_teckit_item"></include>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:background="#eee" />
+
+        <Button
+            android:id="@+id/provider_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@android:color/transparent"
+            android:drawableEnd="@drawable/ic_arrow_right"
+
+            android:gravity="start|center_vertical"
+            android:paddingEnd="@dimen/_16sdp"
+            android:paddingStart="@dimen/_16sdp"
+            android:text="@string/message_active_provider_txt"
+            android:textAllCaps="false"
+            android:textColor="#aaa"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:background="#eee" />
+
+    </LinearLayout>
+</ScrollView>

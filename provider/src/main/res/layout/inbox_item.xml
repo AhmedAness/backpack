@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/_10sdp"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="90dp">
+            <com.loopeer.shadow.ShadowView
+                android:layout_width="@dimen/_100sdp"
+
+                android:layout_height="80dp"
+                android:elevation="70dp"
+                app:shadowMarginBottom="5dp"
+                app:shadowColor="#4a000000"
+                app:cornerRadius="6dp"
+                app:shadowRadius="20dp">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_weight="1"
+                            android:id="@+id/image_inbox"
+                            android:src="@drawable/card"
+                            android:background="@color/gray"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                        <LinearLayout
+                            android:layout_weight="3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="right|center_vertical"
+                                android:paddingRight="20dp"
+                                android:text=""/>
+
+                        </LinearLayout>
+
+                </LinearLayout>
+                    <TextView
+                        android:id="@+id/unReadableMessageNo"
+                        android:text="0"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="wrap_content"
+                        android:background="@drawable/red_rounded_button"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+
+            </com.loopeer.shadow.ShadowView>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_height="90dp">
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="match_parent"
+                android:gravity="left"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:textSize="15dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="match_parent"
+                android:gravity="left"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:textSize="10dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:id="@+id/lastUpdateDate"
+                android:gravity="left"
+                android:textSize="10dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

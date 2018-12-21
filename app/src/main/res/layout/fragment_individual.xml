@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.IndividualFragment">
+
+    <Button
+        android:id="@+id/date_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:background="@android:color/transparent"
+        android:drawableEnd="@drawable/calender_gray"
+
+        android:gravity="start|center_vertical"
+        android:paddingEnd="@dimen/_16sdp"
+        android:paddingStart="@dimen/_16sdp"
+        android:text="@string/your_date_txt"
+        android:textAllCaps="false"
+        android:textColor="#aaa" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:background="#eee" />
+
+    <Button
+        android:id="@+id/time_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:background="@android:color/transparent"
+        android:drawableEnd="@drawable/time_gray"
+        android:gravity="start|center_vertical"
+        android:paddingEnd="@dimen/_16sdp"
+        android:paddingStart="@dimen/_16sdp"
+        android:text="@string/time_04_00_am_txt"
+        android:textAllCaps="false"
+        android:textColor="#aaa" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:background="#eee" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:gravity="center_vertical"
+        android:paddingEnd="@dimen/_16sdp"
+        android:id="@+id/tickets_btn"
+        android:paddingStart="@dimen/_16sdp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tickets_txt"
+
+            android:textColor="#aaa" />
+
+        <TextView
+            android:id="@+id/tickets_remain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_toEndOf="@id/textView"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/tickets_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+
+            android:textColor="#aaa" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:background="#eee" />
+
+    <Button
+        android:id="@+id/provider_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:background="@android:color/transparent"
+        android:drawableEnd="@drawable/ic_arrow_right"
+        android:gravity="start|center_vertical"
+        android:visibility="gone"
+        android:paddingEnd="@dimen/_16sdp"
+        android:paddingStart="@dimen/_16sdp"
+        android:text="@string/message_active_provider_txt"
+        android:textAllCaps="false"
+        android:textColor="#aaa" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:background="#eee" />
+
+</LinearLayout>

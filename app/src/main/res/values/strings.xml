@@ -1,0 +1,155 @@
+<resources>
+    <string name="app_name">Backpack</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="title_activity_my_activites">MyActivites</string>
+    <string name="title_activity_all">AllActivity</string>
+    <string name="title_activity_filter">Filter</string>
+    <string name="title_activity_details">Activity Details</string>
+    <string name="title_activity_details2">Activity Details</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_review">Review your activity</string>
+    <string name="title_activity_review_rules">Review Activity Rules</string>
+    <string name="title_activity_payment">Payment</string>
+    <string name="title_activity_main">activites near jeddah</string>
+    <string name="_37_ratings">37 ratings</string>
+    <string name="filter_btn">Filter</string>
+    <string name="activity_name">Heking in Heluis</string>
+    <string name="jfjfjfjfj">jfjfjfjfj</string>
+    <string name="dummy_desc">jfjfjfdfjkfshhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhjfj</string>
+    <string name="dummy_period">8 hours</string>
+    <string name="trip_rules">Trip Rules</string>
+    <string name="important_notes">important_notes</string>
+    <string name="similar_activities">Similar Activities</string>
+    <string name="dummy_price">150 SR individualL</string>
+    <string name="check_option_btn">CHECK  OPTIONS</string>
+    <string name="activity_provider_btn">Become An Activity  Provider</string>
+    <string name="show_50_more">Show (+%d) More</string>
+    <string name="search">Search</string>
+    <string name="backbag_menu">Your Activities</string>
+    <string name="messages_menu">Messages</string>
+    <string name="favourites_menu">Favourites</string>
+    <string name="payments_menu">Payments</string>
+    <string name="rewards_menu">Rewards</string>
+    <string name="your_activity_string"><![CDATA[Go find and activite of your future.  Then, just backpack & Go]]></string>
+    <string name="my_activity_find">Find An Activity</string>
+    <string name="dummy_count">for 2 Individuals</string>
+    <string name="accept_btn">Book it</string>
+    <string name="dummy_country_locatio">saudi arabia</string>
+    <string name="dummy_location">Kulles,Makkah province</string>
+    <string name="dummy_povider">By kilkg</string>
+    <string name="log_out">Logout</string>
+
+    <string name="date_txt">Date</string>
+    <string name="tickets">Tickets</string>
+    <string name="time_txt">Time</string>
+    <string name="all_activites_btn">All activates</string>
+    <string name="price_holder">SR %.2f per Individual</string>
+    <string name="explore_holder">Explore %s Near By</string>
+    <string name="activates_for_txt">Activates for</string>
+    <string name="price_for_activity">Price of Activity</string>
+    <string name="future_txt">Your future</string>
+    <string name="past_txt">Your past</string>
+    <string name="individual_txt">Individual</string>
+    <string name="group_trip_txt">Group Trip</string>
+    <string name="adult_txt">Adult</string>
+    <string name="children_txt">Children</string>
+    <string name="children_subtitle">6 Years - 13 Years</string>
+    <string name="confirm_btn">Confirm</string>
+    <string name="enter_promo_code_txt">Add Promo-Code</string>
+    <string name="your_date_txt">Your Date</string>
+    <string name="time_04_00_am_txt">Time 04:00 Am</string>
+    <string name="tickets_txt">Tickets</string>
+    <string name="message_active_provider_txt">Message active provider</string>
+    <string name="add_ones_txt">Add ones</string>
+    <string name="save_btn">Save</string>
+    <string name="counter_holder">For %d individual</string>
+    <string name="activity_period_holder">Activity period %s</string>
+    <string name="rating_num_holder">%.2f Ratings</string>
+    <string name="included_txt">included</string>
+    <string name="currency">SR</string>
+    <string name="view_all_reviews_holder">View All %d Reviews</string>
+    <string name="family_frendly_txt">Family Friendly</string>
+    <string name="group_activity">Group Activity</string>
+    <string name="males_and_females_txt">Males and Females</string>
+    <string name="fiter_btn_holder">%d Activities</string>
+    <string name="tickets_count_holder">%d Tickets</string>
+    <string name="tickets_details_holder">Adults %1$d Child %2$d</string>
+    <string name="Slots_remain_holder">( %d Slots remain )</string>
+    <string name="total_price_payment_holder">SAR %.2f
+    </string>
+    <string name="no_internet">There is no \n  Internet Connection</string>
+    <string name="no_data">There is no  \n Data found</string>
+    <string name="firstname">First Name</string>
+    <string name="lastname">Last Name</string>
+    <string name="emailaddress">Email address (optional)</string>
+
+
+    <string name="accept_btn2">Accept</string>
+    <string name="added_to_favourite">Added to Favourite</string>
+    <string name="share">share</string>
+    <string name="total">Total</string>
+    <string name="help">Help?</string>
+    <string name="skip">skip</string>
+    <string name="sendSMs">you have sent you 4 digits code via SMS for mobile number verification at .</string>
+    <string name="worng_phone_number">Wrong phone number ?</string>
+    <string name="verify">Verify</string>
+    <string name="confrim_update">resend new code in 59 seconds</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_account">Account</string>
+    <string name="edit_btn">Edit</string>
+    <string name="title_activity_favourite">Favourite</string>
+    <string name="tab_text_1">Favourite</string>
+    <string name="tab_text_2">List</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_payment_ref">Payment</string>
+    <string name="error_textview">this field is required</string>
+    <string name="mail_txtview_error">invalid email</string>
+    <string name="account_present_holder">Your Account is %d%%Complete</string>
+    <string name="title_activity_inbox">Inbox</string>
+    <string name="resend_code_holder">resend new code in %d</string>
+    <string name="enter_your_phone_number_hint">enter your Phone number</string>
+    <string name="edit_fav_menu">Edit</string>
+    <string name="reward_rule_1">1. invite your friends to download and sign up for backPack</string>
+    <string name="reward_rule_2"><![CDATA[2. They will get <b> 10% </b> off thier first activity]]></string>
+    <string name="reward_rule_3">3. And you will get SAR 10 after they complete first Activity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_qr">QRActivity</string>
+    <string name="title_activity_licenses">LicensesActivity</string>
+    <string name="title_activity_add_license">Add License</string>
+    <string name="title_activity_add_new">AddNewActivity</string>
+    <string name="people_txt">20 People</string>
+    <string name="title_activity_decelration">Decelration</string>
+    <string name="title_activity_idverifcaion">ID Verifcaion</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="gender">Gender</string>
+    <string name="logTokenButton">logToken Button</string>
+    <string name="medical_condItion">Medical Condition</string>
+    <string name="have_you_over_have_thefolwing_medical_conditon">Have you over had the following medical \n condition(s) ?</string>
+    <string name="lastmessage">Last Message</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="lang">AR</string>
+    <string name="group_number">Group Number</string>
+    <string name="group_name">Group Name</string>
+    <string name="confirm_by_ticket_number">confirm by Ticket Number</string>
+    <string name="add_add_ons">Add an Add-on</string>
+    <string name="ok">ok</string>
+    <string name="Warning_title">Warning</string>
+    <string name="Warning_msg">Careful this will case to restart the application</string>
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+
+    </string-array>
+
+    <string-array name="nationality_type_array">
+        <item>National ID</item>
+        <item>Passport</item>
+    </string-array>
+</resources>

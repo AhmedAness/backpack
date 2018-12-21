@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/settings"
+        android:visible="false"
+        android:title="settings"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/add_item"
+        android:visible="false"
+        android:icon="@drawable/plus1"
+        android:title="+"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/ContinueLater"
+        android:visible="false"
+
+        android:title="@string/continuelater"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/calender"
+        android:visible="false"
+        android:icon="@drawable/calender_gray"
+        android:title="@string/calender"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/individual_item"
+        android:visible="false"
+        android:icon="@drawable/individual_icon"
+        android:title="@string/individual"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/delete_activity"
+        android:visible="false"
+        android:title="@string/delete_activity"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/lang"
+        android:visible="false"
+
+        android:title="@string/lang"
+        app:showAsAction="always" />
+
+
+</menu>

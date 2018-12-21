@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:scrollbars="none"
+    android:paddingStart="@dimen/_16sdp"
+    android:paddingEnd="@dimen/_16sdp"
+    android:background="@color/white"
+    android:paddingTop="@dimen/_10sdp"
+    android:paddingBottom="@dimen/_10sdp"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_5sdp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_gravity="start"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="start"
+                    android:text="@string/activity_status"
+                    android:textColor="@color/bg_color_text"
+                    android:textSize="@dimen/big_text_size"
+                    android:textStyle="bold" />
+
+
+                <!--<LinearLayout-->
+                    <!--android:background="@drawable/edit_boarder"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_marginEnd="@dimen/_10sdp"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:layout_height="wrap_content">-->
+                    <!--<FrameLayout-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content">-->
+                        <!--<RelativeLayout-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:orientation="horizontal"-->
+                            <!--android:visibility="gone"-->
+                            <!--android:layout_height="match_parent">-->
+
+                            <!--<TextView-->
+                                <!--android:layout_width="wrap_content"-->
+
+                                <!--android:textColor="@color/black"-->
+                                <!--android:layout_height="match_parent"-->
+                                <!--android:id="@+id/on"-->
+                                <!--android:text="@string/on"/>-->
+                            <!--<TextView-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_toEndOf="@+id/on"-->
+                                <!--android:layout_marginStart="2dp"-->
+                                <!--android:textColor="@color/black"-->
+                                <!--android:layout_height="match_parent"-->
+                                <!--android:text="@string/off"/>-->
+                        <!--</RelativeLayout>-->
+
+                <ImageButton
+                    android:id="@+id/balance_switch"
+                    android:layout_width="wrap_content"
+                    android:minHeight="@dimen/_50sdp"
+                    android:minWidth="@dimen/_66sdp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/payment_switch" />
+
+                        <Switch
+                            android:id="@+id/ac_status"
+                            android:layout_width="wrap_content"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_alignParentEnd="true"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            android:background="@drawable/edit_boarder"
+                            android:checked="true"
+                            android:switchMinWidth="@dimen/_50sdp"
+                            android:track="@drawable/switch_track_custom"
+                            android:thumb="@drawable/switch_thumb_custom"
+                            android:textOn="@string/on"
+                            android:showText="true"
+                            android:textOff="@string/off"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content" />
+                    <!--</FrameLayout>-->
+
+
+
+                <!--</LinearLayout>-->
+
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:layout_gravity="start"
+                    android:text="@string/this_activity_can_be_seen_and_checked_now"
+                    android:textColor="@color/gray" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="#a6a6a6" />
+
+<!--/////////////////////////////////////////-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:weightSum="7">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:layout_gravity="start|center_vertical"
+                    android:gravity="start"
+                    android:textColor="@color/bg_color_text"
+                    android:text="@string/booking_prefrences"
+                    android:textSize="@dimen/big_text_size"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_weight="2"
+                    android:layout_marginStart="@dimen/_60sdp"
+                    android:layout_height="@dimen/_30sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:id="@+id/booking_prefrences_edit_btn"
+                        android:background="@drawable/edit_boarder"
+                        android:gravity="center"
+                        android:text="@string/Edit"
+                        android:textColor="@color/colorAccent" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:gravity="start"
+                android:layout_gravity="start"
+                android:text="@string/notice_in_advance"
+                android:textColor="#4A4A4A"
+                android:textSize="@dimen/med_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:id="@+id/ac_notice_in_advance"
+                android:text="12 hours notice"
+                android:textColor="#4A4A4A"
+                android:layout_gravity="start"
+                android:gravity="start"
+                android:textSize="@dimen/min_text_size" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/booking_window"
+                android:gravity="start"
+                android:layout_gravity="start"
+                android:textColor="#4A4A4A"
+                android:textSize="@dimen/med_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:id="@+id/ac_booking_window"
+                android:text="2 Weeks"
+                android:layout_gravity="start"
+                android:gravity="start"
+                android:textColor="#4A4A4A"
+                android:textSize="@dimen/min_text_size" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/Booking_available_for"
+                android:gravity="start"
+                android:layout_gravity="start"
+                android:textColor="#4A4A4A"
+                android:textSize="@dimen/med_text_size"
+                android:textStyle="bold" />
+
+            <GridLayout
+                android:id="@+id/booking_available_for"
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                android:rowCount="2"
+                android:visibility="gone"
+                android:columnCount="2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:layout_gravity="start"
+                    android:orientation="horizontal">
+
+
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:visibility="gone"
+                        android:padding="5dp"
+                        android:src="@drawable/account_footer_icon_unchecked" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:drawableStart="@drawable/individual_icon"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:text="@string/individuals"
+                        android:textColor="#4A4A4A"
+                        android:id="@+id/ac_individuals"
+                        android:textSize="@dimen/min_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:visibility="gone"
+                        android:src="@drawable/private_group_icon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/ac_private_groups"
+                        android:drawableStart="@drawable/private_group_icon"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:text="@string/private_Groups"
+                        android:gravity="center_vertical"
+
+                        android:textColor="#4A4A4A"
+                        android:textSize="@dimen/min_text_size" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+
+                android:background="@color/gray" />
+
+
+            <!--///////////////-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:weightSum="7">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="start"
+                    android:layout_gravity="start"
+                    android:textColor="@color/bg_color_text"
+                    android:text="@string/availability"
+                    android:textSize="@dimen/big_text_size"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_marginStart="@dimen/_60sdp"
+                    android:layout_weight="2"
+                    android:layout_height="@dimen/_30sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:id="@+id/availability_edit_btn"
+                        android:background="@drawable/edit_boarder"
+                        android:gravity="center"
+                        android:text="@string/Edit"
+                        android:textColor="@color/colorAccent" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:gravity="start"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:textColor="#4A4A4A"
+                android:textSize="@dimen/med_text_size"
+                android:textStyle="bold"
+                android:text="@string/availability_dates_amp_times" />
+
+
+            <GridLayout
+                android:id="@+id/availability_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="2"
+                android:columnCount="1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@color/gray" />
+
+
+            <!--////////////////////-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:weightSum="7">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="start"
+                    android:layout_gravity="start"
+                    android:textColor="@color/bg_color_text"
+                    android:text="@string/length_and_capacity"
+                    android:textSize="@dimen/big_text_size"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_marginStart="@dimen/_60sdp"
+                    android:orientation="vertical"
+                    android:layout_weight="2"
+                    android:layout_height="@dimen/_30sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:id="@+id/length_and_capacity_edit_btn"
+                        android:background="@drawable/edit_boarder"
+                        android:gravity="center"
+                        android:text="@string/Edit"
+                        android:textColor="@color/colorAccent" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/activity_length"
+                android:gravity="start"
+                android:layout_gravity="start"
+                android:textColor="#4A4A4A"
+                android:textSize="@dimen/med_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_gravity="start"
+                android:layout_marginTop="15dp"
+                android:text="@string/how_long_does_this_activity_lasts_for"
+                android:textColor="#4A4A4A"
+                android:textSize="@dimen/min_text_size" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:gravity="start"
+                android:id="@+id/ac_activity_length"
+                android:layout_gravity="start"
+                android:text="6 Hrs"
+                android:textColor="@color/bg_color_text"
+                android:textSize="@dimen/min_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/capacity"
+                android:textColor="@color/bg_color_text"
+                android:textSize="@dimen/min_text_size"
+                android:gravity="start"
+                android:layout_gravity="start"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/maximum_number_of_booking_for_each_length_of_this_activity"
+                android:textColor="@color/gray"
+                android:gravity="start"
+                android:layout_gravity="start"
+                android:textSize="@dimen/min_text_size" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/capacity_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/total_capacity"/>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentEnd="true"
+                   android:id="@+id/ac_total_capacity"
+                   android:text="@string/total_capacity"/>
+
+           </RelativeLayout>
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/private_group"/>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentEnd="true"
+                   android:id="@+id/ac_private_group"
+                   android:text="@string/total_capacity"/>
+
+           </RelativeLayout>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:weightSum="7">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="start"
+                    android:layout_gravity="start"
+                    android:textColor="@color/bg_color_text"
+                    android:text="@string/pricing"
+                    android:textSize="@dimen/big_text_size"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_marginStart="@dimen/_60sdp"
+                    android:orientation="vertical"
+                    android:layout_weight="2"
+                    android:layout_height="@dimen/_30sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:id="@+id/pricing_edit_btn"
+                        android:background="@drawable/edit_boarder"
+                        android:gravity="center"
+                        android:text="@string/Edit"
+                        android:textColor="@color/colorAccent" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/per_individual"
+                android:textColor="@color/bg_color_text"
+                android:gravity="start"
+                android:layout_gravity="start"
+                android:textSize="@dimen/med_text_size"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/price_per_individual_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/private_Groups"
+                android:textColor="@color/bg_color_text"
+                android:gravity="start"
+                android:layout_gravity="start"
+                android:textSize="@dimen/min_text_size"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:id="@+id/ac_private_Groups_price"
+                    android:text="SAR 2500"
+                    android:gravity="start"
+                    android:layout_gravity="start"
+                    android:textColor="@color/bg_color_text"
+                    android:textSize="@dimen/min_text_size"
+
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@color/gray" />
+
+            <!--///////////////////////-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:weightSum="7">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/bg_color_text"
+                    android:layout_weight="5"
+                    android:text="@string/organisers"
+                    android:gravity="start"
+                    android:layout_gravity="start"
+                    android:textSize="@dimen/big_text_size"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_marginStart="@dimen/_60sdp"
+                    android:layout_weight="2"
+                    android:layout_height="@dimen/_30sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:id="@+id/organisers_edit_btn"
+                        android:background="@drawable/edit_boarder"
+                        android:gravity="center"
+                        android:text="@string/Edit"
+                        android:textColor="@color/colorAccent" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_gravity="start"
+                android:layout_marginTop="15dp"
+                android:text="@string/is_there_some_one_helping_you_to_organize_the_activity_invent_them"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/min_text_size" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:gravity="start"
+                    android:text="@string/admins"
+                    android:textColor="@color/bg_color_text"
+                    android:textSize="@dimen/min_text_size"
+
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_gravity="end"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:text="@string/can_edit_activity"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/min_text_size" />
+            </LinearLayout>
+            <GridLayout
+                android:id="@+id/admins_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="2"
+                android:columnCount="1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mahmoud rashad"
+                android:visibility="gone"
+                android:textColor="@color/bg_color_text"
+                android:textSize="@dimen/min_text_size"
+
+                android:textStyle="bold" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:gravity="start"
+                    android:text="@string/organizer"
+                    android:textColor="@color/bg_color_text"
+                    android:textSize="@dimen/min_text_size"
+
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_height="wrap_content"
+                    android:text="@string/can_add_confirm_booking_only"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/min_text_size" />
+
+
+            </LinearLayout>
+
+            <GridLayout
+                android:id="@+id/organizer_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="2"
+                android:columnCount="1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="mahmoud rashad"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:textSize="@dimen/min_text_size"
+
+                android:textStyle="bold" />
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Samy Ahmed"
+            android:textColor="@color/black"
+            android:textSize="@dimen/min_text_size"
+
+            android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

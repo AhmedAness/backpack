@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:background="@color/colorAccent"
+
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Kay"
+        android:id="@+id/key"
+        android:textColor="@color/white"
+        android:textSize="@dimen/med_text_size"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="value"
+        android:id="@+id/value"
+        android:textColor="@color/white"
+        android:textSize="@dimen/med_text_size"
+        android:textStyle="bold"
+        android:layout_alignParentEnd="true"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>

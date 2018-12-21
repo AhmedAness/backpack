@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/_5sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:layout_width="wrap_content"
+        android:textStyle="bold"
+        android:id="@+id/date"
+        android:textSize="@dimen/big_text_size"
+        android:text="12/4/2018"
+        android:textColor="@color/bg_color_text"
+        android:layout_height="wrap_content" />
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/category_recycer"
+        android:layout_height="wrap_content"
+       android:id="@+id/list3"
+        android:orientation="vertical"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_below="@+id/category_recycer"
+        tools:listitem="@layout/overview_day_list_item"
+        android:layout_height="wrap_content"></ListView>
+
+</LinearLayout>

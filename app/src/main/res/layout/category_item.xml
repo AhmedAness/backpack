@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_2sdp"
+    android:layout_marginEnd="@dimen/_5sdp"
+    android:layout_marginBottom="@dimen/_5sdp"
+    app:cardElevation="@dimen/_5sdp">
+
+    <com.loopeer.shadow.ShadowView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="70dp"
+        app:shadowMarginBottom="3.5dp"
+        app:shadowMarginRight=".2dp"
+        app:shadowMarginLeft=".2dp"
+        app:shadowMarginTop=".2dp"
+        app:shadowColor="#7b7a7a"
+        app:cornerRadius="6dp"
+        app:shadowRadius="20dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      >
+
+        <ImageView
+            android:id="@+id/category_img"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:scaleType="fitXY"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/category_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/category_img"
+            android:layout_marginStart="@dimen/_16ssp"
+            android:fontFamily="monospace"
+            android:textColor="#000"
+            android:textSize="@dimen/_14ssp"
+            tools:text="Land" />
+
+    </RelativeLayout>
+    </com.loopeer.shadow.ShadowView>
+
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.andrzejchm.RESTMock:android-0.3.1">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/android-0.3.1.aar/f56a0f289feb46956a99c7be72c16dc0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/android-0.3.1.aar/f56a0f289feb46956a99c7be72c16dc0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

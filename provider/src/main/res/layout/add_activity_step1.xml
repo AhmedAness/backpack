@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/_16sdp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:paddingRight="@dimen/_16sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/name_you_activity"
+            android:textColor="#666666"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/name_you_activity_disc"
+            android:textColor="#BABABA"
+            android:textSize="@dimen/big_text_size"
+            android:textStyle="bold" />
+
+        <EditText
+            android:backgroundTint="@color/background_transparent"
+            android:id="@+id/activity_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:hint="@string/Activity_Title_hint" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/type_of_activity"
+            android:textColor="#666666"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/type_of_activity_disc"
+            android:textColor="#BABABA"
+            android:textSize="@dimen/big_text_size"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radio"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content">
+
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Who_can_book_it"
+            android:textColor="#666666"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Who_can_book_it_hint"
+            android:textColor="#BABABA"
+            android:textSize="@dimen/big_text_size"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Describe_this_activity"
+            android:textColor="#666666"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Describe_this_activity_hint"
+            android:textColor="#BABABA"
+            android:textSize="@dimen/big_text_size"
+            android:textStyle="bold" />
+
+        <EditText
+            android:backgroundTint="@color/background_transparent"
+            android:id="@+id/disc"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:gravity="center_vertical"
+            android:hint="@string/Describe_this_activity"
+
+            />
+
+
+    </LinearLayout>
+</ScrollView>

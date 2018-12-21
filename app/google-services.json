@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "693478871461",
+    "firebase_url": "https://backpack2-1f058.firebaseio.com",
+    "project_id": "backpack2-1f058",
+    "storage_bucket": "backpack2-1f058.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693478871461:android:444f5ef062f9d361",
+        "android_client_info": {
+          "package_name": "com.wasltec.backpack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "693478871461-elv5h2j0ci158j5i0df4vb391mbqi5na.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wasltec.backpack",
+            "certificate_hash": "b2c8439ba3ca6526c6c6e1ee36f6f4140b62a1bb"
+          }
+        },
+        {
+          "client_id": "693478871461-dg8204kbo4ade4131n1e5akusl8vd9ti.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8s6QfgjJdhSwWvoTs3i6uXkLssava00c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "693478871461-dg8204kbo4ade4131n1e5akusl8vd9ti.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

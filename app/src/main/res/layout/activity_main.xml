@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/con"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <include
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
+        android:background="@color/colorPrimary"
+        app:itemTextColor="#fff"
+        app:itemIconTint="#fff"
+        app:menu="@menu/activity_main_drawer">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom"
+            android:background="#FF5252"
+            android:layout_marginBottom="@dimen/_50sdp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_activity_pro"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:textColor="#eee"
+                android:gravity="start|center_vertical"
+                android:paddingStart="@dimen/_16sdp"
+                android:textSize="@dimen/_11sdp"
+                android:background="@android:color/transparent"
+                android:text="@string/activity_provider_btn" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/app_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:text="Backpack v 1.0.0"
+            android:textColor="@color/gray"
+
+            />
+
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="65">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/phone_lyout"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/backpack_icon_gray_watermark" />
+
+            <LinearLayout
+                android:id="@+id/phone_lyout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/btns"
+                android:layout_margin="20dp"
+                android:background="@drawable/rateboard"
+                android:weightSum="100">
+
+                <Spinner
+                    android:id="@+id/phone_code"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="25"
+                    android:background="@color/white"
+
+                    android:dropDownSelector="#e8e6e6"
+                    android:gravity="center"
+                    android:textSize="@dimen/big_text_size"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray" />
+
+                <EditText
+                    android:id="@+id/phone_number"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="75"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/enter_your_phone_number_hint"
+                    android:inputType="phone"
+                    android:maxLines="1"
+                    android:padding="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:textColorLink="#FF000000"
+                    android:textSize="@dimen/text_medium" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:id="@+id/btns"
+                android:background="@drawable/rateboard2"
+                android:orientation="horizontal"
+                >
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Login | Register"
+                    android:layout_gravity="center"
+                    android:id="@+id/login"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    />
+
+                <!--<Button-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text=" Register"-->
+                    <!--android:id="@+id/register"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="@android:color/transparent"-->
+                    <!--/>-->
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_weight="35"
+            android:background="@drawable/white_pattern"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/help"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/skip"
+                android:textSize="@dimen/text_large"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/help"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/skip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:textSize="@dimen/mid_text"
+                android:text="@string/skip"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

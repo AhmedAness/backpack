@@ -1,0 +1,126 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_30sdp"
+    android:layout_marginEnd="@dimen/_30sdp"
+    android:layout_gravity="center"
+    android:paddingTop="@dimen/_10sdp"
+    android:background="@drawable/board2"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/name"
+        android:paddingStart="@dimen/_16sdp"
+        android:gravity="center"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:paddingEnd="@dimen/_16sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eman" />
+
+    <TextView
+        android:id="@+id/ticket_number_lable"
+        android:layout_width="match_parent"
+        android:paddingStart="@dimen/_16sdp"
+        android:paddingEnd="@dimen/_16sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:gravity="center"
+        android:paddingBottom="@dimen/_5sdp"
+        android:layout_height="wrap_content"
+        android:text="Ticket No." />
+    <TextView
+        android:id="@+id/ticket_number"
+        android:layout_width="match_parent"
+        android:paddingStart="@dimen/_16sdp"
+        android:paddingEnd="@dimen/_16sdp"
+        android:gravity="center"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:layout_height="wrap_content"
+        android:text="xxxx,xxxx,xxxx,xxxx" />
+
+    <View
+        android:id="@+id/divider6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+    <CheckBox
+        android:id="@+id/check"
+        android:visibility="gone"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:paddingTop="@dimen/_15sdp"
+        android:paddingBottom="@dimen/_15sdp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/Gray_Dolphin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="i have checked ID and all documents" />
+    <TextView
+        android:id="@+id/Add_addons_btn"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="@color/gray"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:text="@string/check_in"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/next"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+            <TextView
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:paddingStart="@dimen/_10sdp"
+            android:textSize="@dimen/_12ssp"
+            android:text="SR 150" />
+
+            <TextView
+                android:id="@+id/paid_flag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp"
+
+                android:paddingStart="@dimen/_10sdp"
+                android:text="Not paid" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/view_ticket"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/_30sdp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:layout_gravity="center"
+            android:paddingEnd="@dimen/_5sdp"
+            android:paddingStart="@dimen/_5sdp"
+            android:gravity="center"
+            android:text="@string/view_ticket"
+            android:textStyle="bold"
+            android:textColor="@color/Platinum" />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

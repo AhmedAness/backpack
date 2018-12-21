@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/_10sdp"
+    android:paddingEnd="@dimen/_16sdp"
+    android:paddingStart="@dimen/_16sdp"
+    android:paddingTop="@dimen/_25sdp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".RewardActivity"
+    tools:showIn="@layout/activity_reward">
+
+    <TextView
+        android:id="@+id/r1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:textColor="#979797"
+        android:text= "@string/reward_rule_1"
+        android:textSize="@dimen/mid_text" />
+
+    <TextView
+        android:id="@+id/r2"
+        android:layout_width="wrap_content"
+        android:textColor="#979797"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/r1"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:text="@string/reward_rule_2"
+        android:textSize="@dimen/mid_text" />
+
+    <TextView
+        android:id="@+id/r3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/r2"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:textColor="#979797"
+        android:text="@string/reward_rule_3"
+        android:textSize="@dimen/mid_text" />
+
+    <TextView
+        android:id="@+id/user_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/invite_btn_shadow"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:textColor="#979797"
+        android:text="Your Code: ERD967"
+        android:textSize="@dimen/mid_text" />
+
+    <com.loopeer.shadow.ShadowView
+        android:id="@+id/invite_btn_shadow"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="70dp"
+        app:shadowRadius="20dp"
+        app:shadowMarginBottom="3dp"
+        app:shadowMarginRight="2dp"
+        android:background="@color/zxing_transparent"
+        app:backgroundColor="@color/zxing_transparent"
+        app:shadowMarginLeft="2dp"
+        app:shadowColor="#4a000000">
+    <Button
+        android:id="@+id/invite_btn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FF5B4B"
+        app:layout_gravity="center"
+        android:paddingBottom="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_50sdp"
+        android:paddingStart="@dimen/_50sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:text="Invite Friends"
+        android:textColor="#DEFFFFFF" />
+    </com.loopeer.shadow.ShadowView>
+
+</RelativeLayout>
