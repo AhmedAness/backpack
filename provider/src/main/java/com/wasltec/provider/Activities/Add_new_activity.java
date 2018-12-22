@@ -285,10 +285,11 @@ public class Add_new_activity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
        if (mode==1){
-           if (getSupportFragmentManager().getBackStackEntryCount() > 1)
+           if (getSupportFragmentManager().getBackStackEntryCount() > 1) {
                getSupportFragmentManager().popBackStack();
+               step_number--;
 //            super.onBackPressed();
-           else
+           }else
                Add_new_activity.this.finish();
        }
        else

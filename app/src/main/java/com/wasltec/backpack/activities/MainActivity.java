@@ -383,11 +383,11 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(this, FavouriteActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_payment) {
-            Intent intent = new Intent(this, PaymentRefActivity.class);
-            startActivity(intent);
+//            Intent intent = new Intent(this, PaymentRefActivity.class);
+//            startActivity(intent);
         } else if (id == R.id.nav_redeem) {
-            Intent intent = new Intent(this, RewardActivity.class);
-            startActivity(intent);
+//            Intent intent = new Intent(this, RewardActivity.class);
+//            startActivity(intent);
         } else if (id == R.id.nav_messages) {
             Intent intent = new Intent(this, InboxActivity.class);
             startActivity(intent);

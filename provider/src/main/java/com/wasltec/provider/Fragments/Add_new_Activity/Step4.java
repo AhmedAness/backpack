@@ -94,7 +94,7 @@ public class Step4 extends Fragment {
             mMap1 = googleMap;
             MarkerOptions markerOptions = new MarkerOptions().position(ny).title("activity location");
             mActivity = googleMap.addMarker(markerOptions);
-            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(ny, 2));
+            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(ny, 7));
             googleMap.getUiSettings().setAllGesturesEnabled(true);
 //            if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
 //                // TODO: Consider calling
@@ -158,7 +158,7 @@ public class Step4 extends Fragment {
                 mSecondMap.setVisibility(View.GONE);
                 mMeeting.setPosition(mMap1.getCameraPosition().target);
                 mLocationMeeting.setText(getCountryName(getContext(), mMap1.getCameraPosition().target));
-                mgMap2.moveCamera(CameraUpdateFactory.newLatLngZoom(mMap1.getCameraPosition().target,3));
+                mgMap2.moveCamera(CameraUpdateFactory.newLatLngZoom(mMap1.getCameraPosition().target,7));
             }
             else{
                 mSecondMap.setVisibility(View.VISIBLE);
@@ -277,7 +277,7 @@ public class Step4 extends Fragment {
                 LatLng latLng=new LatLng(lat,lng);
                 mActivity.setPosition(latLng);
                 mLocationName.setText(getCountryName(getContext(), latLng));
-                mMap1.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,3));
+                mMap1.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,7));
 
                 Toast.makeText(getActivity(),lat+" "+lng,Toast.LENGTH_SHORT).show();
 
@@ -290,7 +290,7 @@ public class Step4 extends Fragment {
                 LatLng latLng=new LatLng(lat,lng);
                 mMeeting.setPosition(latLng);
                 mLocationMeeting.setText(getCountryName(getContext(), latLng));
-                mgMap2.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,3));
+                mgMap2.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,7));
                 Toast.makeText(getActivity(),lat+" "+lng,Toast.LENGTH_SHORT).show();
 
             }

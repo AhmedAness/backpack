@@ -331,8 +331,9 @@
                 android:paddingEnd="@dimen/_20sdp"
                 android:paddingStart="@dimen/_20sdp"
                 android:text="@string/confirm_btn"
+                android:textSize="@dimen/_20sdp"
                 android:textStyle="bold"
-                android:textColor="#fff"
+                android:textColor="#DEFFFFFF"
 
                 />
 

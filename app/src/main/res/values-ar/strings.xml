@@ -28,7 +28,7 @@
     <string name="dummy_price">150 ريال سعودي فردي</string>
     <string name="check_option_btn">راجع الخيارات</string>
     <string name="activity_provider_btn">كن مزودًا للأنشطة</string>
-    <string name="show_50_more">عرض (٪ د) المزيد</string>
+    <string name="show_50_more">عرض (%d) المزيد</string>
     <string name="search">بحث</string>
     <string name="backbag_menu">الأنشطة الخاصة بك</string>
     <string name="messages_menu">رسائل</string>
@@ -47,8 +47,8 @@
     <string name="tickets">تذاكر</string>
     <string name="time_txt">زمن</string>
     <string name="all_activites_btn">كل ينشط</string>
-    <string name="price_holder">SR٪ .2f لكل فرد</string>
-    <string name="explore_holder">استكشف٪ s Near By</string>
+    <string name="price_holder">SR %s لكل فرد</string>
+    <string name="explore_holder">استكشف  %d  بالقرب منك </string>
     <string name="activates_for_txt">ينشط</string>
     <string name="price_for_activity">سعر للنشاط</string>
     <string name="future_txt">مستقبل</string>
@@ -67,18 +67,18 @@
     <string name="add_ones_txt">أضف هؤلاء</string>
     <string name="save_btn">حفظ</string>
     <string name="counter_holder">للفرد د</string>
-    <string name="activity_period_holder">فترة النشاط٪ s</string>
-    <string name="rating_num_holder">تقييمات٪ .2f</string>
+    <string name="activity_period_holder"> فترة النشاط %s ساعه %s </string>
+    <string name="rating_num_holder">تقييمات %s</string>
     <string name="included_txt">شمل</string>
     <string name="currency">ريال سعودى</string>
-    <string name="view_all_reviews_holder">عرض الكل٪ d الآراء</string>
+    <string name="view_all_reviews_holder">عرض الكل %d الآراء</string>
     <string name="family_frendly_txt">مناسب للعائلات</string>
     <string name="group_activity">نشاط جماعي</string>
     <string name="males_and_females_txt">الذكور والإناث</string>
-    <string name="fiter_btn_holder">٪ d أنشطة</string>
-    <string name="tickets_count_holder">٪ d تذاكر</string>
-    <string name="tickets_details_holder">الكبار٪ d الطفل٪ د</string>
-    <string name="Slots_remain_holder">(تبقى٪ d من الشرائح)</string>
+    <string name="fiter_btn_holder"> %d أنشطة</string>
+    <string name="tickets_count_holder"> %dتذاكر</string>
+    <string name="tickets_details_holder">الكبار %d الطفل %d </string>
+    <string name="Slots_remain_holder">(تبقى %d من الشرائح)</string>
     <string name="total_price_payment_holder">SAR %.2f     </string>
     <string name="no_internet">لا يوجد اتصال بالإنترنت</string>
     <string name="no_data">لا يوجد \ n تم العثور على البيانات</string>
@@ -110,11 +110,11 @@
     <string name="mail_txtview_error">بريد إلكتروني خاطئ</string>
     <string name="account_present_holder">حسابك هو٪ d ٪٪ مكتمل</string>
     <string name="title_activity_inbox">صندوق الوارد</string>
-    <string name="resend_code_holder">إعادة إرسال رمز جديد في ٪d</string>
+    <string name="resend_code_holder">إعادة إرسال رمز جديد في %d</string>
     <string name="enter_your_phone_number_hint">أدخل رقم هاتفك</string>
     <string name="edit_fav_menu">تصحيح</string>
     <string name="reward_rule_1">1. دعوة أصدقائك لتحميل والاشتراك في backPack</string>
-    <string name="reward_rule_2">2. سيحصل على &lt;b&gt; 10٪ &lt;/ b&gt; من نشاطه الأول</string>
+    <string name="reward_rule_2">2. سيحصل على &lt;b&gt; %d &lt;/ b&gt; من نشاطه الأول</string>
     <string name="reward_rule_3">3. ستحصل على 10 ريال سعودي بعد إكمال النشاط الأول</string>
 
 
@@ -136,7 +136,7 @@
     <string name="lang">EN</string>
     <string name="add_add_ons">إضافة الوظائف الإضافية</string>
     <string name="ok">تم </string>
-    <string name="Warning_title">تحزير </string>
+    <string name="Warning_title">تحذير </string>
     <string name="Warning_msg">هذا سيؤدي الي اعاده تشغيل التطبيق</string>
     <string name="log_out">تسجيل الخروج </string>
 

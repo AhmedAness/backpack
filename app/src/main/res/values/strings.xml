@@ -17,10 +17,10 @@
     <string name="title_activity_main">activites near jeddah</string>
     <string name="_37_ratings">37 ratings</string>
     <string name="filter_btn">Filter</string>
-    <string name="activity_name">Heking in Heluis</string>
-    <string name="jfjfjfjfj">jfjfjfjfj</string>
-    <string name="dummy_desc">jfjfjfdfjkfshhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhjfj</string>
-    <string name="dummy_period">8 hours</string>
+    <string name="activity_name">title</string>
+
+    <string name="dummy_desc">desc desc desc desc desc desc desc desc desc desc desc desc desc desc</string>
+    <string name="dummy_period">Activity period 8 hours</string>
     <string name="trip_rules">Trip Rules</string>
     <string name="important_notes">important_notes</string>
     <string name="similar_activities">Similar Activities</string>
@@ -39,7 +39,7 @@
     <string name="dummy_count">for 2 Individuals</string>
     <string name="accept_btn">Book it</string>
     <string name="dummy_country_locatio">saudi arabia</string>
-    <string name="dummy_location">Kulles,Makkah province</string>
+    <string name="dummy_location">location,location location</string>
     <string name="dummy_povider">By kilkg</string>
     <string name="log_out">Logout</string>
 
@@ -47,7 +47,7 @@
     <string name="tickets">Tickets</string>
     <string name="time_txt">Time</string>
     <string name="all_activites_btn">All activates</string>
-    <string name="price_holder">SR %.2f per Individual</string>
+    <string name="price_holder">SR %s per Individual</string>
     <string name="explore_holder">Explore %s Near By</string>
     <string name="activates_for_txt">Activates for</string>
     <string name="price_for_activity">Price of Activity</string>
@@ -67,8 +67,8 @@
     <string name="add_ones_txt">Add ones</string>
     <string name="save_btn">Save</string>
     <string name="counter_holder">For %d individual</string>
-    <string name="activity_period_holder">Activity period %s</string>
-    <string name="rating_num_holder">%.2f Ratings</string>
+    <string name="activity_period_holder">Activity period %s Hours %s mints</string>
+    <string name="rating_num_holder">%s Ratings</string>
     <string name="included_txt">included</string>
     <string name="currency">SR</string>
     <string name="view_all_reviews_holder">View All %d Reviews</string>
@@ -103,7 +103,7 @@
     <string name="title_activity_account">Account</string>
     <string name="edit_btn">Edit</string>
     <string name="title_activity_favourite">Favourite</string>
-    <string name="tab_text_1">Favourite</string>
+    <string name="tab_text_1">Favourite List</string>
     <string name="tab_text_2">List</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_payment_ref">Payment</string>
@@ -134,7 +134,7 @@
     <string name="have_you_over_have_thefolwing_medical_conditon">Have you over had the following medical \n condition(s) ?</string>
     <string name="lastmessage">Last Message</string>
     <string name="dismiss">Dismiss</string>
-    <string name="lang">AR</string>
+    <string name="lang">عربي</string>
     <string name="group_number">Group Number</string>
     <string name="group_name">Group Name</string>
     <string name="confirm_by_ticket_number">confirm by Ticket Number</string>
@@ -142,6 +142,10 @@
     <string name="ok">ok</string>
     <string name="Warning_title">Warning</string>
     <string name="Warning_msg">Careful this will case to restart the application</string>
+    <string name="activity_owner">activity_owner</string>
+    <string name="upload_your_id">upload your ID</string>
+    <string name="view_ticket">View Ticket</string>
+    <string name="ticket_no">Ticket No.</string>
     <string-array name="gender_array">
         <item>Male</item>
         <item>Female</item>

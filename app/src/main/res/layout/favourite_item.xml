@@ -50,28 +50,28 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_80sdp"
+        android:layout_height="wrap_content"
         android:layout_toEndOf="@id/shadow_view"
         android:gravity="center"
         android:orientation="vertical">
     <TextView
         android:id="@+id/item_name"
         android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:paddingBottom="@dimen/_5sdp"
         android:paddingEnd="@dimen/_16ssp"
         android:paddingStart="@dimen/_16ssp"
         android:textColor="#4A4A4A"
-        android:textSize="@dimen/_18ssp"
+        android:textSize="@dimen/_16ssp"
         tools:text="Heking in Heluis" />
 
     <TextView
         android:id="@+id/item_description"
         android:layout_weight="1"
         android:textColor="#9B9B9B"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/item_name"
         android:layout_toEndOf="@id/activity_img"
 
@@ -85,8 +85,8 @@
     <TextView
         android:id="@+id/item_price"
         android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/item_price"
         android:layout_toEndOf="@id/activity_img"
         android:paddingBottom="@dimen/_5sdp"

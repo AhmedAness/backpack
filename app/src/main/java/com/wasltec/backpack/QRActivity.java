@@ -1,9 +1,11 @@
 package com.wasltec.backpack;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.TextView;
 
 import com.androidnetworking.AndroidNetworking;
@@ -13,6 +15,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.wasltec.backpack.Adapters.Slider_Adopter;
 import com.wasltec.backpack.activities.DetailsActivity;
+import com.wasltec.backpack.activities.MainActivity;
 import com.wasltec.backpack.models.ActivityDetails.ActivityDetail;
 import com.wasltec.backpack.models.BookingDetails.BookingDetailsModel;
 import com.wasltec.backpack.utils.URLManager;
@@ -33,6 +36,8 @@ public class QRActivity extends AppCompatActivity {
     private TextView mDate;
     private TextView mTime;
     private TextView mTextView11;
+    private TextView confirm_btn;
+
     private ActivityDetail object;
 
 
@@ -62,6 +67,21 @@ public class QRActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        confirm_btn=findViewById(R.id.confirm_btn);
+        confirm_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Intent i = new Intent(QRActivity.this, MainActivity.class);
+// set the new task and clear flags
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(i);
+                finish();
+
+            }
+        });
 
 
     }

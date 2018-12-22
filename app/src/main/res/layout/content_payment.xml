@@ -288,7 +288,7 @@
         android:background="@color/colorPrimary"
         android:drawableStart="@drawable/qr_code_icon_white"
         android:padding="@dimen/_5sdp"
-        android:text="View Ticket"
+        android:text="@string/view_ticket"
         android:textColor="#fff"
         android:textStyle="bold"
         android:visibility="gone" />

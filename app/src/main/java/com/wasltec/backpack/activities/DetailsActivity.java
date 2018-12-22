@@ -29,6 +29,7 @@ import android.widget.Toast;
 
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.error.ANError;
+import com.androidnetworking.interfaces.JSONArrayRequestListener;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
 import com.borjabravo.readmoretextview.ReadMoreTextView;
 import com.bumptech.glide.Glide;
@@ -39,7 +40,9 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.wasltec.backpack.AccountActivity;
 import com.wasltec.backpack.Adapters.AddonesAdapter;
+import com.wasltec.backpack.Adapters.SimilarAdapter;
 import com.wasltec.backpack.DataManager;
 import com.wasltec.backpack.R;
 import com.wasltec.backpack.Session;
@@ -47,11 +50,15 @@ import com.wasltec.backpack.models.ActivityDetails.ActivityDetail;
 import com.wasltec.backpack.models.ActivityDetails.ActivityOption;
 import com.wasltec.backpack.models.ActivityDetails.CustomerActivitiesDetailsModel;
 import com.wasltec.backpack.models.ActivityPhoto;
+import com.wasltec.backpack.models.SimilarActivitiesResponse;
 import com.wasltec.backpack.utils.URLManager;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -106,17 +113,23 @@ public class DetailsActivity extends AppCompatActivity {
 
         mMap.getMapAsync(googleMap -> {
 //            LatLng sydney = new LatLng(object.getPlace().getLan(), object.getPlace().getLat());
-//            LatLng ny = new LatLng(object.getActivityLang(), object.getActivityLat());
+            LatLng ny;
+          try {
+                ny = new LatLng(object.getActivityLang(), object.getActivityLat());
+          }catch (Exception e) {
+                ny = new LatLng(34,34);
+          }
 //            googleMap.moveCamera(CameraUpdateFactory.newLatLng(ny));
             //Move the camera to the user's location and zoom in!
             // Creating a marker
             MarkerOptions markerOptions = new MarkerOptions();
 
             // Setting the position for the marker
-            markerOptions.position(new LatLng(34,34));
+//            markerOptions.position(new LatLng(34,34));
+            markerOptions.position(ny);
 //            markerOptions.title(object.getTitle());
 
-//            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng( object.getActivityLat(), object.getActivityLang()), 10.0f));
+            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(ny, 10.0f));
 //            googleMap.addMarker(markerOptions);
         });
         Bundle mapViewBundle = null;
@@ -229,7 +242,10 @@ public class DetailsActivity extends AppCompatActivity {
         }
         mItemDescription.setText(object.getDescription());
 
-        mActivityPeriod.setText(String.format(getString(R.string.activity_period_holder), "" + object.getActivityLang()));
+        int hours = object.getActivityLang().intValue();
+        int mints= (object.getActivityLang().intValue()-hours)*60;
+
+        mActivityPeriod.setText(String.format(getString(R.string.activity_period_holder), "" +hours,""+mints));
         Glide.with(this).load(object.getProvider().getUserPhotoUrl()).apply(new RequestOptions()
                 .placeholder(new ColorDrawable(Color.GRAY))).into(mImageView);
         mItemRating.setRating(object.getRate());
@@ -246,7 +262,34 @@ public class DetailsActivity extends AppCompatActivity {
 //        Log.v("Detail", object.getDate().toString());
         mSimilarActivities.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
-//        mSimilarActivities.setAdapter(new SimilarAdapter(object.getSimilarAcitivity()));
+
+
+        AndroidNetworking.post(URLManager.getInstance().getActivitiesByCategory(""+object.getCategory().getId()))
+                .addHeaders("Authorization", "bearer "+ Session.getInstance(this).getToken())
+                .addJSONObjectBody(new JSONObject())
+                .build()
+                .getAsJSONArray(new JSONArrayRequestListener() {
+                    @Override
+                    public void onResponse(JSONArray response) {
+
+                        Gson gson = new Gson();
+
+                        Type listType = new TypeToken<List<SimilarActivitiesResponse>>() {
+                        }.getType();
+
+//
+                        List<SimilarActivitiesResponse> similarActivitiesResponses = gson.fromJson(response.toString(), listType);
+
+
+                        mSimilarActivities.setAdapter(new SimilarAdapter(similarActivitiesResponses));
+                    }
+
+                    @Override
+                    public void onError(ANError anError) {
+                        mSimilarActivities.setVisibility(View.GONE);
+                    }
+                });
+
 
 
         Thread thread = new Thread(new Runnable() {

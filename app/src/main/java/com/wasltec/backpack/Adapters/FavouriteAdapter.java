@@ -43,7 +43,10 @@ public class FavouriteAdapter extends RecyclerView.Adapter<FavouriteAdapter.Hold
     public void onBindViewHolder(@NonNull Holder holder, int position) {
 //        if (position>0) {
         holder.mItemName.setText(items.get(position).getTitle());
-        holder.mItemPrice.setText(holder.mActivityImg.getContext().getString(R.string.price_holder)+"  "+ items.get(position).getPrice());
+
+
+        holder.mItemPrice.setText(String.format(holder.mActivityImg.getContext().getString(R.string.price_holder), ""+ items.get(position).getPrice())
+        );
 //        holder.mItemRating.setRating(items.get(position).getTitle());
         holder.mItemName.setText(items.get(position).getTitle());
         holder.mItemDescription.setText(items.get(position).getDescription());

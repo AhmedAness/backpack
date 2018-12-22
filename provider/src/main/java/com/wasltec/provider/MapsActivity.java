@@ -108,10 +108,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         googleMap.getUiSettings().setMyLocationButtonEnabled(true);
         googleMap.getUiSettings().setAllGesturesEnabled(true);
 //        // Add a marker in Sydney and move the camera
-//        final LatLng[] ny = {new LatLng(24.774265, 46.738586)};
-//        MarkerOptions markerOptions=new MarkerOptions().position(ny[0]).title("activity location");
+        final LatLng[] ny = {new LatLng(24.774265, 46.738586)};
+        MarkerOptions markerOptions=new MarkerOptions().position(ny[0]).title("activity location");
 //        Marker m = googleMap.addMarker(markerOptions);
-//        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(ny[0],2));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(ny[0],2));
         googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
             @Override
             public void onMapClick(LatLng latLng) {

@@ -31,6 +31,7 @@
             android:id="@+id/backpacker_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="phone"
 
             android:hint="Mobile No." />
     </android.support.design.widget.TextInputLayout>
@@ -43,6 +44,7 @@
             android:id="@+id/backpacker_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="phone"
             android:hint="Email (optional)" />
     </android.support.design.widget.TextInputLayout>
 
@@ -65,6 +67,7 @@
             android:id="@+id/backpacker_group_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="number"
             android:hint="@string/group_number" />
     </android.support.design.widget.TextInputLayout>
 

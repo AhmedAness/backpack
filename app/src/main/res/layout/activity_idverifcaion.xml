@@ -4,26 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AccountActivity">
+    tools:context=".IDVerifcaionActivity">
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_150sdp"
-        android:background="@color/colorPrimary" />
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_150sdp"
-        android:background="@drawable/white_pattern"
+        android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
+
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_account" />
-
+    <include layout="@layout/content_idverifcaion" />
 
 </android.support.design.widget.CoordinatorLayout>

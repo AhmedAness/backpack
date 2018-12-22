@@ -13,6 +13,7 @@ public class LocaleUtils {
         Locale.setDefault(locale);
         Configuration config = mContext.getResources().getConfiguration();
         config.locale = locale;
+        config.setLayoutDirection(locale);
         mContext.getResources().updateConfiguration(config,
                 mContext.getResources().getDisplayMetrics());
     }

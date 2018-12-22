@@ -12,15 +12,16 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.wasltec.backpack.R;
 import com.wasltec.backpack.models.ActivityTrip;
+import com.wasltec.backpack.models.SimilarActivitiesResponse;
 
 import java.util.List;
 
 public class SimilarAdapter extends RecyclerView.Adapter<SimilarAdapter.Holder> {
 
-    List<ActivityTrip> categories;
+    List<SimilarActivitiesResponse> categories;
 
 
-    public SimilarAdapter(List<ActivityTrip> categories) {
+    public SimilarAdapter(List<SimilarActivitiesResponse> categories) {
         this.categories = categories;
     }
 
@@ -33,11 +34,17 @@ public class SimilarAdapter extends RecyclerView.Adapter<SimilarAdapter.Holder> 
 
     @Override
     public void onBindViewHolder(@NonNull Holder holder, int position) {
-        holder.mItemName.setText(categories.get(position).getTitle());
-        holder.mItemPrice.setText(String.format(holder.itemView.getContext().getString(R.string.price_holder), categories.get(position).getPrice()));
-        holder.mRatingCount.setText(String.format(holder.itemView.getContext().getString(R.string.rating_num_holder), categories.get(position).getNumOfRatings()));
-        Glide.with(holder.itemView.getContext()).load(categories.get(position).getCover()).into(holder.mItemImg);
-        holder.mItemRating.setRating(categories.get(position).getRate());
+      try {
+          holder.mItemName.setText(categories.get(position).getTitle());
+          holder.mItemPrice.setText(String.format(holder.itemView.getContext().getString(R.string.price_holder), "" + categories.get(position).getPrice()));
+          holder.mRatingCount.setText(String.format(holder.itemView.getContext().getString(R.string.rating_num_holder), "" + categories.get(position).getReviewsCount()));
+          Glide.with(holder.itemView.getContext()).load(categories.get(position).getActivityPhoto_Url()).into(holder.mItemImg);
+          holder.mItemRating.setRating(Float.parseFloat(categories.get(position).getRate()));
+      }
+      catch (Exception e )
+      {
+
+      }
     }
 
     @Override

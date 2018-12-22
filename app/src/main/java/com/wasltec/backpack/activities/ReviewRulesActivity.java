@@ -63,7 +63,9 @@ public class ReviewRulesActivity extends AppCompatActivity {
         });
         try {
 
+
         int sum = Cart.getInstance().getTickets().size();
+
         if(Cart.getInstance().isIsgroub())
             mCounter.setText("");
         else

@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/_10sdp"
-            android:text="Ticket No. xxx-xxx-xxx-xxx"
+            android:text="@string/ticket_no"
             android:textColor="@color/white"
             android:textSize="@dimen/text_large" />
 

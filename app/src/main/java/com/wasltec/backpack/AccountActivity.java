@@ -119,7 +119,7 @@ public class AccountActivity extends AppCompatActivity {
         preset = Session.getInstance(AccountActivity.this).getCompleteInt();
 
 
-        showPopup();
+//        showPopup();
 
     }
 
@@ -309,7 +309,7 @@ public class AccountActivity extends AppCompatActivity {
             startActivity(new Intent(this, DecelrationActivity.class));
         } else if (id == R.id.id_license_txt) {
 
-            startActivity(new Intent(this, LicensesActivity.class));
+//            startActivity(new Intent(this, LicensesActivity.class));
         }
     }
 

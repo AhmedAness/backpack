@@ -299,11 +299,11 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
     }
 
     public void setLocale(String lang) {
-        final Locale loc = new Locale(lang);
-        Locale.setDefault(loc);
-        final Configuration cfg = new Configuration();
-        cfg.locale = loc;
-        getApplicationContext().getResources().updateConfiguration(cfg, null);
+//        final Locale loc = new Locale(lang);
+//        Locale.setDefault(loc);
+//        final Configuration cfg = new Configuration();
+//        cfg.locale = loc;
+//        getApplicationContext().getResources().updateConfiguration(cfg, null);
 
 
 
@@ -314,7 +314,7 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
         editor.putBoolean("langSelected", true);
         editor.apply();
         editor.commit();
-        LocaleUtils.updateConfig(Home.this,lang);
+//        LocaleUtils.updateConfig(Home.this,lang);
         if (editor.commit()){
             Intent mStartActivity = new Intent(getApplicationContext(), Splash_Screen.class);
             int mPendingIntentId = 123456;
