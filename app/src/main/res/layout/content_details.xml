@@ -28,6 +28,7 @@
 
             <TextView
                 android:id="@+id/item_name"
+                android:gravity="left"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#4A4A4A"
@@ -38,6 +39,7 @@
                 android:id="@+id/item_price"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="left"
                 android:layout_below="@id/item_name"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
                 android:textColor="#4A4A4A"
@@ -46,6 +48,8 @@
 
             <LinearLayout
                 android:id="@+id/t"
+                android:layoutDirection="ltr"
+                android:gravity="left"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/item_price"
@@ -80,6 +84,8 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/orgination_img"
                 android:layout_width="@dimen/_50sdp"
+                android:layoutDirection="ltr"
+                android:layout_alignParentLeft="true"
                 android:layout_height="@dimen/_50sdp"
                 android:layout_below="@+id/t"
                 android:contentDescription="@string/nav_header_desc"
@@ -94,10 +100,11 @@
                 android:id="@+id/location"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_toEndOf="@+id/orgination_img"
-                android:gravity="end"
+                android:layout_alignParentRight="true"
+                android:gravity="right"
+                android:layoutDirection="ltr"
                 android:layout_below="@+id/t"
+                android:layout_toEndOf="@+id/orgination_img"
                 android:textColor="#9B9B9B"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
@@ -119,10 +126,11 @@
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:textColor="#9B9B9B"
+                android:layout_alignParentRight="true"
                 android:layout_toEndOf="@+id/orgination_img"
-                android:gravity="end"
+                android:textColor="#9B9B9B"
+                android:layout_toLeftOf="@+id/orgination_img"
+                android:gravity="right"
                 android:layout_below="@+id/location_country"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
                 android:text="@string/activity_owner" />
@@ -172,19 +180,33 @@
                 android:layout_marginTop="@dimen/_5sdp"
                 android:background="#bbb" />
 
+            <!--<TextView-->
+                <!--android:id="@+id/activity_period"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/line2"-->
+                <!--android:textColor="#9B9B9B"-->
+                <!--android:layout_alignEnd="@+id/location"-->
+                <!--android:layout_marginTop="6dp"-->
+                <!--android:drawableStart="@drawable/activity_period_icon"-->
+                <!--android:drawablePadding="@dimen/_15sdp"-->
+                <!--android:paddingStart="@dimen/_5sdp"-->
+                <!--android:text="@string/dummy_period"-->
+                <!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />-->
+
             <TextView
                 android:id="@+id/activity_period"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/line2"
-                android:textColor="#9B9B9B"
-                android:layout_alignEnd="@+id/location"
-                android:layout_marginTop="6dp"
-                android:drawableStart="@drawable/activity_period_icon"
                 android:drawablePadding="@dimen/_15sdp"
+                android:layout_marginTop="6dp"
                 android:paddingStart="@dimen/_5sdp"
+                android:layout_below="@+id/line2"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:drawableStart="@drawable/activity_period_icon"
                 android:text="@string/dummy_period"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+                android:textColor="#9B9B9B"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
 
             <com.google.android.gms.maps.MapView
                 android:id="@+id/map"
@@ -198,6 +220,7 @@
                 android:id="@+id/review_profile_pic"
                 android:layout_width="@dimen/_50sdp"
                 android:layout_height="@dimen/_50sdp"
+                android:layout_alignParentLeft="true"
                 android:layout_below="@+id/map"
                 android:src="@mipmap/ic_launcher_round"
                 app:civ_border_color="#FFF"
@@ -209,10 +232,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/map"
-                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
                 android:textColor="#4A4A4A"
 
-                android:layout_toEndOf="@+id/review_profile_pic" />
+                android:layout_toRightOf="@+id/review_profile_pic" />
 
 
             <TextView
@@ -221,15 +244,15 @@
                 android:textColor="#4A4A4A"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/review_name"
-                android:layout_marginStart="@dimen/_10sdp"
-                android:layout_toEndOf="@+id/review_profile_pic" />
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_toRightOf="@+id/review_profile_pic" />
 
             <RatingBar
                 android:id="@+id/review_rating"
                 style="@style/Widget.AppCompat.RatingBar.Small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
                 android:layout_below="@+id/map"
                 android:isIndicator="true"
                 android:numStars="5"

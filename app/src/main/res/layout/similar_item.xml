@@ -28,6 +28,7 @@
             android:id="@+id/item_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="left"
             android:layout_above="@+id/item_price"
             android:paddingEnd="@dimen/_5sdp"
             android:paddingStart="@dimen/_5sdp"
@@ -50,6 +51,7 @@
 
         <LinearLayout
             android:id="@+id/Linear"
+            android:layoutDirection="ltr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"

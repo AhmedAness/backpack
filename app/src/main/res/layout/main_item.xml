@@ -4,13 +4,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:gravity="left"
+    app:layout_gravity="left"    android:layout_width="match_parent"
     android:layout_marginTop="@dimen/_15sdp"
     android:layout_height="wrap_content">
     <com.loopeer.shadow.ShadowView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:elevation="70dp"
+        android:gravity="left"
+        app:layout_gravity="left"       android:elevation="70dp"
         app:shadowMarginBottom="3.5dp"
         app:shadowMarginRight=".2dp"
         app:shadowMarginLeft=".2dp"
@@ -20,11 +22,14 @@
         app:shadowRadius="20dp">
 
     <RelativeLayout
+        android:gravity="left"
+        app:layout_gravity="left"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_150sdp"
+        android:gravity="left"
+        app:layout_gravity="left"  android:layout_height="@dimen/_150sdp"
         android:id="@+id/img_cont"
         >
         <ImageView
@@ -41,17 +46,19 @@
             android:background="@android:color/transparent"
             app:srcCompat="@drawable/fav_btn"
             android:scaleType="fitXY"
-            android:layout_gravity="end"
+            android:layout_gravity="right"
             android:tint="@android:color/white"
-            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginRight="@dimen/_8sdp"
             android:layout_marginTop="@dimen/_8sdp" />
 
     </FrameLayout>
         <TextView
             android:layout_marginTop="@dimen/_10sdp"
-            android:paddingStart="@dimen/_10sdp"
+            android:paddingLeft="@dimen/_10sdp"
             android:id="@+id/item_name"
             android:layout_width="match_parent"
+            app:layout_gravity="left"
+            android:gravity="left"
             android:layout_height="wrap_content"
             android:layout_below="@+id/img_cont"
             android:textColor="#4A4A4A"
@@ -60,9 +67,11 @@
 
         <TextView
             android:id="@+id/item_price"
-            android:paddingStart="@dimen/_10sdp"
+            android:paddingLeft="@dimen/_10sdp"
+            app:layout_gravity="left"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="left"
             android:layout_below="@id/item_name"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
             android:textColor="#4A4A4A"
@@ -71,8 +80,11 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:paddingStart="@dimen/_10sdp"
+            android:paddingLeft="@dimen/_10sdp"
             android:layout_height="@dimen/_25sdp"
+            android:gravity="left"
+            android:layoutDirection="ltr"
+            app:layout_gravity="left"
             android:layout_below="@id/item_price"
             android:layout_marginBottom="@dimen/_5sdp"
             android:weightSum="10">
@@ -80,18 +92,22 @@
             <RatingBar
                 android:id="@+id/item_rating"
                 android:layout_width="wrap_content"
+                android:gravity="left"
+                app:layout_gravity="left"
                 android:layout_height="wrap_content"
                 android:isIndicator="true"
                 android:numStars="5"
                 android:rating="1"
                 android:stepSize="1"
-                android:layout_gravity="center"
+                android:layout_gravity="center|left"
                 style="@style/Widget.AppCompat.RatingBar.Small" />
 
             <TextView
                 android:id="@+id/rating_count"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:gravity="left"
+                app:layout_gravity="left" android:layout_height="match_parent"
+                android:layout_gravity="left"
                 android:padding="@dimen/_5sdp"
                 android:textSize="@dimen/_10ssp"
                 android:textColor="#4A4A4A"

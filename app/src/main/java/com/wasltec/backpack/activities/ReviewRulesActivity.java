@@ -41,7 +41,7 @@ public class ReviewRulesActivity extends AppCompatActivity {
     private TextView mItemPrice2;
     private TextView mCounter;
     private Button mConfirmBtn;
-
+    JSONObject obj;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -111,8 +111,18 @@ public class ReviewRulesActivity extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+//        String jsonn = "{\n" + "\t\"activity_id\":\"277\",\n" + "    \"avaliability_id\":\"2363\",\n" + "    \"booking_type\":\"1\",\n" + "    \"full_group\":false,\n" + "    \"booking_amount\":\"1000.00\",\n" + "    \"bookingIndividualCategoryCapacity\":[{\n" + "    \t\"category_id\":\"3\",\n" + "    \t\"count\":\"1\"\n" + "    },{\n" + "    \t\"category_id\":\"4\",\n" + "    \t\"count\":\"1\"\n" + "    }],\n" + "    \"bookingTicket\":[{\n" + "\t\t\n" + "\t\t\t\"name\":\"Eman\",\n" + "\t\t\t\"mail\":\"amanyShaker@gmail.com\",\n" + "\t\t\t\"mobile\":\"012548\",\n" + "\t\t\t\"primaryTicket\":true,\n" + "\t\t\t\"ticket_reviewd\":true,\n" + "\t\t\t\"ticket_checked_in\":true,\n" + "\t\t\t\"ticket_cancelled\":false,\n" + "\t\t\t\"category_id\":3,\n" + "\t\t\t\"Booking_Ticket_AddonsModel\":[\n" + "\t\t\t\t{\n" + "\t\t\t\t\t\"Addons_id\":\"1\"\n" + "\t\t\t\t}]\n" + "\t\t},{\n" + "\t\t\t\n" + "\t\t\t\"name\":\"Ahmed\",\n" + "\t\t\t\"mail\":\"ahmed@gmail.com\",\n" + "\t\t\t\"mobile\":\"0125489\",\n" + "\t\t\t\"primaryTicket\":true,\n" + "\t\t\t\"ticket_reviewd\":true,\n" + "\t\t\t\"ticket_checked_in\":true,\n" + "\t\t\t\"ticket_cancelled\":false,\n" + "\t\t\t\"category_id\":4,\n" + "\t\t\t\"Booking_Ticket_AddonsModel\":[\n" + "\t\t\t    {\n" + "\t\t\t\t\t\"Addons_id\":\"2\"\n" + "\t\t\t\t},\n" + "\t\t\t\t{\n" + "\t\t\t\t\t\"Addons_id\":\"1\"\n" + "\t\t\t\t}]\n" + "\t\t}\n" + "\t\t]\n" + "    \n" + "}";
 
-        Log.d(PaymentActivity.class.getSimpleName(), jsonObject.toString());
+//        try {
+//
+//            obj = new JSONObject(jsonn);
+//
+//            Log.d("My App", obj.toString());
+//
+//        } catch (Throwable t) {
+//            Log.e("My App", "Could not parse malformed JSON: \"" + jsonn + "\"");
+//        }
+//        Log.d(PaymentActivity.class.getSimpleName(), jsonObject.toString());
 
         AndroidNetworking.post(URLManager.getInstance().getCreateBooking())
                 .addHeaders("Authorization", "bearer " + Session.getInstance(ReviewRulesActivity.this).getToken())
