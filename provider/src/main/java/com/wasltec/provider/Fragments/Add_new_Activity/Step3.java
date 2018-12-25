@@ -137,7 +137,7 @@ public class Step3 extends Fragment {
                     TextView name = view1.findViewById(R.id.name);
 
                     RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-                    layoutParams.setMargins(0, 0, 0, 10);
+                    layoutParams.setMargins(0, 0, 0, 25);
                     view1.setLayoutParams(layoutParams);
                     ImageButton imageButton = view1.findViewById(R.id.remove);
                     imageButton.setOnClickListener(v -> {
@@ -148,7 +148,7 @@ public class Step3 extends Fragment {
                     });
                     name.setTag(activityAddOn.getId());
                     EditText desc = view1.findViewById(R.id.description);
-                    desc.setPaintFlags(desc.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+//                    desc.setPaintFlags(desc.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
 
                     name.setText(activityAddOn.getName());
                     mContainer.addView(view1, start[0]);

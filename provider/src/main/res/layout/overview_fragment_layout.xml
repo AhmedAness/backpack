@@ -7,7 +7,10 @@
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <android.support.v7.widget.RecyclerView
-        android:minHeight="@dimen/_150sdp"
+        android:minHeight="@dimen/_100sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_30sdp"
         android:id="@+id/category_recycer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -15,14 +18,15 @@
         app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
     <LinearLayout
         android:layout_width="match_parent"
-        android:background="@color/gray"
+        android:background="#9C979797"
         android:layout_below="@+id/category_recycer"
-        android:layout_height="@dimen/_2sdp">
+        android:layout_height="@dimen/_1sdp">
 
     </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_5sdp"
         android:id="@+id/list2"
         android:layout_below="@+id/category_recycer"
         android:layout_height="match_parent"

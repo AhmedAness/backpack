@@ -15,6 +15,7 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
+            android:paddingTop="@dimen/_15sdp"
             android:layout_width="match_parent"
             android:paddingBottom="@dimen/_5sdp"
             android:layout_height="match_parent"
@@ -75,9 +76,9 @@
                 <ImageButton
                     android:id="@+id/balance_switch"
                     android:layout_width="wrap_content"
-                    android:minHeight="@dimen/_50sdp"
+
                     android:minWidth="@dimen/_66sdp"
-                    android:layout_height="match_parent"
+                    android:layout_height="@dimen/_30sdp"
                     android:scaleType="fitXY"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
@@ -120,7 +121,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="8"
+                    android:layout_weight="7"
                     android:layout_gravity="start"
                     android:text="@string/this_activity_can_be_seen_and_checked_now"
                     android:textColor="@color/gray" />
@@ -135,9 +136,8 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-
-                android:layout_marginBottom="@dimen/_15sdp"
-                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_25sdp"
                 android:background="#a6a6a6" />
 
 <!--/////////////////////////////////////////-->
@@ -311,8 +311,8 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="@dimen/_15sdp"
-                android:layout_marginBottom="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_marginBottom="@dimen/_25sdp"
 
                 android:background="@color/gray" />
 
@@ -377,8 +377,8 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginBottom="@dimen/_15sdp"
-                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_25sdp"
                 android:background="@color/gray" />
 
 
@@ -483,6 +483,7 @@
             </android.support.v7.widget.RecyclerView>
 
            <RelativeLayout
+               android:paddingRight="@dimen/_15sdp"
                android:layout_width="match_parent"
                android:layout_height="wrap_content">
                <TextView
@@ -499,6 +500,7 @@
            </RelativeLayout>
            <RelativeLayout
                android:layout_width="match_parent"
+               android:paddingRight="@dimen/_15sdp"
                android:layout_height="wrap_content">
                <TextView
                    android:layout_width="wrap_content"
@@ -518,8 +520,8 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginBottom="@dimen/_15sdp"
-                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_25sdp"
                 android:background="@color/gray" />
 
             <LinearLayout
@@ -617,8 +619,8 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginBottom="@dimen/_15sdp"
-                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_25sdp"
                 android:background="@color/gray" />
 
             <!--///////////////////////-->

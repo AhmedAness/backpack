@@ -83,7 +83,7 @@
     <EditText
         android:layout_width="match_parent"
         android:id="@+id/email"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="@color/background_transparent"
         android:maxLines="1"
         android:singleLine="true"
         android:inputType="textEmailAddress"

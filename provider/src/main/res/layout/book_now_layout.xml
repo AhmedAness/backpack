@@ -204,7 +204,7 @@
 
         </LinearLayout>
         <LinearLayout
-            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
             android:layout_width="match_parent"
             android:id="@+id/group_ticket"
             android:visibility="gone"
@@ -380,13 +380,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:elevation="70dp"
+        app:shadowMarginTop="@dimen/_4sdp"
         app:backgroundColor="@color/background_transparent"
         app:shadowColor="#4a000000"
         app:cornerRadius="6dp"
         app:shadowRadius="20dp">
 
     <LinearLayout
-        android:layout_marginTop="@dimen/_3sdp"
         android:id="@+id/footer"
         android:padding="@dimen/_10sdp"
         android:background="@color/colorAccent"

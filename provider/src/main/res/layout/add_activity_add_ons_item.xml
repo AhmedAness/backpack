@@ -1,13 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:background="@drawable/addone_boared"
-    android:layout_margin="@dimen/_10sdp"
-    android:padding="10dp"
-    android:focusable="true"
-    android:focusableInTouchMode="true"
-    android:layout_height="wrap_content">
+    android:layout_height="@dimen/_120sdp"
+    android:layout_width="wrap_content"
+    android:layout_marginTop="@dimen/_25sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="@dimen/_20sdp">
+
+    <com.loopeer.shadow.ShadowView
+        android:id="@+id/shadow_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="70dp"
+        app:shadowMarginBottom="3dp"
+        app:shadowMarginRight="1dp"
+        app:shadowMarginLeft="1dp"
+        app:shadowMarginTop=".5dp"
+        app:shadowColor="#4a000000"
+        app:cornerRadius="6dp"
+        app:shadowRadius="20dp">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/_10sdp"
+        android:padding="10dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_height="@dimen/_120sdp">
     <LinearLayout
         android:layout_width="match_parent"
         android:id="@+id/s"
@@ -22,7 +41,7 @@
             android:gravity="start"
             android:textStyle="bold"
             android:id="@+id/name"
-            android:textColor="@color/black"
+            android:textColor="#666666"
             android:text="@string/Food"/>
 
         <ImageButton
@@ -42,20 +61,29 @@
     </LinearLayout>
 
 
+
     <EditText
         android:backgroundTint="@color/background_transparent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/gray"
+        android:textColor="#A8A8A8"
         android:textSize="@dimen/med_text_size"
         android:layout_below="@id/s"
-        android:textStyle="bold"
         android:id="@+id/description"
         android:hint="@string/description" />
+
+        <View
+            android:layout_below="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:alpha=".32"
+            android:background="#979797"/>
+
 
     <LinearLayout
         android:id="@+id/con"
         android:layout_weight="100"
+        android:layout_marginTop="@dimen/_7sdp"
         android:layout_below="@id/description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -72,19 +100,20 @@
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="@dimen/_10sdp"
                 android:text="@string/Price"
-                android:textColor="@color/black"
+                android:textColor="#666666"
                 android:textSize="@dimen/med_text_size"
                 android:textStyle="bold" />
 
             <EditText
-                android:backgroundTint="@color/background_transparent"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/price_lable"
+                android:backgroundTint="#e2e2e2"
                 android:id="@+id/price"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toEndOf="@+id/price_lable"
                 android:inputType="numberDecimal"
                 android:maxLines="1"
+                android:textColor="#c7c7c7"
                 android:hint="0.0"
                 android:textSize="@dimen/med_text_size" />
         </RelativeLayout>
@@ -105,12 +134,13 @@
                 android:layout_marginEnd="@dimen/_10sdp"
                 android:id="@+id/Provider_lable"
                 android:textStyle="bold"
-                android:textColor="@color/black"
+                android:textColor="#666666"
                 android:text="@string/Provider"/>
             <EditText
-                android:backgroundTint="@color/background_transparent"
+                android:backgroundTint="#e2e2e2"
                 android:layout_width="match_parent"
                 android:maxLines="1"
+                android:textColor="#A8A8A8"
                 android:layout_toEndOf="@+id/Provider_lable"
                 android:textSize="@dimen/med_text_size"
                 android:layout_height="wrap_content"
@@ -119,5 +149,8 @@
 
 
     </LinearLayout>
+    </RelativeLayout>
+
+    </com.loopeer.shadow.ShadowView>
 
 </RelativeLayout>

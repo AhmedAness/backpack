@@ -66,7 +66,7 @@ public class Step9 extends Fragment {
     PriceAdapter adapter2;
     List<Price_per_individual> cats;
     EditText group_price ;
-
+    LinearLayout Add_addons;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -108,7 +108,7 @@ public class Step9 extends Fragment {
         });
 
 
-        LinearLayout Add_addons = view.findViewById(R.id.add_price_ber_individual);
+        Add_addons = view.findViewById(R.id.add_price_ber_individual);
 
         Add_addons.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -243,61 +243,62 @@ public class Step9 extends Fragment {
 
     public void valid() {
 
+        if (strings.size()>0){
+            Toast.makeText(getActivity(), "You have to add Price per individual", Toast.LENGTH_SHORT).show();
+            Add_new_activity.dialog.hide();
+            return;
+        }else if (group_price.getText().toString().length()<=0){
+            group_price.setError(getString(R.string.this_field_is_required));
+            Add_new_activity.dialog.hide();
+            return;
+        } else {
+            JSONObject jsonObject = new JSONObject();
+            try {
+                jsonObject.put("group_price", group_price.getText().toString());
+                jsonObject.put("price_discount", 0);
+                jsonObject.put("apply_discount", mApplyBtn.isChecked());
 
+                JSONArray jsonArray = new JSONArray();
 
-
-
-
-
-        JSONObject jsonObject = new JSONObject();
-                try {
-                    jsonObject.put("group_price", group_price.getText().toString());
-                    jsonObject.put("price_discount",0);
-                    jsonObject.put("apply_discount", mApplyBtn.isChecked());
-
-                    JSONArray jsonArray = new JSONArray();
-
-                    for (Price_per_individual cat :adapter.getPrices()){
-                        jsonObject.put("id",cat.getId());
+                for (Price_per_individual cat : adapter.getPrices()) {
+                    jsonObject.put("id", cat.getId());
 //                        jsonObject.put("name", prices.get(position).getName());
-                        jsonObject.put("price", cat.getPrice());
-                        jsonObject.put("price_after_discount", cat.getPrice_after_discount());
+                    jsonObject.put("price", cat.getPrice());
+                    jsonObject.put("price_after_discount", cat.getPrice_after_discount());
 //                        jsonObject.put("capacity", prices.get(position).getCapacity());
 
-                    }
-
-
-                    jsonObject.put("individualCategories", jsonArray);
-
-
-
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
                 }
-                AndroidNetworking.post(URLManger.getInstance().getCreate_ActivityPricing(ActivityID,mode))
-                        .addHeaders("Authorization", "bearer " + SharedPreferencesManager.getInstance(getActivity()).getToken())
-                        .addJSONObjectBody(jsonObject).build().getAsJSONObject(new JSONObjectRequestListener() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        if (mode == 2) {
-                            Add_new_activity.step_number = 1;
-                            mode = 1;
-                            getActivity().finish();
-                        }
-                        else {
-                            Add_new_activity.steper.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.step5));
-                            getActivity().getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container1, Add_new_activity.step10).commit();
-                            Add_new_activity.step_number = 10;
-                        }
-                    }
 
-                    @Override
-                    public void onError(ANError anError) {
-                        Toast.makeText(getActivity(), anError.getErrorDetail(), Toast.LENGTH_SHORT).show();
-                    }
-                });
 
+                jsonObject.put("individualCategories", jsonArray);
+
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            AndroidNetworking.post(URLManger.getInstance().getCreate_ActivityPricing(ActivityID, mode))
+                    .addHeaders("Authorization", "bearer " + SharedPreferencesManager.getInstance(getActivity()).getToken())
+                    .addJSONObjectBody(jsonObject).build().getAsJSONObject(new JSONObjectRequestListener() {
+                @Override
+                public void onResponse(JSONObject response) {
+                    if (mode == 2) {
+                        Add_new_activity.step_number = 1;
+                        mode = 1;
+                        getActivity().finish();
+                    } else {
+                        Add_new_activity.steper.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.step5));
+                        getActivity().getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container1, Add_new_activity.step10).commit();
+                        Add_new_activity.step_number = 10;
+                    }
+                }
+
+                @Override
+                public void onError(ANError anError) {
+                    Toast.makeText(getActivity(), anError.getErrorDetail(), Toast.LENGTH_SHORT).show();
+                    Add_new_activity.dialog.hide();
+                }
+            });
+        }
 
     }
     @Override

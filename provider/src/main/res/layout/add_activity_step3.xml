@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
+    android:layout_marginTop="@dimen/_12sdp"
     android:orientation="vertical"
     android:layout_marginHorizontal="20dp"
     android:background="@color/white"
@@ -22,11 +23,13 @@
             android:textStyle="bold"
             android:text="@string/The_trip_will_include_the_following" />
         <TextView
+            android:layout_marginTop="@dimen/_7sdp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#BABABA"
             android:textSize="@dimen/big_text_size"
             android:textStyle="bold"
+            android:layout_marginBottom="@dimen/_7sdp"
             android:text="@string/The_trip_will_include_the_following_disc" />
 
     <LinearLayout

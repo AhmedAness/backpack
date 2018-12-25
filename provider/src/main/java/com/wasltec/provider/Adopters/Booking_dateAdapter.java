@@ -78,8 +78,6 @@ public class Booking_dateAdapter extends RecyclerView.Adapter<Booking_dateAdapte
               reservatoin_teckits = view.findViewById(R.id.reservatoin_teckits);
               messageicon = view.findViewById(R.id.messageicon);
 
-
-
         }
     }
 
@@ -107,7 +105,7 @@ public class Booking_dateAdapter extends RecyclerView.Adapter<Booking_dateAdapte
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         final Reservation booking_item = Booking_items.get(position);
-        holder.reservatoin_teckits.setVisibility(View.GONE);
+        holder.reservatoin_teckits.setVisibility(View.INVISIBLE);
         holder.reservatoin_teckits.setLayoutManager(new LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false));
 
 
@@ -116,14 +114,14 @@ public class Booking_dateAdapter extends RecyclerView.Adapter<Booking_dateAdapte
             holder.NumOfTickets.setText(String.format("%sX", String.valueOf(booking_item.getBookingTicketDetails().size())));
         else
         {
-            holder.NumOfTickets.setVisibility(View.GONE);
-            holder.ticket_details.setVisibility(View.GONE);
+            holder.NumOfTickets.setVisibility(View.INVISIBLE);
+            holder.ticket_details.setVisibility(View.INVISIBLE);
         }
 
         if (booking_item.getBookingTicketDetails().get(0).isMessageIcon())
             holder.messageicon.setVisibility(View.VISIBLE);
         else
-            holder.messageicon.setVisibility(View.GONE);
+            holder.messageicon.setVisibility(View.INVISIBLE);
 
         holder.messageicon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -176,9 +174,12 @@ public class Booking_dateAdapter extends RecyclerView.Adapter<Booking_dateAdapte
                 {
                     holder.reservatoin_teckits.setVisibility(View.VISIBLE);
                     holder.reservatoin_teckits.setAdapter(new Booking_dateAdapter_item(Booking_items.get(position),activity));
+                    holder.ticket_details.setBackground(activity.getResources().getDrawable(R.drawable.collaps_tickets));
+
                 }else
                 {
                     holder.reservatoin_teckits.setVisibility(View.GONE);
+                    holder.ticket_details.setBackground(activity.getResources().getDrawable(R.drawable.expand_tickets));
                 }
 
             }
@@ -195,12 +196,12 @@ public class Booking_dateAdapter extends RecyclerView.Adapter<Booking_dateAdapte
         if (booking_item.isIsPaid())
             holder.mPaidFlag.setVisibility(View.VISIBLE);
         else
-            holder.mPaidFlag.setVisibility(View.GONE);
+            holder.mPaidFlag.setVisibility(View.INVISIBLE);
 
         if (booking_item.getBookingType()==1)
             holder.mBackpackFlag.setVisibility(View.VISIBLE);
         else
-            holder.mBackpackFlag.setVisibility(View.GONE);
+            holder.mBackpackFlag.setVisibility(View.INVISIBLE);
 
 
         for (BookingTicketDetail bookingTicketDetail : booking_item.getBookingTicketDetails()) {
@@ -209,7 +210,7 @@ public class Booking_dateAdapter extends RecyclerView.Adapter<Booking_dateAdapte
                 break;
             }
             else
-                holder.mVerifyFlag.setVisibility(View.GONE);
+                holder.mVerifyFlag.setVisibility(View.INVISIBLE);
         }
         for (BookingTicketDetail bookingTicketDetail : booking_item.getBookingTicketDetails()) {
 
@@ -223,7 +224,7 @@ public class Booking_dateAdapter extends RecyclerView.Adapter<Booking_dateAdapte
                 holder.mCheckinFlag.setVisibility(View.VISIBLE);
                 break;
             } else {
-                holder.mCheckinFlag.setVisibility(View.GONE);
+                holder.mCheckinFlag.setVisibility(View.INVISIBLE);
 
             }
 

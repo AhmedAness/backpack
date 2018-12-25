@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-
+    android:layout_marginTop="@dimen/_7sdp"
+    android:layout_marginBottom="@dimen/_7sdp"
     android:layout_height="wrap_content">
 
 
@@ -59,14 +60,14 @@
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="@dimen/_10sdp"
                         android:gravity="left"
-                        android:textColor="@color/footer_color_text"
+                        android:textColor="#979797"
                         android:text="@string/massageall"
                         android:id="@+id/sencMessage"
                         />
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_gravity="right"
-                        android:src="@drawable/messages_footer_icon"
+                        android:src="@drawable/messages_footer_icon_checked"
                         android:layout_height="wrap_content" />
 
                 </LinearLayout>

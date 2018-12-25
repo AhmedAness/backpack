@@ -132,58 +132,66 @@ public class CapcityAdapter extends RecyclerView.Adapter<CapcityAdapter.Holder> 
                 holder.mCategoryPrice.setClickable(false);
                 holder.mCategoryPrice.setEnabled(false);
                 holder.mCategoryPrice.setCursorVisible(false);
+                holder.mCategoryPrice.setVisibility(View.GONE);
+
                 holder.mCategoryName.setOnEditorActionListener((v, actionId, event) -> {
-                    if (actionId == EditorInfo.IME_ACTION_DONE) {
-                        InputMethodManager imm = (InputMethodManager) holder.mCategoryName.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
-                        if (imm != null) {
-                            imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
-                        }
-                        JSONObject jsonObject = new JSONObject();
-                        try {
-                            jsonObject.put("name", holder.mCategoryName.getText().toString());
-                            jsonObject.put("capacity", 0);
-                            jsonObject.put("price", "0.0");
-                            jsonObject.put("price_after_discount", "0.0");
-                            jsonObject.put("activityid", Add_new_activity.ActivityID);
-
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-
-                        boolean found=false;
-                        for (Price p:prices) {
-                            if(p.getCategory().equals(holder.mCategoryName.getText().toString())){
-                                found=true;
-                                break;
+                    if (holder.mCategoryName.getText().toString().length()>0) {
+                        if (actionId == EditorInfo.IME_ACTION_DONE) {
+                            InputMethodManager imm = (InputMethodManager) holder.mCategoryName.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+                            if (imm != null) {
+                                imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
                             }
-                        }
-                        if (!found)
-                        {
-                            prices.add(new Price(holder.mCategoryName.getText().toString(), String.valueOf(0)));
-                            notifyDataSetChanged();
-                        }
-                        else {
-                            holder.mCategoryName.setError(holder.mCategoryName.getContext().getResources().getString(R.string.error_textview));
-                        }
+                            JSONObject jsonObject = new JSONObject();
+                            try {
+                                jsonObject.put("name", holder.mCategoryName.getText().toString());
+                                jsonObject.put("capacity", 0);
+                                jsonObject.put("price", "0.0");
+                                jsonObject.put("price_after_discount", "0.0");
+                                jsonObject.put("activityid", Add_new_activity.ActivityID);
+
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+                            boolean found = false;
+                            for (Price p : prices) {
+                                if (p.getCategory().equals(holder.mCategoryName.getText().toString())) {
+                                    found = true;
+                                    break;
+                                }
+                            }
+                            if (!found) {
+                                prices.add(new Price(holder.mCategoryName.getText().toString(), String.valueOf(0)));
+                                notifyDataSetChanged();
+                            } else {
+                                holder.mCategoryName.setError(holder.mCategoryName.getContext().getResources().getString(R.string.error_textview));
+                            }
 
 
-                        int count=0;
-                        for (int i = 1; i < prices.size(); i++) {
-                            count+=Integer.parseInt(prices.get(i).getPrice());
+                            int count = 0;
+                            for (int i = 1; i < prices.size(); i++) {
+                                count += Integer.parseInt(prices.get(i).getPrice());
+                            }
+                            changeListener.onChange(count);
+                            return true; // Focus will do whatever you put in the logic.
                         }
-                        changeListener.onChange(count);
-                        return true; // Focus will do whatever you put in the logic.
+                    }else {
+                        holder.mCategoryName.setError(holder.mCategoryName.getContext().getResources().getString(R.string.error_textview));
                     }
                     return false;  // Focus will change according to the actionId
                 });
 
             } else {
 
+                holder.mCategoryPrice.setVisibility(View.VISIBLE);
                 holder.mCategoryPrice.setText("");
                 holder.mCategoryPrice.setClickable(true);
                 holder.mCategoryPrice.setEnabled(true);
                 holder.mCategoryPrice.setCursorVisible(true);
                 holder.mCategoryPrice.setOnEditorActionListener((v, actionId, event) -> {
+
+                    if (holder.mCategoryName.getText().length()>0){
+                        if (holder.mCategoryPrice.getText().length()>0){
                     if (actionId == EditorInfo.IME_ACTION_DONE) {
                         InputMethodManager imm = (InputMethodManager) holder.mCategoryPrice.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
                         if (imm != null) {
@@ -210,34 +218,14 @@ public class CapcityAdapter extends RecyclerView.Adapter<CapcityAdapter.Holder> 
                             count+=Integer.parseInt(prices.get(i).getPrice());
                         }
                         changeListener.onChange(count);
-
-//                    Add_new_activity.dialog.show();
-//                    AndroidNetworking.post(URLManger.getInstance().getCreateIndividualCategory())
-//                            .addJSONObjectBody(jsonObject)
-//                            .addHeaders("Authorization", "bearer " + SharedPreferencesManager.getInstance(holder.mCategoryName.getContext()).getToken())
-//                            .build().getAsJSONObject(new JSONObjectRequestListener() {
-//                        @Override
-//                        public void onResponse(JSONObject response) {
-//                            prices.add(new Price(holder.mCategoryName.getText().toString(), holder.mCategoryPrice.getText().toString()));
-//                            notifyDataSetChanged();
-//                            Add_new_activity.dialog.hide();
-//                            int count=0;
-//                            for (int i = 1; i < prices.size(); i++) {
-//                                count+=Integer.parseInt(prices.get(i).getPrice());
-//
-//                                }
-//                                changeListener.onChange(count);
-//                        }
-//
-//                        @Override
-//                        public void onError(ANError anError) {
-//                            Add_new_activity.dialog.hide();
-//                            Toast.makeText(holder.mCategoryName.getContext(), anError.getErrorDetail(), Toast.LENGTH_SHORT).show();
-//                        }
-//                    });
-
-
                         return true; // Focus will do whatever you put in the logic.
+                    }
+
+                    }else {
+                            holder.mCategoryPrice.setError(holder.mCategoryName.getContext().getResources().getString(R.string.error_textview));
+                        }
+                    }else {
+                        holder.mCategoryName.setError(holder.mCategoryName.getContext().getResources().getString(R.string.error_textview));
                     }
                     return false;  // Focus will change according to the actionId
                 });

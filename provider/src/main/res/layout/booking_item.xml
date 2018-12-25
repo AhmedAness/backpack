@@ -162,7 +162,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_gravity="center"
-            android:src="@drawable/collaps_tickets" />
+            android:src="@drawable/expand_tickets" />
 
     </LinearLayout>
 

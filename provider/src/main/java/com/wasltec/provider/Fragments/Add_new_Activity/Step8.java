@@ -53,7 +53,7 @@ public class Step8 extends Fragment {
     private View view;
     private static final String[] time_spinner_paths = {" Minutes", " Hours", " Days"};
     private static final String[] different_categories_sp_paths = {" _"," No", " Yes"};
-    private static final String[] each_category_have_spacefic_capacity_sp_paths = {" No", " Yes"};
+    private static final String[] each_category_have_spacefic_capacity_sp_paths = {" _"," No", " Yes"};
     private RecyclerView mList;
     private Spinner mDifferentCategoriesSp;
     private EditText mCpacityNumberForActivity;
@@ -215,15 +215,50 @@ public class Step8 extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {
+
                     case 0:
+
+                        mList.setVisibility(View.GONE);
+                        capacity_layout.setVisibility(View.VISIBLE);
+                        mCpacityNumberForActivity.setEnabled(false);
+                        mCpacityNumberForActivity.setText("");
+                        mUnlimitedCapacity.setVisibility(View.GONE);
+                        capacity_num_for_activity.setVisibility(View.GONE);
+//                        li1.setVisibility(View.VISIBLE);
+//                        li2.setVisibility(View.GONE);
+//                        li3.setVisibility(View.GONE);
+
+                        break;
+
+                    case 1:
                         capcityAdapter.setHasCapacity(false);
                         mUnlimitedCapacity.setVisibility(View.VISIBLE);
 
+                        mCpacityNumberForActivity.setEnabled(true);
+                        mCpacityNumberForActivity.setText("");
+
+                        mList.setVisibility(View.VISIBLE);
+
+                        capacity_num_for_activity.setVisibility(View.VISIBLE);
+                        li1.setVisibility(View.VISIBLE);
+                        li2.setVisibility(View.VISIBLE);
+                        li3.setVisibility(View.GONE);
+
+
                         break;
-                    case 1:
+                    case 2:
                         // Whatever you want to happen when the first item gets selected
                         capcityAdapter.setHasCapacity(true);
                         mUnlimitedCapacity.setVisibility(View.GONE);
+
+                        mList.setVisibility(View.VISIBLE);
+
+                        capacity_num_for_activity.setVisibility(View.VISIBLE);
+                        li1.setVisibility(View.VISIBLE);
+                        li2.setVisibility(View.VISIBLE);
+                        li3.setVisibility(View.VISIBLE);
+
+
                         try {
 
                         if(String.valueOf(capcityAdapter.getTotalCapacity()).length()>0){
@@ -284,11 +319,26 @@ public class Step8 extends Fragment {
 
                         break;
                     case 2:
-                        mList.setVisibility(View.VISIBLE);
+//                        mList.setVisibility(View.VISIBLE);
+//                        capacity_layout.setVisibility(View.VISIBLE);
+//                        mCpacityNumberForActivity.setEnabled(true);
+//                        mCpacityNumberForActivity.setText(String.valueOf(capcityAdapter.getTotalCapacity()));
+//                        capacity_num_for_activity.setVisibility(View.VISIBLE);
+//                        mUnlimitedCapacity.setVisibility(View.GONE);
+//                        li1.setVisibility(View.VISIBLE);
+//                        li2.setVisibility(View.VISIBLE);
+//                        li3.setVisibility(View.VISIBLE);
+
+                        ArrayAdapter<String> each_category_have_spacefic_capacity_adapter = new ArrayAdapter<String>(getActivity(),
+                                android.R.layout.simple_spinner_item, each_category_have_spacefic_capacity_sp_paths);
+                        each_category_have_spacefic_capacity_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        each_category_have_spacefic_capacity_sp.setAdapter(each_category_have_spacefic_capacity_adapter);
+
+                        mList.setVisibility(View.GONE);
                         capacity_layout.setVisibility(View.VISIBLE);
-                        mCpacityNumberForActivity.setEnabled(true);
-                        mCpacityNumberForActivity.setText(String.valueOf(capcityAdapter.getTotalCapacity()));
-                        capacity_num_for_activity.setVisibility(View.VISIBLE);
+                        mCpacityNumberForActivity.setEnabled(false);
+                        mCpacityNumberForActivity.setText("");
+                        capacity_num_for_activity.setVisibility(View.GONE);
                         mUnlimitedCapacity.setVisibility(View.GONE);
                         li1.setVisibility(View.VISIBLE);
                         li2.setVisibility(View.VISIBLE);

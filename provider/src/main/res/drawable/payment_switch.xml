@@ -2,7 +2,7 @@
 <selector
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:drawable="@drawable/ontogle" android:state_selected="true" />
+    <item android:drawable="@drawable/toggle_on" android:state_selected="true" />
 
-    <item android:drawable="@drawable/offtogle" android:state_selected="false" />
+    <item android:drawable="@drawable/toggle_off" android:state_selected="false" />
 </selector>
