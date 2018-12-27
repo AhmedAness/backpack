@@ -21,7 +21,7 @@
             android:paddingHorizontal="30dp"
             android:textSize="@dimen/big_text_size"
             android:background="@color/white"
-            android:textColor="@color/black"
+            android:textColor="@color/bg_color_text"
             android:textStyle="bold"
 
             android:layout_height="wrap_content" />
@@ -43,6 +43,7 @@
             android:layout_width="match_parent"
             android:id="@+id/ticket_price"
             android:hint="@string/ticket_price"
+            android:textColor="@color/bg_color_text"
             android:inputType="number"
             android:layout_height="wrap_content" />
 

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:paddingHorizontal="@dimen/_12sdp"
     android:background="@color/white"
-    android:layout_marginTop="@dimen/_12sdp"
+    android:layout_marginTop="@dimen/_17sdp"
     android:focusable="true"
     android:focusableInTouchMode="true"
     android:layout_height="match_parent">
@@ -20,15 +21,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/rules"
-            android:textColor="#666666"
+            android:textColor="@color/bg_color_text"
             android:textSize="@dimen/big_text_size"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
             android:text="@string/rules_disc"
-            android:textColor="@color/gray"
+            android:textColor="@color/footer_color_text"
             android:textSize="@dimen/med_text_size" />
 
         <android.support.v7.widget.RecyclerView
@@ -72,22 +74,25 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
             android:text="@string/requirments"
-            android:textColor="#666666"
+            android:textColor="@color/bg_color_text"
             android:textSize="@dimen/big_text_size"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
             android:text="@string/requirments_disc"
-            android:textColor="@color/gray"
+            android:textColor="@color/footer_color_text"
             android:textSize="@dimen/med_text_size" />
 
         <EditText
             android:backgroundTint="@color/background_transparent"
             android:id="@+id/requirements"
             android:layout_width="match_parent"
+            android:textColor="#979797"
             android:layout_height="wrap_content"
             android:hint="@string/requirments_hint"
             android:minLines="3"/>

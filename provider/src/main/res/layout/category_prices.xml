@@ -7,19 +7,23 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ImageView
-        android:layout_width="@dimen/_20sdp"
-        android:padding="@dimen/_10sdp"
+        android:layout_width="@dimen/_15sdp"
+        android:padding="@dimen/_15sdp"
         android:background="@drawable/close"
+
         android:id="@+id/delete"
+
         android:layout_centerVertical="true"
         android:layout_alignParentStart="true"
-        android:layout_height="@dimen/_20sdp" />
+        android:layout_height="@dimen/_15sdp" />
     <EditText
         android:backgroundTint="@color/background_transparent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="category"
         android:inputType="text"
+        android:textColor="#9B9B9B"
+        android:textSize="@dimen/big_text_size"
         android:background="@android:color/transparent"
         android:padding="@dimen/_10sdp"
         android:layout_toEndOf="@+id/delete"
@@ -30,9 +34,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Price"
+        android:textSize="@dimen/big_text_size"
         android:background="@android:color/transparent"
         android:paddingTop="@dimen/_10sdp"
         android:paddingLeft="@dimen/_10sdp"
+        android:textColor="#9B9B9B"
         android:paddingBottom="@dimen/_10sdp"
         android:imeOptions="actionDone"
         android:gravity="right"
@@ -42,20 +48,23 @@
         />
     <TextView
         android:layout_width="wrap_content"
+        android:textColor="#9B9B9B"
         android:layout_height="wrap_content"
+        android:textSize="@dimen/big_text_size"
         android:hint="SR"
         android:paddingLeft="@dimen/_7sdp"
         android:paddingTop="@dimen/_12sdp"
         android:layout_alignParentEnd="true"
         android:visibility="invisible"
-        android:textSize="@dimen/_15sdp"
         android:id="@+id/curr"
         />
     <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
 
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_4sdp"
         android:layout_below="@+id/category_name"
-        android:background="@color/gray"
-        />
+        android:background="#3B979797" />
 </RelativeLayout>

@@ -2,6 +2,7 @@
 <ScrollView
     android:layout_marginTop="@dimen/_12sdp"
     android:orientation="vertical"
+    android:paddingHorizontal="@dimen/_12sdp"
     android:layout_marginHorizontal="20dp"
     android:background="@color/white"
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
@@ -27,7 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#BABABA"
-            android:textSize="@dimen/big_text_size"
+            android:textSize="@dimen/med_text_size"
             android:textStyle="bold"
             android:layout_marginBottom="@dimen/_7sdp"
             android:text="@string/The_trip_will_include_the_following_disc" />
@@ -56,6 +57,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
+                android:textSize="@dimen/big_text_size"
                 android:textColor="@color/colorAccent"
                 android:layout_gravity="center_vertical"
                 android:text="@string/Add_add_ons" />

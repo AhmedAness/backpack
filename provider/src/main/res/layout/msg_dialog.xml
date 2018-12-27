@@ -16,6 +16,7 @@
         android:id="@+id/toolbar"
         android:layout_gravity="center"
         android:gravity="center"
+        app:titleTextColor="@color/bg_color_text"
         app:popupTheme="@style/AppTheme.AppBarOverlay"
         app:title="@string/sendmessage" />
     <View
@@ -27,6 +28,7 @@
         android:backgroundTint="@color/background_transparent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/footer_color_text"
         android:hint="@string/send_your_message"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:layout_marginTop="@dimen/_5sdp"

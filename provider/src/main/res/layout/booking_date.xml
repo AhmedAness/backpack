@@ -8,9 +8,9 @@
         android:id="@+id/date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:textColor="@color/bg_color_text"
         android:text="Friday, 14 Apr 2018"
-        android:textSize="18dp"
+        android:textSize="@dimen/big_text_size"
         android:textStyle="bold" />
 
 

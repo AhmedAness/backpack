@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingEnd="@dimen/_16sdp"
-    android:paddingStart="@dimen/_16sdp"
+    android:paddingEnd="@dimen/_20sdp"
+    android:paddingStart="@dimen/_20sdp"
     android:background="@color/white"
     android:paddingTop="@dimen/_5sdp"
     android:scrollbars="none">
@@ -78,6 +79,7 @@
                 android:layout_gravity="start"
                 android:layout_height="wrap_content"
                 android:gravity="start"
+                android:textColor="@color/bg_color_text"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:layout_marginBottom="10dp"
                 android:text="Land Activity"
@@ -103,22 +105,20 @@
                 android:layout_height="wrap_content"
                 android:text="@string/dummy_desc"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                android:textColor="#bbb"
+                android:textColor="@color/footer_color_text"
                 app:trimCollapsedText="Read more"
                 app:trimExpandedText="@string/read_less"
                 android:layout_marginBottom="@dimen/_5sdp"
                 app:trimLength="3" />
 
 
-            <LinearLayout
+            <View
+                android:layout_below="@+id/description"
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
-               android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginBottom="@dimen/_10sdp"
-                android:background="@color/gray">
-
-
-            </LinearLayout>
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:background="#a6a6a6"/>
 
         </LinearLayout>
         <!--step2-->
@@ -177,16 +177,14 @@
                 />
 
 
-            <LinearLayout
+            <View
+                android:layout_below="@+id/description"
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:background="#a6a6a6"/>
 
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginBottom="@dimen/_10sdp"
-                android:background="@color/gray">
-
-
-            </LinearLayout>
 
         </LinearLayout>
         <!--step3-->
@@ -246,16 +244,14 @@
                 />
 
 
-            <LinearLayout
+            <View
+                android:layout_below="@+id/description"
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:background="#a6a6a6"/>
 
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginBottom="@dimen/_10sdp"
-                android:background="@color/gray">
-
-
-            </LinearLayout>
 
         </LinearLayout>
         <!--step4-->
@@ -315,7 +311,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="start"
                     android:layout_gravity="start"
-                    android:textSize="@dimen/_15sdp"
+                    android:textSize="@dimen/big_text_size"
                     android:layout_marginBottom="@dimen/_5sdp"
                     android:text="@string/activity_location"
                     android:textColor="@color/bg_color_text"
@@ -325,6 +321,7 @@
                     android:id="@+id/ac_location"
                     android:layout_gravity="start"
                     android:layout_marginBottom="@dimen/_5sdp"
+                    android:textColor="@color/bg_color_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/data" />
@@ -340,7 +337,7 @@
                 <TextView
                     android:layout_marginTop="@dimen/_8sdp"
                     android:layout_width="wrap_content"
-                    android:textSize="@dimen/_15sdp"
+                    android:textSize="@dimen/big_text_size"
                     android:layout_height="wrap_content"
                     android:text="@string/metting_point"
                     android:layout_gravity="start"
@@ -351,6 +348,8 @@
                 <TextView
                     android:id="@+id/ac_meetingpoint"
                     android:layout_width="wrap_content"
+                    android:textColor="@color/bg_color_text"
+                    android:layout_marginTop="@dimen/_12sdp"
                     android:layout_gravity="start"
                     android:layout_height="wrap_content"
                     android:text="@string/data" />
@@ -359,16 +358,14 @@
             </LinearLayout>
 
 
-            <LinearLayout
+            <View
+                android:layout_below="@+id/description"
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:background="#a6a6a6"/>
 
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginBottom="@dimen/_10sdp"
-                android:background="@color/gray">
-
-
-            </LinearLayout>
 
         </LinearLayout>
         <!--step5-->
@@ -424,7 +421,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/bg_color_text"
-                android:textSize="@dimen/_15sdp"
+                android:textSize="@dimen/big_text_size"
+                android:layout_marginTop="@dimen/big_text_size"
                 android:gravity="start"
                 android:layout_gravity="start"
                 android:text="@string/activity_rules"
@@ -432,6 +430,7 @@
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/activity_rules"
+                android:layout_marginTop="@dimen/_12sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -444,7 +443,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/requirments"
-                android:textSize="@dimen/_15sdp"
+                android:textSize="@dimen/big_text_size"
                 android:layout_gravity="start"
                 android:textColor="@color/bg_color_text"
                 android:gravity="start"
@@ -453,6 +452,8 @@
             <TextView
                 android:id="@+id/ac_Requirments"
                 android:layout_gravity="start"
+                android:textColor="@color/bg_color_text"
+                android:layout_marginTop="@dimen/_12sdp"
                 android:gravity="start"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

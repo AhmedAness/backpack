@@ -486,6 +486,7 @@
     <color name="bg_color2">#985494</color>
     <color name="bg_color_text">#4A4A4A</color>
     <color name="footer_color_text">#BABABA</color>
+    <color name="paragraphe_color_text">#666666</color>
 
 
     <color name="day_disabled_background_color">#F1F5F8</color>

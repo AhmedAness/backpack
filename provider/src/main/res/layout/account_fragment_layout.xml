@@ -22,7 +22,7 @@
                android:layout_weight="3"
                android:src="@drawable/account_profile_icon"
                android:layout_width="match_parent"
-               android:padding="@dimen/_13sdp"
+               android:padding="@dimen/_15sdp"
                android:layout_height="match_parent" />
             <LinearLayout
                 android:layout_weight="1"
@@ -88,7 +88,7 @@
                 android:layout_weight="3"
                 android:src="@drawable/account_org"
                 android:layout_width="match_parent"
-                android:padding="@dimen/_13sdp"
+                android:padding="@dimen/_15sdp"
                 android:layout_height="match_parent" />
 
             <LinearLayout
@@ -153,7 +153,7 @@
                 android:layout_weight="3"
                 android:src="@drawable/account_notifications"
                 android:layout_width="match_parent"
-                android:padding="@dimen/_13sdp"
+                android:padding="@dimen/_15sdp"
                 android:layout_height="match_parent" />
 
             <LinearLayout
@@ -193,7 +193,7 @@
                 android:layout_weight="3"
                 android:src="@drawable/activities_settings_icon"
                 android:layout_width="match_parent"
-                android:padding="@dimen/_13sdp"
+                android:padding="@dimen/_15sdp"
                 android:layout_height="match_parent" />
             <LinearLayout
                 android:layout_weight="1"
@@ -258,7 +258,7 @@
                 android:layout_weight="3"
                 android:src="@drawable/account_profile_icon_copy"
                 android:layout_width="match_parent"
-                android:padding="@dimen/_13sdp"
+                android:padding="@dimen/_15sdp"
                 android:layout_height="match_parent" />
             <LinearLayout
                 android:layout_gravity="center"
@@ -308,7 +308,7 @@
                 android:layout_weight="3"
                 android:src="@drawable/account_profile_icon_copy_3"
                 android:layout_width="match_parent"
-                android:padding="@dimen/_13sdp"
+                android:padding="@dimen/_15sdp"
                 android:layout_height="match_parent" />
             <LinearLayout
                android:layout_weight="1"
@@ -360,7 +360,7 @@
                 android:layout_weight="3"
                 android:src="@drawable/account_profile_icon_copy_4"
                 android:layout_width="match_parent"
-                android:padding="@dimen/_13sdp"
+                android:padding="@dimen/_15sdp"
                 android:layout_height="match_parent" />
             <LinearLayout
                 android:layout_gravity="center"
@@ -440,7 +440,7 @@
                 android:layout_weight="3"
                 android:src="@drawable/account_profile_icon_copy_2"
                 android:layout_width="match_parent"
-                android:padding="@dimen/_13sdp"
+                android:padding="@dimen/_15sdp"
                 android:layout_height="match_parent" />
 
             <TextView
@@ -471,7 +471,7 @@
                 android:layout_weight="3"
                 android:src="@drawable/account_profile_icon_copy_5"
                 android:layout_width="match_parent"
-                android:padding="@dimen/_13sdp"
+                android:padding="@dimen/_15sdp"
                 android:layout_height="match_parent" />
 
             <TextView
@@ -505,7 +505,7 @@
                 android:layout_weight="3"
                 android:src="@drawable/logout"
                 android:layout_width="match_parent"
-                android:padding="@dimen/_13sdp"
+                android:padding="@dimen/_15sdp"
                 android:layout_height="match_parent" />
 
             <TextView

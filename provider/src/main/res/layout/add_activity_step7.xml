@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_marginTop="@dimen/_12sdp"
+    android:paddingHorizontal="@dimen/_12sdp"
     android:background="@color/white"
     android:layout_height="match_parent">
 
@@ -14,18 +15,26 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/footer_color_text"
+            android:textSize="@dimen/min_text_size"
             android:text="@string/availability_disc1" />
 
         <TextView
             android:layout_width="match_parent"
+            android:textColor="@color/footer_color_text"
+            android:textSize="@dimen/min_text_size"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="@string/availability_disc2" />
 
-        <LinearLayout
+        <View
+            android:layout_below="@+id/description"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/gray" />
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="#3B979797"/>
+
 
 
         <android.support.v7.widget.RecyclerView

@@ -101,7 +101,7 @@
     <string name="availability">Availability</string>
     <string name="availability_disc1">If you add the same time for Individuals and         Private groups, you will have 2 different trips in         the same time. One for individuals and one for         Private groups.</string>
     <string name="availability_disc2">You can skip this step and do it from the activity calender if you have a spacific date</string>
-    <string name="add_available_time">Add available time</string>
+    <string name="add_available_time">Add available days time</string>
     <string name="q1">activity calender if you have a specific date</string>
     <string name="q2">What is the activity_Start/end day and time?</string>
     <string name="activity_Start">Start</string>

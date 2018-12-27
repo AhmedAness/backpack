@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_marginTop="@dimen/_12sdp"
     android:layout_width="match_parent"
+    android:paddingHorizontal="@dimen/_12sdp"
     android:background="@color/white"
     android:layout_height="match_parent">
 
@@ -20,12 +21,14 @@
             android:layout_height="wrap_content"
             android:text="@string/activity_length"
             android:textColor="@color/bg_color_text"
+            android:layout_marginTop="@dimen/_18sdp"
             android:textSize="@dimen/big_text_size"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
             android:text="@string/activity_length_disc"
             android:textColor="@color/footer_color_text"
             android:textSize="@dimen/med_text_size" />
@@ -41,12 +44,14 @@
                 android:layout_width="0dp"
                 android:hint="Time"
                 android:layout_height="wrap_content"
+                android:textColor="#9F9F9F"
                 android:layout_weight="30"
                 android:inputType="numberSigned" />
 
             <Spinner
                 android:id="@+id/time_spinner"
                 android:layout_width="0dp"
+
                 android:layout_height="wrap_content"
                 android:layout_weight="70" />
 
@@ -56,13 +61,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/activity_capacity"
-            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:textColor="@color/bg_color_text"
             android:textSize="@dimen/big_text_size"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
             android:text="@string/activity_capacity_disc"
             android:textColor="@color/footer_color_text"
             android:textSize="@dimen/med_text_size" />
@@ -79,6 +86,7 @@
                 android:layout_weight="70"
                 android:textColor="@color/bg_color_text"
                 android:textSize="@dimen/big_text_size"
+                android:layout_marginTop="@dimen/_15sdp"
                 android:text="@string/different_categories" />
 
             <Spinner
@@ -90,15 +98,17 @@
                 android:gravity="bottom" />
         </LinearLayout>
 
-        <LinearLayout
+        <View
             android:id="@+id/li1"
+            android:layout_below="@+id/description"
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/gray"
-            android:orientation="horizontal" />
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="#3B979797"/>
 
         <LinearLayout
             android:id="@+id/capacity_layout"
+            android:layout_marginTop="@dimen/_18sdp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:visibility="gone"
@@ -129,16 +139,18 @@
             android:layout_height="wrap_content"
             android:visibility="gone"
             android:layout_marginBottom="@dimen/_5sdp"
-            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:background="@drawable/border_black"
             android:padding="@dimen/_10sdp" />
 
-        <LinearLayout
+        <View
             android:id="@+id/li2"
+            android:layout_below="@+id/description"
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/gray"
-            android:orientation="horizontal" />
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="#3B979797"/>
 
         <LinearLayout
             android:id="@+id/capacity_num_for_activity"
@@ -164,6 +176,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="bottom"
+                android:textColor="#979797"
                 android:inputType="numberSigned"
                 android:layout_weight="30"
                 android:gravity="bottom|center"
@@ -178,17 +191,19 @@
             android:layout_height="wrap_content"
             android:paddingEnd="@dimen/_5sdp"
             android:paddingStart="@dimen/_5sdp"
+            android:buttonTint="#9B9B9B"
             android:text="@string/check_this_box_if_capacity_is_unlimited"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:textColor="@color/gray" />
+            android:textColor="#9B9B9B" />
 
-        <LinearLayout
+        <View
             android:id="@+id/li3"
+            android:layout_below="@+id/description"
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/gray"
-            android:orientation="horizontal" />
-
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="#3B979797"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -213,6 +228,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="bottom"
                 android:layout_weight="15"
+                android:textColor="#979797"
                 android:gravity="bottom"
                 android:inputType="numberSigned"
                 android:hint="Min" />
@@ -221,6 +237,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:textColor="@color/bg_color_text"
                 android:layout_weight="5"
                 android:gravity="center"
                 android:text="-"
@@ -232,6 +249,7 @@
                 android:id="@+id/max_number_group"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:textColor="#979797"
                 android:layout_gravity="bottom"
                 android:layout_weight="15"
                 android:inputType="numberSigned"
@@ -240,12 +258,14 @@
 
         </LinearLayout>
 
-        <LinearLayout
+        <View
             android:id="@+id/li4"
+            android:layout_below="@+id/description"
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/gray"
-            android:orientation="horizontal" />
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="#3B979797"/>
 
 
     </LinearLayout>

@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_marginTop="@dimen/_12sdp"
     android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/_12sdp"
     android:background="@color/white"
     android:orientation="vertical">
 
@@ -24,15 +25,17 @@
             android:layout_height="wrap_content"
             android:text="@string/name_you_activity"
             android:textColor="#666666"
-            android:textSize="20dp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:textSize="@dimen/big_text_size"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
             android:text="@string/name_you_activity_disc"
             android:textColor="#BABABA"
-            android:textSize="@dimen/big_text_size"
+            android:textSize="@dimen/med_text_size"
             android:textStyle="bold" />
 
         <EditText
@@ -41,6 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
+            android:textSize="@dimen/text_large"
             android:layout_marginTop="10dp"
             android:hint="@string/Activity_Title_hint" />
 
@@ -50,15 +54,16 @@
             android:layout_height="wrap_content"
             android:text="@string/type_of_activity"
             android:textColor="#666666"
-            android:textSize="20dp"
+            android:textSize="@dimen/big_text_size"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/type_of_activity_disc"
+            android:layout_marginTop="@dimen/_4sdp"
             android:textColor="#BABABA"
-            android:textSize="@dimen/big_text_size"
+            android:textSize="@dimen/med_text_size"
             android:textStyle="bold" />
 
         <RadioGroup
@@ -73,9 +78,10 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_17sdp"
             android:text="@string/Who_can_book_it"
             android:textColor="#666666"
-            android:textSize="20dp"
+            android:textSize="@dimen/big_text_size"
             android:textStyle="bold" />
 
 
@@ -83,8 +89,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/Who_can_book_it_hint"
+            android:layout_marginTop="@dimen/_4sdp"
             android:textColor="#BABABA"
-            android:textSize="@dimen/big_text_size"
+            android:textSize="@dimen/med_text_size"
             android:textStyle="bold" />
 
 
@@ -93,22 +100,26 @@
             android:layout_height="wrap_content"
             android:text="@string/Describe_this_activity"
             android:textColor="#666666"
-            android:textSize="20dp"
+            android:layout_marginTop="@dimen/_17sdp"
+            android:textSize="@dimen/big_text_size"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/Describe_this_activity_hint"
+            android:layout_marginTop="@dimen/_4sdp"
             android:textColor="#BABABA"
-            android:textSize="@dimen/big_text_size"
+            android:textSize="@dimen/med_text_size"
             android:textStyle="bold" />
 
         <EditText
             android:backgroundTint="@color/background_transparent"
             android:id="@+id/disc"
+            android:layout_marginTop="@dimen/_4sdp"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_150sdp"
+            android:textSize="@dimen/med_text_size"
             android:gravity="center_vertical"
             android:hint="@string/Describe_this_activity"
 

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-
+    android:paddingHorizontal="@dimen/_12sdp"
     android:focusable="true"
     android:focusableInTouchMode="true"
     android:layout_height="match_parent"
@@ -15,11 +15,11 @@
         android:id="@+id/header"
         android:layout_height="wrap_content">
         <ImageView
-            android:layout_width="30dp"
+            android:layout_width="25dp"
             android:layout_gravity="center"
             android:src="@drawable/close_white"
             android:id="@+id/close"
-            android:layout_height="30dp" />
+            android:layout_height="25dp" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/Date"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_17sdp" />
+                android:textSize="@dimen/med_text_size" />
 
             <TextView
                 android:id="@+id/date"
@@ -142,12 +142,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/full_group"
-                        android:textSize="@dimen/_15sdp"
+                        android:textSize="@dimen/big_text_size"
                         android:textColor="@color/Wisteria_Purple" />
 
                     <TextView
                         android:layout_marginTop="@dimen/_5sdp"
                         android:layout_width="wrap_content"
+                        android:textSize="@dimen/med_text_size"
                         android:layout_height="wrap_content"
                         android:text="@string/full_group_disc"
                         android:textColor="@color/Wisteria_Purple" />
@@ -180,7 +181,7 @@
                 android:layout_marginTop="13dp"
                 android:text="@string/tickets_left"
                 android:alpha=".65"
-                android:textSize="@dimen/_17sdp"
+                android:textSize="@dimen/big_text_size"
                 android:textColor="@color/white" />
 
 

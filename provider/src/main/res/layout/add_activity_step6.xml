@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_marginTop="@dimen/_12sdp"
     android:background="@color/white"
+    android:paddingHorizontal="@dimen/_12sdp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
@@ -19,11 +20,13 @@
             android:text="@string/notice_in_advance"
             android:textSize="@dimen/big_text_size"
             android:textColor="#666666"
+
             android:textStyle="bold"
             />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
             android:textSize="@dimen/med_text_size"
             android:textColor="#BABABA"
             android:text="@string/notice_in_advance_disc"
@@ -38,7 +41,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="30"
                 android:text="30"
-                android:textColor="@color/bg_color_text"
+                android:textColor="#9F9F9F"
                 android:inputType="numberSigned"
                 android:id="@+id/notice_in_advance_txt"
                 android:layout_height="wrap_content" />
@@ -47,7 +50,7 @@
             <Spinner
                 android:layout_width="0dp"
                 android:layout_weight="70"
-                android:textColor="@color/bg_color_text"
+                android:textColor="#9F9F9F"
                 android:id="@+id/notice_in_advance_spinner"
                 android:layout_height="wrap_content">
 
@@ -59,12 +62,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/booking_window"
+            android:layout_marginTop="@dimen/_12sdp"
             android:textSize="@dimen/big_text_size"
             android:textColor="#666666"
             android:textStyle="bold"
             />
         <TextView
             android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
             android:layout_height="wrap_content"
             android:textSize="@dimen/med_text_size"
             android:textColor="#BABABA"
@@ -75,6 +80,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:weightSum="100"
+            android:layout_marginTop="@dimen/_10sdp"
             android:orientation="horizontal"
             android:layout_height="wrap_content">
 
@@ -86,14 +92,14 @@
                 android:text="30"
                 android:layout_gravity="center"
                 android:inputType="numberSigned"
-                android:textColor="@color/bg_color_text"
+                android:textColor="#9F9F9F"
                 android:id="@+id/booking_window_ET"
                 android:layout_height="wrap_content" />
             <Spinner
                 android:layout_width="0dp"
                 android:layout_margin="10dp"
                 android:layout_weight="70"
-                android:textColor="@color/bg_color_text"
+                android:textColor="#9F9F9F"
                 android:layout_gravity="center"
                 android:id="@+id/booking_window_spinner"
                 android:layout_height="wrap_content">
@@ -104,6 +110,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
             android:text="@string/booking_available_for"
             android:textSize="@dimen/big_text_size"
             android:textColor="#666666"
@@ -112,6 +119,7 @@
         <CheckBox
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
             android:text="@string/individuals"
             android:textSize="@dimen/med_text_size"
             android:textColor="#666666"

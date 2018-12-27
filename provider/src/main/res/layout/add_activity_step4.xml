@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingHorizontal="@dimen/_12sdp"
     android:layout_marginTop="@dimen/_12sdp"
     android:background="@color/white"
     android:layout_width="match_parent">
@@ -17,15 +18,14 @@
             android:textSize="@dimen/big_text_size"
             android:textColor="#666666"
             android:textStyle="bold"
-            android:text="@string/activity_location"
-            />
+            android:text="@string/activity_location" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
             android:textSize="@dimen/med_text_size"
-            android:textColor="@color/gray"
-            android:text="@string/Activity_Title_disc"
-            />
+            android:textColor="@color/footer_color_text"
+            android:text="@string/Activity_Title_disc" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -39,6 +39,8 @@
                 android:layout_weight="80"
                 android:id="@+id/location_name"
                 android:layout_gravity="center"
+                android:textColor="#979797"
+                android:textSize="@dimen/min_text_size"
                 android:text="@string/select_range_from_map" />
             <ImageView
                 android:layout_width="50dp"
@@ -49,13 +51,16 @@
                 android:layout_height="20dp" />
 
         </LinearLayout>
-        <LinearLayout
+        <view
             android:layout_width="match_parent"
-            android:background="@color/gray"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:layout_height="2dp">
 
-        </LinearLayout>
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="#979797"
+            android:alpha=".36"
+            android:layout_height="1dp">
+
+        </view>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="200dp">
@@ -77,27 +82,31 @@
             android:text="@string/meeting_point"
             android:textSize="@dimen/big_text_size"
             android:textColor="#666666"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
+
         <TextView
             android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_4sdp"
             android:layout_height="wrap_content"
             android:text="@string/meeting_point_disc"
             android:textSize="@dimen/med_text_size"
-            android:textColor="#BABABA"
-            />
+            android:textColor="#BABABA" />
+
         <CheckBox
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#666666"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:buttonTint="#666666"
             android:id="@+id/same_location"
-            android:text="@string/use_same_location_as_activity_location"
-            />
+            android:text="@string/use_same_location_as_activity_location" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:id="@+id/second_map"
-            >
+            android:id="@+id/second_map">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="horizontal"
@@ -110,7 +119,7 @@
                 android:layout_weight="80"
                 android:layout_gravity="center"
                 android:id="@+id/location_meeting"
-
+                android:textColor="#979797"
                 android:text="@string/select_loation_from_map"
                 />
             <ImageView
@@ -121,14 +130,15 @@
                 android:layout_height="20dp" />
 
         </LinearLayout>
-        <LinearLayout
+        <view
             android:layout_width="match_parent"
 
             android:layout_marginTop="@dimen/_5sdp"
-            android:background="@color/gray"
-            android:layout_height="2dp">
+            android:background="#979797"
+            android:alpha=".36"
+            android:layout_height="1dp">
 
-        </LinearLayout>
+        </view>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="200dp">

@@ -62,9 +62,10 @@
                         android:layout_alignParentStart="true"
                         android:layout_toStartOf="@id/edit_user_name"
                         android:text="mahmoud rashad"
+                        android:textSize="@dimen/big_text_size"
                         android:imeOptions="actionDone"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/bg_color_text" />
 
                     <TextView
                         android:id="@+id/edit_user_name"
@@ -75,7 +76,7 @@
                         android:text="@string/edit_btn"
                         android:layout_centerVertical="true"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                        android:textColor="@color/gray" />
+                        android:textColor="@color/footer_color_text" />
 
                 </RelativeLayout>
 
@@ -96,12 +97,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
+                        android:textSize="@dimen/big_text_size"
                         android:layout_toStartOf="@id/edit_user_phone"
                         android:text="+9661 2122255"
                         android:background="@android:color/transparent"
                         android:imeOptions="actionDone"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/bg_color_text" />
 
 
                     <TextView
@@ -113,7 +115,7 @@
                         android:text="@string/edit_btn"
                         android:layout_centerVertical="true"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                        android:textColor="@color/gray" />
+                        android:textColor="@color/footer_color_text" />
 
                 </RelativeLayout>
 
@@ -134,11 +136,13 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
                         android:imeOptions="actionDone"
+                        android:paddingRight="@dimen/_12sdp"
+                        android:textSize="@dimen/big_text_size"
                         android:background="@android:color/transparent"
                         android:layout_toStartOf="@id/edit_email"
                         android:text="mahmoud.rashad7010@gmail.com"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/bg_color_text" />
 
                     <TextView
                         android:id="@+id/edit_email"
@@ -146,10 +150,11 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_gravity="end"
+
                         android:text="@string/edit_btn"
                         android:layout_centerVertical="true"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                        android:textColor="@color/gray" />
+                        android:textColor="@color/footer_color_text" />
 
                 </RelativeLayout>
 
@@ -177,13 +182,15 @@
                 app:civ_border_width="@dimen/_3sdp"
                 />
 
-
-            <ImageButton
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/edit_image"
-                android:layout_width="@dimen/_25sdp"
-                android:layout_height="@dimen/_25sdp"
+                android:layout_width="@dimen/_40sdp"
+                app:civ_circle_background_color="@color/white"
+                android:layout_height="@dimen/_40sdp"
                 android:layout_gravity="end|bottom"
-                android:src="@drawable/backpack_icon_gray_watermark" />
+                android:padding="@dimen/_7sdp"
+                android:src="@drawable/camera_icon_profile" />
+
         </FrameLayout>
 
 

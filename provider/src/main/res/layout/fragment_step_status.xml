@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:paddingHorizontal="@dimen/_12sdp"
     android:layout_height="match_parent"
     >
 <LinearLayout android:layout_width="match_parent"
@@ -37,7 +38,7 @@
                 android:textSize="@dimen/_16sdp"
 
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                android:textColor="@color/gray"
+                android:textColor="@color/bg_color_text"
                 android:text="ActivityInfo" />
 
             <TextView
@@ -63,7 +64,7 @@
             android:layout_height="wrap_content"
             android:layout_toEndOf="@id/step1"
             android:padding="@dimen/_5sdp"
-            android:textColor="@color/gray"
+            android:textColor="@color/footer_color_text"
 
             android:text="@string/titleandtypeanddescription"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
@@ -91,7 +92,7 @@
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/step2"
                 android:padding="@dimen/_5sdp"
-                android:textColor="@color/gray"
+                android:textColor="@color/footer_color_text"
 
                 android:text="@string/photos"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
@@ -120,7 +121,7 @@
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/step3"
                 android:padding="@dimen/_5sdp"
-                android:textColor="@color/gray"
+                android:textColor="@color/footer_color_text"
 
                 android:text="@string/Add_add_ons"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
@@ -147,7 +148,7 @@
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/step4"
                 android:padding="@dimen/_5sdp"
-                android:textColor="@color/gray"
+                android:textColor="@color/footer_color_text"
 
                 android:text="@string/location"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
@@ -175,7 +176,7 @@
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/step5"
                 android:padding="@dimen/_5sdp"
-                android:textColor="@color/gray"
+                android:textColor="@color/footer_color_text"
 
                 android:text="@string/rulesandrequirment"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
@@ -216,7 +217,7 @@ android:visibility="invisible"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                android:textColor="@color/gray"
+                android:textColor="@color/bg_color_text"
                 android:textSize="@dimen/_16sdp"
                 android:text="@string/complete_booking_setting_title" />
 
@@ -244,7 +245,7 @@ android:visibility="invisible"
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/step6"
                 android:padding="@dimen/_5sdp"
-                android:textColor="@color/gray"
+                android:textColor="@color/footer_color_text"
 
                 android:text="@string/booking_prefrences"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
@@ -272,7 +273,7 @@ android:visibility="invisible"
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/step7"
                 android:padding="@dimen/_5sdp"
-                android:textColor="@color/gray"
+                android:textColor="@color/footer_color_text"
 
                 android:text="@string/availability"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
@@ -300,7 +301,7 @@ android:visibility="invisible"
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/step8"
                 android:padding="@dimen/_5sdp"
-                android:textColor="@color/gray"
+                android:textColor="@color/footer_color_text"
 
                 android:text="@string/length_and_capacity"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
@@ -328,7 +329,7 @@ android:visibility="invisible"
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/step9"
                 android:padding="@dimen/_5sdp"
-                android:textColor="@color/gray"
+                android:textColor="@color/footer_color_text"
 
                 android:text="@string/pricing"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
@@ -356,7 +357,7 @@ android:visibility="invisible"
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/step10"
                 android:padding="@dimen/_5sdp"
-                android:textColor="@color/gray"
+                android:textColor="@color/footer_color_text"
                 android:text="@string/rulesandrequirment"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 

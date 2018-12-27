@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:focusable="true"
+    android:paddingHorizontal="@dimen/_12sdp"
     android:focusableInTouchMode="true"
     android:layout_height="match_parent"
     tools:context=".Activities.Calenderdaydetails">
@@ -27,33 +29,38 @@
             >
             <ImageView
                 android:layout_weight="10"
-                android:src="@drawable/arrow"
+                android:src="@drawable/back_button_gray"
+                android:layout_gravity="center"
                 android:layout_width="30dp"
                 android:layout_height="30dp" />
             <TextView
                 android:id="@+id/day_date"
                 android:text="Thu, 4 August"
                 android:layout_weight="90"
+                android:textColor="@color/bg_color_text"
                 android:gravity="center"
-
                 android:layout_gravity="center"
+                android:textSize="@dimen/big_text_size"
                 android:layout_width="0dp"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
                 android:textAlignment="center"
                 android:background="@drawable/border_black"
-                android:padding="@dimen/_5sdp"
+                android:paddingTop="@dimen/_12sdp"
+                android:paddingBottom="@dimen/_12sdp"
                 android:layout_height="wrap_content" />
 
 
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginEnd="@dimen/_10sdp"
-            android:background="@color/gray"
-            android:layout_height="2dp"></LinearLayout>
+
+            <View
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#87979797" />
 
 
         <RadioGroup
@@ -65,12 +72,16 @@
             <RadioButton
                 android:id="@+id/not_availableRadioButton"
                 android:text="@string/not_available"
+                android:textColor="@color/bg_color_text"
+                android:buttonTint="@color/bg_color_text"
                 android:onClick="onRadioButtonClicked"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <RadioButton
                 android:id="@+id/availableRadioButton"
                 android:text="@string/available"
+                android:textColor="@color/bg_color_text"
+                android:buttonTint="@color/bg_color_text"
                 android:onClick="onRadioButtonClicked"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
@@ -80,21 +91,25 @@
             android:layout_width="match_parent"
             android:orientation="vertical"
             android:layout_height="wrap_content">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginStart="@dimen/_10sdp"
+            <View
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
-                android:background="@color/gray"
-                android:layout_height="2dp"></LinearLayout>
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#87979797" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
                 android:text="@string/is_the_activity_for_individual_bookings_or_private_groups"
-                android:layout_height="wrap_content" />
+                android:textColor="@color/paragraphe_color_text"
+                android:textStyle="bold" />
 
             <CheckBox
                 android:layout_width="match_parent"
@@ -105,28 +120,33 @@
                 android:text="@string/individuals"
                 android:id="@+id/individuals_checkbox"
                 android:onClick="onCheckboxClicked"
+                android:buttonTint="@color/paragraphe_color_text"
+                android:textColor="@color/paragraphe_color_text"
                 android:checked="false"/>
 
             <CheckBox
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
+                android:buttonTint="@color/paragraphe_color_text"
+                android:textColor="@color/paragraphe_color_text"
                 android:layout_marginStart="@dimen/_20sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
                 android:text="@string/private_Groups"
                 android:id="@+id/private_groups"
                 android:onClick="onCheckboxClicked"
                 android:checked="false"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginStart="@dimen/_10sdp"
+            <View
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
-                android:background="@color/gray"
-                android:layout_height="2dp"></LinearLayout>
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#87979797" />
 
             <TextView
                 android:layout_width="match_parent"
+                android:textColor="@color/paragraphe_color_text"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginStart="@dimen/_20sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
@@ -136,14 +156,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_3sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_10sdp"
+                android:textSize="@dimen/min_text_size"
+                android:textColor="#818181"
                 android:text="Start"
                 />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:layout_marginStart="@dimen/_20sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
                 >
@@ -152,8 +174,10 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:hint="DAY"
+                    android:textColor="@color/bg_color_text"
                     android:id="@+id/startD"
                     android:gravity="center"
+                    android:textSize="@dimen/big_text_size"
                     android:padding="@dimen/_5sdp"
                     android:background="@drawable/border_black"
                     android:layout_height="wrap_content" />
@@ -161,6 +185,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="at"
+                    android:textColor="#818181"
                     android:layout_gravity="center"
                     android:layout_marginEnd="@dimen/_10sdp"
                     android:layout_marginStart="@dimen/_10sdp"
@@ -169,6 +194,8 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:hint="Time"
+                    android:textColor="@color/bg_color_text"
+                    android:textSize="@dimen/big_text_size"
                     android:id="@+id/startT"
                     android:gravity="center"
                     android:padding="@dimen/_5sdp"
@@ -180,6 +207,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_20sdp"
+                android:textSize="@dimen/min_text_size"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:textColor="#818181"
                 android:layout_marginEnd="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:text="End"
@@ -198,12 +228,15 @@
                     android:hint="DAY"
                     android:id="@+id/endD"
                     android:gravity="center"
+                    android:textSize="@dimen/big_text_size"
+                    android:textColor="@color/bg_color_text"
                     android:padding="@dimen/_5sdp"
                     android:background="@drawable/border_black"
                     android:layout_height="wrap_content" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="#818181"
                     android:text="at"
                     android:layout_gravity="center"
                     android:layout_marginEnd="@dimen/_10sdp"
@@ -212,6 +245,8 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_weight="1"
+                    android:textSize="@dimen/big_text_size"
+                    android:textColor="@color/bg_color_text"
                     android:hint="Time"
                     android:id="@+id/endT"
                     android:gravity="center"
@@ -227,23 +262,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="@color/bg_color_text"
+                android:buttonTint="#979797"
                 android:layout_marginStart="@dimen/_20sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
                 android:text="@string/repeat_every_week"
                 android:onClick="onCheckboxClicked"
                 />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginStart="@dimen/_10sdp"
+            <View
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
-                android:background="@color/gray"
-                android:layout_height="2dp"></LinearLayout>
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#87979797" />
             <TextView
                 android:layout_width="match_parent"
                 android:text="@string/price_per_individual"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:layout_marginStart="@dimen/_20sdp"
+                android:textColor="@color/bg_color_text"
                 android:layout_marginEnd="@dimen/_10sdp"
                 android:layout_height="wrap_content" />
             <android.support.v7.widget.RecyclerView
@@ -279,6 +318,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_20sdp"
+                android:textColor="@color/bg_color_text"
+                android:layout_marginBottom="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
                 android:text="Price for private group"/>
             <TextView
@@ -288,7 +329,7 @@
 group."
                 android:layout_marginStart="@dimen/_20sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
-                android:textColor="@color/gray"
+                android:textColor="#9B9B9B"
 
                 />
             <EditText
@@ -297,31 +338,36 @@ group."
                 android:id="@+id/price"
                 android:layout_gravity="end"
                 android:hint="SR 0.0"
+                android:textColor="#9B9B9B"
+                android:textSize="@dimen/text_large"
                 android:layout_marginStart="@dimen/_20sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
                 android:layout_height="wrap_content" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginStart="@dimen/_10sdp"
+            <View
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
-                android:background="@color/gray"
-                android:layout_height="2dp"></LinearLayout>
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#87979797" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="@color/bg_color_text"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:text="@string/discount"
                 />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginStart="@dimen/_10sdp"
+            <View
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
-                android:background="@color/gray"
-                android:layout_height="2dp"></LinearLayout>
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#87979797" />
 
 
 
@@ -339,6 +385,7 @@ group."
                 <RadioButton
                     android:id="@+id/not_apply_btn"
                     android:layout_width="wrap_content"
+                    android:textColor="@color/bg_color_text"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:checked="true"
@@ -349,17 +396,20 @@ group."
                     android:id="@+id/apply_rbtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/bg_color_text"
                     android:layout_weight="1"
                     android:onClick="onRadioButtondiscountClicked"
                     android:text="@string/apply_btn"/>
 
             </RadioGroup>
             <View
-                android:id="@+id/divider3"
-                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_width="fill_parent"
                 android:layout_height="1dp"
-                android:layout_weight="1"
-                android:background="?android:attr/listDivider" />
+                android:background="#87979797" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -375,8 +425,10 @@ group."
                     android:layout_weight="1"
                     android:text="@string/cancel"
                     android:gravity="center"
+                    android:textColor="@color/cancell_color"
                     android:padding="@dimen/_5sdp"
                     android:id="@+id/cancel"
+                    android:textSize="@dimen/text_large"
                     android:layout_height="wrap_content" />
                 <TextView
                     android:layout_width="wrap_content"
@@ -390,7 +442,9 @@ group."
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:id="@+id/apply_btn"
+                    android:textSize="@dimen/text_large"
                     android:text="@string/apply_btn"
+                    android:textColor="@color/white"
                     android:gravity="center"
                     android:padding="@dimen/_5sdp"
                     android:background="@color/colorAccent"

@@ -14,6 +14,7 @@
         android:paddingStart="@dimen/_16sdp"
         android:paddingEnd="@dimen/_16sdp"
         android:paddingTop="@dimen/_5sdp"
+        android:textColor="@color/bg_color_text"
         android:paddingBottom="@dimen/_5sdp"
         android:gravity="center"
         android:layout_width="match_parent"
@@ -30,6 +31,7 @@
         android:id="@+id/ticket_number"
         android:layout_width="match_parent"
         android:paddingStart="@dimen/_16sdp"
+        android:textColor="@color/bg_color_text"
         android:paddingEnd="@dimen/_16sdp"
         android:paddingTop="@dimen/_5sdp"
         android:paddingBottom="@dimen/_5sdp"
@@ -58,6 +60,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/this_ticket_has_a_balance_of_150_sar_and_isn_t_paid_yet_pay_it_now"
+        android:textColor="@color/bg_color_text"
         android:gravity="center"
         />
     <LinearLayout
@@ -71,6 +74,7 @@
         android:id="@+id/Add_addons_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/bg_color_text"
         android:layout_gravity="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
 

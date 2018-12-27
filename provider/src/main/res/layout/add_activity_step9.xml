@@ -4,6 +4,7 @@
     android:layout_marginTop="@dimen/_12sdp"
     android:layout_width="match_parent"
     android:background="@color/white"
+    android:paddingHorizontal="@dimen/_12sdp"
     android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,10 +21,13 @@
             android:textStyle="bold"
             android:textColor="@color/bg_color_text"
             android:text="@string/Price_per_individual"
+            android:layout_marginTop="@dimen/_20sdp"
             android:layout_height="wrap_content" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
             android:textColor="@color/footer_color_text"
             android:textSize="@dimen/med_text_size"
             android:text="@string/Price_per_individual_disc"
@@ -84,28 +88,34 @@
             android:inputType="numberSigned"
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp" />
-        <LinearLayout
+        <View
+            android:id="@+id/li1"
+            android:layout_below="@+id/description"
             android:layout_width="match_parent"
-            android:background="@color/gray"
-            android:layout_height="2dp"/>
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:background="#3B979797"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:textSize="@dimen/big_text_size"
+            android:textColor="@color/bg_color_text"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/discount"
+            android:layout_height="wrap_content" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
+            android:layout_marginTop="@dimen/_12sdp"
             android:textSize="@dimen/med_text_size"
             android:textColor="@color/footer_color_text"
             android:text="@string/discount_disc"
             />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:textColor="@color/gray"
-            android:textSize="26dp"
-            android:layout_marginBottom="50dp"
-            android:padding="10dp"
-            android:text="@string/discount" />
+
+
+
 
         <TextView
             android:id="@+id/textView"
@@ -119,8 +129,10 @@
             android:id="@+id/divider"
             android:layout_width="match_parent"
             android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginBottom="@dimen/_7sdp"
             android:layout_weight="1"
-            android:background="?android:attr/listDivider" />
+            android:background="#87979797" />
 
 
         <RadioGroup
@@ -134,39 +146,49 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/bg_color_text"
                 android:checked="true"
                 android:text="@string/don_t_apply_radio_btn" />
 
             <RadioButton
                 android:id="@+id/apply_btn"
                 android:layout_width="wrap_content"
+                android:textColor="@color/bg_color_text"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/apply_btn"/>
 
         </RadioGroup>
+
         <View
             android:id="@+id/divider3"
+            android:layout_below="@+id/description"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_weight="1"
-            android:background="?android:attr/listDivider" />
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:background="#3B979797"/>
+
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textColor="@color/footer_color_text"
             android:text="@string/discount_order" />
         <View
             android:id="@+id/divider2"
+            android:layout_below="@+id/description"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_weight="1"
-            android:background="?android:attr/listDivider" />
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:background="#3B979797" />
 
         <android.support.v7.widget.RecyclerView
             android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_12sdp"
             android:id="@+id/discount_list"
             android:paddingBottom="@dimen/_5sdp"
 

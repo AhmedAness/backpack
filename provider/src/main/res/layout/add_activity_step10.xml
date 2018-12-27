@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingHorizontal="@dimen/_12sdp"
     android:layout_width="match_parent"
     android:layout_marginTop="@dimen/_12sdp"
     android:layout_height="match_parent">
@@ -13,11 +14,12 @@
         android:paddingBottom="@dimen/_5sdp"
         android:orientation="vertical">
 
-        <LinearLayout
+        <View
+            android:layout_below="@+id/description"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="20dp"
-            android:background="@color/gray"/>
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="#3B979797"/>
 
         <TextView
             android:layout_width="match_parent"
