@@ -19,6 +19,7 @@ import android.widget.EditText;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +29,7 @@ import com.androidnetworking.interfaces.JSONObjectRequestListener;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.kaopiz.kprogresshud.KProgressHUD;
+import com.victor.loading.rotate.RotateLoading;
 import com.wasltec.provider.Activities.Add_new_activity;
 import com.wasltec.provider.Adopters.Online_items_list_adopter;
 import com.wasltec.provider.R;
@@ -60,6 +62,9 @@ public class Activities_Fragment extends Fragment  {
     EditText msearch_text ;
     ImageView mclose_searsh;
     Online_items_list_adopter list_adopter;
+    RotateLoading rotateloading;
+
+    RelativeLayout loader;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -106,6 +111,7 @@ public class Activities_Fragment extends Fragment  {
 
         Online_items_list= view.findViewById(R.id.online_list);
         mclose_searsh= view.findViewById(R.id.close_searsh);
+        loader= view.findViewById(R.id.loader);
 
 
         msearch_icon= view.findViewById(R.id.search_icon);
@@ -116,7 +122,11 @@ public class Activities_Fragment extends Fragment  {
                 if (!search){
                 show_search(search);//false
                 search=true;
-                mclose_searsh.setVisibility(View.VISIBLE);}
+                mclose_searsh.setVisibility(View.VISIBLE);
+                msearch_icon.setVisibility(View.GONE);
+                    msearch_text.setFocusable(true);
+
+                }
             }
         });
         mclose_searsh.setOnClickListener(new View.OnClickListener() {
@@ -127,6 +137,8 @@ public class Activities_Fragment extends Fragment  {
                     search = false;
                     msearch_text.setText("");
                     mclose_searsh.setVisibility(View.GONE);
+                    msearch_icon.setVisibility(View.VISIBLE);
+                    msearch_text.setFocusable(false);
                 }
             }
         });
@@ -152,18 +164,21 @@ public class Activities_Fragment extends Fragment  {
 
         search_container=view.findViewById(R.id.container3);
         filter_container=view.findViewById(R.id.container2);
+        rotateloading=view.findViewById(R.id.rotateloading);
 
 
-        KProgressHUD hud = KProgressHUD.create(getActivity())
-                .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
-                .setLabel("Please wait")
-                .setDetailsLabel("Downloading data")
-                .setCancellable(true)
-                .setAnimationSpeed(2)
-                .setDimAmount(0.5f)
-                .show();
-        hud.setProgress(90);
+//        KProgressHUD hud = KProgressHUD.create(getActivity())
+//                .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
+//                .setLabel("Please wait")
+//                .setDetailsLabel("Downloading data")
+//                .setCancellable(true)
+//                .setAnimationSpeed(2)
+//                .setDimAmount(0.5f)
+//                .show();
+//        hud.setProgress(90);
 
+        rotateloading.start();
+        loader.setVisibility(View.VISIBLE);
 
         AndroidNetworking.get(URLManger.getInstance().getGetAllActivities())
                 .addHeaders("Authorization", "bearer "+SharedPreferencesManager.getInstance(getActivity()).getToken())
@@ -172,7 +187,7 @@ public class Activities_Fragment extends Fragment  {
                     @Override
                     public void onResponse(JSONObject response) {
 
-
+                        loader.setVisibility(View.GONE);
                         int empty = 0;
                         online_pointer.setEnabled(true);
                         offline_pointer.setEnabled(true);
@@ -214,14 +229,17 @@ public class Activities_Fragment extends Fragment  {
                         list_adopter=new Online_items_list_adopter(getActivity(),Online_items,offline_items,incomplate);
                         Online_items_list.setAdapter(list_adopter);
 //                        Online_items_list.setAdapter(new Online_items_list_adopter(getActivity(),inctest,inctest,incomplate));
-                        hud.dismiss();
+                        if (rotateloading.isStart())
+                        rotateloading.stop();
 
                     }
 
                     @Override
                     public void onError(ANError anError) {
                         Toast.makeText(getActivity(),""+anError.getMessage(),Toast.LENGTH_LONG).show();
-                        hud.dismiss();
+                        loader.setVisibility(View.GONE);
+                        if (rotateloading.isStart())
+                            rotateloading.stop();
 
                     }
                 });

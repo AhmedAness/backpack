@@ -187,7 +187,6 @@
                             android:layout_height="match_parent"
                             android:scaleType="center"
                             android:padding="@dimen/_2sdp"
-                            android:background="@drawable/search_boarder"
                             android:src="@drawable/close"
                             android:visibility="gone"
                             />

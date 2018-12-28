@@ -45,8 +45,8 @@ public class Account_Fragment extends Fragment {
                              Bundle savedInstanceState) {
 
         setHasOptionsMenu(true);
-        actoinbar.setDisplayHomeAsUpEnabled(true);
-        actoinbar.setDisplayShowHomeEnabled(true);
+//        actoinbar.setDisplayHomeAsUpEnabled(true);
+//        actoinbar.setDisplayShowHomeEnabled(true);
         toolbar.setTitle(Session.getInstance().getFirst_name()+" "+Session.getInstance().getLast_name());
         view =  inflater.inflate(R.layout.account_fragment_layout, container, false);
         return view;

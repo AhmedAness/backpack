@@ -10,7 +10,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="horizontal"
-        android:paddingTop="@dimen/_8sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingHorizontal="@dimen/_5sdp"
         android:layout_height="wrap_content">
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -38,7 +39,7 @@
                             android:id="@+id/image_inbox"
                             android:src="@drawable/card"
                             android:background="@color/gray"
-
+                            android:scaleType="centerCrop"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent" />
 

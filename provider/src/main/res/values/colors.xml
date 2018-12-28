@@ -495,6 +495,8 @@
     <color name="selected_day_background">#03A7E9</color>
     <color name="current_day_of_month">#03A7E9</color>
 
+    <color name="cancell_color">#F44336</color>
+
 
 
 </resources>

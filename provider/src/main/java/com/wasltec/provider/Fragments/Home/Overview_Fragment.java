@@ -23,6 +23,7 @@ import com.androidnetworking.interfaces.JSONObjectRequestListener;
 import com.google.android.gms.common.util.ListUtils;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.victor.loading.rotate.RotateLoading;
 import com.wasltec.provider.Activities.Calender;
 import com.wasltec.provider.Activities.CustomisedCalender;
 import com.wasltec.provider.Adopters.ActivityCategoryAdapter;
@@ -55,6 +56,8 @@ public class Overview_Fragment extends Fragment implements ActivityCategoryAdapt
     private Gson gson;
     public static List<AllActivityReturnOpj> items;
     RecyclerView recyclerView;
+    private RotateLoading rotateloading,rotateloading2;
+    int loaderindex=0;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -71,9 +74,15 @@ public class Overview_Fragment extends Fragment implements ActivityCategoryAdapt
 
 
         // set up the RecyclerView
+        rotateloading = view.findViewById(R.id.rotateloading);
+        rotateloading2 = view.findViewById(R.id.rotateloading2);
         recyclerView = view.findViewById(R.id.category_recycer);
         adapter = new ActivityCategoryAdapter(getActivity());
         adapter.setClickListener(this);
+
+
+        rotateloading.start();
+
         AndroidNetworking.get(URLManger.getInstance().getGetAllActivities())
                 .addHeaders("Authorization", "bearer "+ SharedPreferencesManager.getInstance(getActivity()).getToken())
                 .build()
@@ -81,6 +90,8 @@ public class Overview_Fragment extends Fragment implements ActivityCategoryAdapt
                     @Override
                     public void onResponse(JSONObject response) {
 
+                            if (rotateloading.isStart())
+                                rotateloading.stop();
 
                         Type listType = new TypeToken<List<AllActivityReturnOpj>>() {
                         }.getType();
@@ -119,6 +130,8 @@ public class Overview_Fragment extends Fragment implements ActivityCategoryAdapt
                     public void onError(ANError anError) {
                         Log.d(TAG, "onError: "+anError.getMessage());
 
+                            if (rotateloading.isStart())
+                                rotateloading.stop();
                     }
                 });
 
@@ -148,7 +161,7 @@ public class Overview_Fragment extends Fragment implements ActivityCategoryAdapt
 
 
 
-
+        rotateloading2.start();
 
         AndroidNetworking.get(URLManger.getInstance().getUpcomingActivity())
                 .addHeaders("Authorization", "bearer "+ SharedPreferencesManager.getInstance(getActivity()).getToken())
@@ -157,6 +170,8 @@ public class Overview_Fragment extends Fragment implements ActivityCategoryAdapt
                     @Override
                     public void onResponse(JSONArray response) {
 
+                            if (rotateloading2.isStart())
+                                rotateloading2.stop();
                         Type listType = new TypeToken<List<OverviewReturnOpj>>() {
                         }.getType();
                         gson=new Gson();
@@ -173,6 +188,8 @@ public class Overview_Fragment extends Fragment implements ActivityCategoryAdapt
                     public void onError(ANError anError) {
                         Log.d(TAG, "onError: "+anError.getMessage());
 
+                            if (rotateloading2.isStart())
+                                rotateloading2.stop();
                     }
                 });
 

@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: org.florescu.android.rangeseekbar:rangeseekbar-library-0.3.0">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/rangeseekbar-library-0.3.0.aar/bdcd6144a2f03fcf8feef0da5d0f8789/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/rangeseekbar-library-0.3.0.aar/05996fd84df4a6240a960cb16f9361f8/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/rangeseekbar-library-0.3.0.aar/bdcd6144a2f03fcf8feef0da5d0f8789/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/rangeseekbar-library-0.3.0.aar/bdcd6144a2f03fcf8feef0da5d0f8789/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/rangeseekbar-library-0.3.0.aar/05996fd84df4a6240a960cb16f9361f8/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/rangeseekbar-library-0.3.0.aar/05996fd84df4a6240a960cb16f9361f8/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

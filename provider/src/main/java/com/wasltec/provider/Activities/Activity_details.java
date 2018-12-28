@@ -218,7 +218,7 @@ public class Activity_details extends AppCompatActivity {
 
         menu.findItem(R.id.settings).setVisible(false);
         menu.findItem(R.id.add_item).setVisible(false);
-        menu.findItem(R.id.individual_item).setVisible(true);
+        menu.findItem(R.id.individual_item).setVisible(false);
         menu.findItem(R.id.calender).setVisible(true);
         menu.findItem(R.id.delete_activity).setVisible(true);
         menu.findItem(R.id.delete_activity).setCheckable(true);

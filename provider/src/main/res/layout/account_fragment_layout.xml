@@ -15,7 +15,7 @@
         <LinearLayout
             android:id="@+id/profile"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:layout_marginRight="@dimen/_14sdp"
             android:orientation="horizontal">
            <ImageView
@@ -81,7 +81,7 @@
         <LinearLayout
             android:id="@+id/organization_profile"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:layout_marginRight="@dimen/_14sdp"
             android:orientation="horizontal">
             <ImageView
@@ -139,14 +139,14 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="1dp"
             android:layout_marginLeft="@dimen/_17sdp"
             android:layout_marginRight="@dimen/_17sdp"
 
             android:background="#8C979797"></LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:layout_marginRight="@dimen/_14sdp"
             android:orientation="horizontal">
             <ImageView
@@ -179,14 +179,14 @@
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="1dp"
             android:layout_marginLeft="@dimen/_17sdp"
             android:layout_marginRight="@dimen/_17sdp"
 
             android:background="#8C979797"></LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:layout_marginRight="@dimen/_14sdp"
             android:orientation="horizontal">
             <ImageView
@@ -243,7 +243,7 @@
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="1dp"
             android:layout_marginLeft="@dimen/_17sdp"
             android:layout_marginRight="@dimen/_17sdp"
 
@@ -251,7 +251,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:layout_marginRight="@dimen/_14sdp"
             android:orientation="horizontal">
             <ImageView
@@ -294,14 +294,14 @@
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="1dp"
             android:layout_marginLeft="@dimen/_17sdp"
             android:layout_marginRight="@dimen/_17sdp"
 
             android:background="#8C979797"></LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:layout_marginRight="@dimen/_14sdp"
             android:orientation="horizontal">
             <ImageView
@@ -346,7 +346,7 @@
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="1dp"
             android:layout_marginLeft="@dimen/_17sdp"
             android:layout_marginRight="@dimen/_17sdp"
 
@@ -354,7 +354,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_marginRight="@dimen/_14sdp"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
            android:orientation="horizontal">
             <ImageView
                 android:layout_weight="3"
@@ -398,7 +398,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:layout_marginStart="@dimen/_30sdp"
             android:layout_gravity="center"
             android:gravity="center"
@@ -424,7 +424,7 @@
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="1dp"
             android:layout_marginLeft="@dimen/_17sdp"
             android:layout_marginRight="@dimen/_17sdp"
 
@@ -432,7 +432,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:layout_gravity="center"
             android:gravity="center"
             android:orientation="horizontal">
@@ -456,14 +456,14 @@
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="1dp"
             android:layout_marginLeft="@dimen/_17sdp"
             android:layout_marginRight="@dimen/_17sdp"
 
             android:background="#8C979797"></LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:layout_gravity="center"
             android:gravity="center"
             android:orientation="horizontal">
@@ -491,13 +491,13 @@
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="1dp"
             android:layout_marginLeft="@dimen/_17sdp"
             android:layout_marginRight="@dimen/_17sdp"
 
             android:background="#8C979797"></LinearLayout><LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:layout_gravity="center"
             android:gravity="center"
             android:orientation="horizontal">

@@ -20,6 +20,7 @@ import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONArrayRequestListener;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.victor.loading.rotate.RotateLoading;
 import com.wasltec.provider.Adopters.Inbox_Adopter;
 import com.wasltec.provider.Adopters.Online_items_list_adopter;
 import com.wasltec.provider.R;
@@ -42,8 +43,9 @@ import static com.wasltec.provider.Activities.Home.toolbar;
 public class Messages_Fragment extends Fragment {
 
     private View view;
-    private LinearLayout mContainer;
+    private LinearLayout mContainer,empty_msg;
     RecyclerView inbox_list;
+    RotateLoading loader;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -53,7 +55,13 @@ public class Messages_Fragment extends Fragment {
         view =  inflater.inflate(R.layout.messages_fragment_layout, container, false);
 
         mContainer = (LinearLayout) view.findViewById(R.id.container);
+        empty_msg = (LinearLayout) view.findViewById(R.id.empty_msg);
         inbox_list = (RecyclerView) view.findViewById(R.id.inbox_list);
+        loader = (RotateLoading) view.findViewById(R.id.rotateloading);
+        loader.start();
+
+        empty_msg.setVisibility(View.GONE);
+        mContainer.setVisibility(View.GONE);
 
         AndroidNetworking.get(URLManger.getInstance().getInbox())
                 .addHeaders("Authorization", "bearer "+ SharedPreferencesManager.getInstance(getActivity()).getToken())
@@ -67,14 +75,25 @@ public class Messages_Fragment extends Fragment {
 
                 ArrayList<Inbox_model> data = gson.fromJson(response.toString(), listType);
 
-                inbox_list.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
-                inbox_list.setAdapter(new Inbox_Adopter(getActivity(),data));
+                if (data.size()>0)
+                {
+                    inbox_list.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
+                    inbox_list.setAdapter(new Inbox_Adopter(getActivity(),data));
+
+                    mContainer.setVisibility(View.VISIBLE);
+                }
+               else
+                    empty_msg.setVisibility(View.VISIBLE);
+                if (loader.isStart())
+                loader.stop();
 
             }
 
             @Override
             public void onError(ANError anError) {
-
+                empty_msg.setVisibility(View.VISIBLE);
+                if (loader.isStart())
+                    loader.stop();
             }
         });
 

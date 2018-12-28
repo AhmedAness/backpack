@@ -93,7 +93,7 @@ public class overview_list_item_list extends RecyclerView.Adapter<overview_list_
 
 
         holder.title.setText(data.get(position).getTitle());
-        holder.number_of_views.setText(context.getString(R.string.view_all) + "( " + data.get(position).getTotal_tickets() +"Tickets"+ " )");
+        holder.number_of_views.setText(context.getString(R.string.view_all) + " (" + data.get(position).getTotal_tickets() +" Tickets"+ ")");
 
         holder.mSencMessage.setOnClickListener(new View.OnClickListener() {
             @Override
