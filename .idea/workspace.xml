@@ -13,57 +13,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5c8606da-42d3-412b-9b22-658c70e19f9d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anychart/anychart.iml" beforeDir="false" afterPath="$PROJECT_DIR$/anychart/anychart.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/provider/provider.iml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/provider.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/drawable/border_black.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/drawable/border_black.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/account_fragment_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/account_fragment_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/activities_fragment_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/activities_fragment_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/activity_addon_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/activity_addon_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/activity_calenderdaydetails.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/activity_calenderdaydetails.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/activity_category_item_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/activity_category_item_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/activity_chart_common.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/activity_chart_common.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/activity_chat.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/activity_chat.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/activity_customised_calender.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/activity_customised_calender.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/activity_reviews.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/activity_reviews.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/add_activity_step1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/add_activity_step1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/add_activity_step10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/add_activity_step10.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/add_activity_step2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/add_activity_step2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/add_activity_step3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/add_activity_step3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/add_activity_step4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/add_activity_step4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/add_activity_step5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/add_activity_step5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/add_activity_step6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/add_activity_step6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/add_activity_step7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/add_activity_step7.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/add_activity_step8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/add_activity_step8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/add_activity_step9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/add_activity_step9.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/alert_dialog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/alert_dialog.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/availability_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/availability_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/book_now_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/book_now_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/booking_date.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/booking_date.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/category_prices.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/category_prices.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/checkbox_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/checkbox_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/content_account.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/content_account.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/customer_info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/customer_info.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/customes_item_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/customes_item_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/day_view_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/day_view_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/dialog_add_add_on.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/dialog_add_add_on.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/dialog_add_availability.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/dialog_add_availability.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/dialog_add_organizer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/dialog_add_organizer.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/dialog_add_price_per_individual.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/dialog_add_price_per_individual.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/dialog_checkin_ticket.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/dialog_checkin_ticket.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/dialog_verify_ticket.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/dialog_verify_ticket.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/empty_activity_fragment_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/empty_activity_fragment_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/fragment_booking.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/fragment_booking.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/fragment_good.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/fragment_good.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/fragment_info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/fragment_info.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/fragment_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/fragment_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/fragment_step_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/fragment_step_status.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/inbox_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/inbox_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/messages_fragment_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/messages_fragment_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/msg_dialog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/msg_dialog.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/option_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/option_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/layout/payment_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/layout/payment_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/values/dimens.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -108,11 +60,8 @@
       <file leaf-file-name="fragment_settings.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/provider/src/main/res/layout/fragment_settings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
+            <state relative-caret-position="2397">
               <caret line="141" selection-start-line="135" selection-end-line="141" />
-              <folding>
-                <element signature="e#341#356#0" expanded="true" />
-              </folding>
             </state>
           </provider>
           <provider editor-type-id="android-designer2">
@@ -123,24 +72,8 @@
       <file leaf-file-name="fragment_info.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/provider/src/main/res/layout/fragment_info.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-555">
+            <state relative-caret-position="6120">
               <caret line="360" column="17" selection-start-line="360" selection-start-column="12" selection-end-line="360" selection-end-column="17" />
-              <folding>
-                <element signature="e#366#381#0" expanded="true" />
-                <element signature="e#4957#4972#0" expanded="true" />
-                <element signature="e#5014#5029#0" expanded="true" />
-                <element signature="e#7505#7520#0" expanded="true" />
-                <element signature="e#7562#7577#0" expanded="true" />
-                <element signature="e#10052#10067#0" expanded="true" />
-                <element signature="e#10109#10124#0" expanded="true" />
-                <element signature="e#12553#12575#0" expanded="true" />
-                <element signature="e#13615#13637#0" expanded="true" />
-                <element signature="e#14620#14635#0" expanded="true" />
-                <element signature="e#14677#14692#0" expanded="true" />
-                <element signature="e#16914#16936#0" expanded="true" />
-                <element signature="e#16978#17000#0" expanded="true" />
-                <element signature="e#17806#17828#0" expanded="true" />
-              </folding>
             </state>
           </provider>
           <provider editor-type-id="android-designer2">
@@ -151,18 +84,39 @@
       <file leaf-file-name="Overview_Fragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/wasltec/provider/Fragments/Home/Overview_Fragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
+            <state relative-caret-position="510">
               <caret line="74" column="31" selection-start-line="74" selection-start-column="31" selection-end-line="74" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActivityCategoryAdapter.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ActivityCategoryAdapter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/wasltec/provider/Adopters/ActivityCategoryAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="69" column="5" selection-start-line="66" selection-start-column="82" selection-end-line="69" selection-end-column="5" />
+            <state relative-caret-position="527">
+              <caret line="66" column="83" selection-start-line="66" selection-start-column="83" selection-end-line="66" selection-end-column="83" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Activities_Fragment.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/wasltec/provider/Fragments/Home/Activities_Fragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="123" column="41" lean-forward="true" selection-start-line="123" selection-start-column="41" selection-end-line="123" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="empty_activity_fragment_layout.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/provider/src/main/res/layout/empty_activity_fragment_layout.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
           </provider>
         </entry>
       </file>
@@ -4659,7 +4613,6 @@
         <option value="$PROJECT_DIR$/provider/src/main/res/layout/dialog_add_price_per_individual.xml" />
         <option value="$PROJECT_DIR$/provider/src/main/res/layout/dialog_checkin_ticket.xml" />
         <option value="$PROJECT_DIR$/provider/src/main/res/layout/dialog_verify_ticket.xml" />
-        <option value="$PROJECT_DIR$/provider/src/main/res/layout/empty_activity_fragment_layout.xml" />
         <option value="$PROJECT_DIR$/provider/src/main/res/layout/fragment_booking.xml" />
         <option value="$PROJECT_DIR$/provider/src/main/res/layout/fragment_good.xml" />
         <option value="$PROJECT_DIR$/provider/src/main/res/layout/fragment_settings.xml" />
@@ -4675,6 +4628,7 @@
         <option value="$PROJECT_DIR$/provider/src/main/res/layout/inbox_item.xml" />
         <option value="$PROJECT_DIR$/provider/src/main/res/layout/fragment_info.xml" />
         <option value="$PROJECT_DIR$/provider/src/main/res/layout/activity_category_item_layout.xml" />
+        <option value="$PROJECT_DIR$/provider/src/main/res/layout/empty_activity_fragment_layout.xml" />
       </list>
     </option>
   </component>
@@ -4688,8 +4642,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -4746,7 +4701,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -4943,44 +4897,51 @@
       <option name="project" value="LOCAL" />
       <updated>1545752884454</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="edit suhaib comments aniss 27/12">
+      <created>1545920605418</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1545920605418</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="Android Profiler" order="8" />
-      <window_info id="Build Variants" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Logcat" order="10" />
-      <window_info id="Capture Tool" order="7" />
-      <window_info id="Designer" order="2" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.3293718" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Device File Explorer" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Android Profiler" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="4" />
+      <window_info id="Build Variants" order="3" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="right" x="0" y="0" width="295" height="544" id="Documentation" order="9" sideWeight="0.5042445" side_tool="true" weight="0.32980332" />
-      <window_info anchor="right" id="Preview" order="4" sideWeight="0.49575552" weight="0.29500756" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Terminal" order="12" />
+      <window_info anchor="bottom" id="Logcat" order="10" />
       <window_info id="Captures" order="2" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2579425" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="Designer" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25718608" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.3293718" />
       <window_info anchor="right" id="Gradle" order="6" weight="0.32980332" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Device File Explorer" order="5" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Preview" order="4" sideWeight="0.49575552" weight="0.29500756" />
+      <window_info anchor="right" x="0" y="0" width="295" height="544" id="Documentation" order="9" sideWeight="0.5042445" side_tool="true" weight="0.32980332" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -4988,7 +4949,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="befor deliver aniss 25/12" />
-    <option name="LAST_COMMIT_MESSAGE" value="befor deliver aniss 25/12" />
+    <MESSAGE value="edit suhaib comments aniss 27/12" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit suhaib comments aniss 27/12" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -5003,14 +4965,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/provider/src/main/res/layout/custom_calendar_title_layout.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state />
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/provider/src/main/res/layout/custom_calendar_weeks_layout.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state />
@@ -5023,16 +4977,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
           <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
-          <folding>
-            <element signature="e#229#244#0" expanded="true" />
-            <element signature="e#3150#3169#0" expanded="true" />
-            <element signature="e#5499#5521#0" expanded="true" />
-            <element signature="e#6381#6403#0" expanded="true" />
-            <element signature="e#6741#6763#0" expanded="true" />
-            <element signature="e#6811#6826#0" expanded="true" />
-            <element signature="e#8095#8114#0" expanded="true" />
-            <element signature="e#9080#9102#0" expanded="true" />
-          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -5043,9 +4987,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="51" column="48" selection-start-line="51" selection-start-column="48" selection-end-line="51" selection-end-column="48" />
-          <folding>
-            <element signature="e#221#237#0" expanded="true" />
-          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -5110,19 +5051,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/provider/src/main/res/layout/empty_activity_fragment_layout.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="5" />
-          <folding>
-            <element signature="e#183#198#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/provider/src/main/res/layout/empty_statistics_fragment_layout.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state />
@@ -5135,9 +5063,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#148#163#0" expanded="true" />
-          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -5156,9 +5081,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" selection-start-line="6" selection-end-line="7" />
-          <folding>
-            <element signature="e#311#326#0" expanded="true" />
-          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -5207,10 +5129,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="407">
           <caret line="359" column="59" selection-start-line="359" selection-start-column="59" selection-end-line="359" selection-end-column="59" />
-          <folding>
-            <element signature="e#288#303#0" expanded="true" />
-            <element signature="e#2794#2809#0" expanded="true" />
-          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -5269,10 +5187,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
           <caret line="143" column="12" selection-start-line="143" selection-start-column="12" selection-end-line="143" selection-end-column="12" />
-          <folding>
-            <element signature="e#320#335#0" expanded="true" />
-            <element signature="e#1006#1028#0" expanded="true" />
-          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -5361,11 +5275,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="318">
           <caret line="270" column="19" selection-start-line="270" selection-start-column="19" selection-end-line="270" selection-end-column="19" />
-          <folding>
-            <element signature="e#10370#10384#0" expanded="true" />
-            <element signature="e#10425#10440#0" expanded="true" />
-            <element signature="e#10478#10493#0" expanded="true" />
-          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -5425,9 +5334,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding>
-            <element signature="e#468#482#0" expanded="true" />
-          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -5450,11 +5356,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/provider/src/main/res/layout/fragment_settings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
+        <state relative-caret-position="2397">
           <caret line="141" selection-start-line="135" selection-end-line="141" />
-          <folding>
-            <element signature="e#341#356#0" expanded="true" />
-          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -5463,24 +5366,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/provider/src/main/res/layout/fragment_info.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-555">
+        <state relative-caret-position="6120">
           <caret line="360" column="17" selection-start-line="360" selection-start-column="12" selection-end-line="360" selection-end-column="17" />
-          <folding>
-            <element signature="e#366#381#0" expanded="true" />
-            <element signature="e#4957#4972#0" expanded="true" />
-            <element signature="e#5014#5029#0" expanded="true" />
-            <element signature="e#7505#7520#0" expanded="true" />
-            <element signature="e#7562#7577#0" expanded="true" />
-            <element signature="e#10052#10067#0" expanded="true" />
-            <element signature="e#10109#10124#0" expanded="true" />
-            <element signature="e#12553#12575#0" expanded="true" />
-            <element signature="e#13615#13637#0" expanded="true" />
-            <element signature="e#14620#14635#0" expanded="true" />
-            <element signature="e#14677#14692#0" expanded="true" />
-            <element signature="e#16914#16936#0" expanded="true" />
-            <element signature="e#16978#17000#0" expanded="true" />
-            <element signature="e#17806#17828#0" expanded="true" />
-          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -5497,7 +5384,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/wasltec/provider/Fragments/Home/Overview_Fragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
+        <state relative-caret-position="510">
           <caret line="74" column="31" selection-start-line="74" selection-start-column="31" selection-end-line="74" selection-end-column="31" />
         </state>
       </provider>
@@ -5512,10 +5399,27 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/provider/src/main/res/layout/empty_activity_fragment_layout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/wasltec/provider/Adopters/ActivityCategoryAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="69" column="5" selection-start-line="66" selection-start-column="82" selection-end-line="69" selection-end-column="5" />
+        <state relative-caret-position="527">
+          <caret line="66" column="83" selection-start-line="66" selection-start-column="83" selection-end-line="66" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/wasltec/provider/Fragments/Home/Activities_Fragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="123" column="41" lean-forward="true" selection-start-line="123" selection-start-column="41" selection-end-line="123" selection-end-column="41" />
         </state>
       </provider>
     </entry>
