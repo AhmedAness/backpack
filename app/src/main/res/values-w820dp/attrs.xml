@@ -16,5 +16,6 @@
         <attr name="red" format="color" />
         <attr name="not_aval_day" format="color" />
         <attr name="aval_day" format="color" />
+
     </declare-styleable>
 </resources>

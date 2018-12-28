@@ -6,6 +6,7 @@
         <attr name="subtitleText" format="string" localization="suggested" />
         <attr name="subtitleColor" format="color" />
 
+
     </declare-styleable>
 
 </resources>
