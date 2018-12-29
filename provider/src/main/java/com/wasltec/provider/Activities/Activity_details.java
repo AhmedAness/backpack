@@ -244,6 +244,7 @@ public class Activity_details extends AppCompatActivity {
             case R.id.calender:
                 Intent intent = new Intent(Activity_details.this, CustomisedCalender.class);
                 intent.putExtra("Activity_id", ""+myactivity.getId());
+                intent.putExtra("title", ""+myactivity.getTitle());
                 startActivity(intent);
 
                 break;

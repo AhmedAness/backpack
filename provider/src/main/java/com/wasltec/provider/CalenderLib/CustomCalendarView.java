@@ -106,7 +106,7 @@ public class CustomCalendarView extends LinearLayout {
 
 
         aval_day = typedArray.getColor(R.styleable.CustomCalendarView_aval_day, getResources().getColor(R.color.white));
-        not_aval_day = typedArray.getColor(R.styleable.CustomCalendarView_not_aval_day, getResources().getColor(R.color.gray));
+        not_aval_day = typedArray.getColor(R.styleable.CustomCalendarView_not_aval_day, getResources().getColor(R.color.not_aval_day_c));
         red = typedArray.getColor(R.styleable.CustomCalendarView_red, getResources().getColor(R.color.red));
 
         calendarBackgroundColor = typedArray.getColor(R.styleable.CustomCalendarView_calendarBackgroundColor, getResources().getColor(R.color.white));
@@ -254,7 +254,7 @@ public class CustomCalendarView extends LinearLayout {
 
 
 
-            if (CalendarUtils.isSameMonth(calendar, startCalendar)) {
+//            if (CalendarUtils.isSameMonth(calendar, startCalendar)) {
 
 
 
@@ -266,7 +266,7 @@ public class CustomCalendarView extends LinearLayout {
 
 
 
-                if (is_in_aval(calendar, calendardata)!=null){
+                if (is_in_aval(startCalendar, calendardata)!=null){
 
 
                     if (CalendarUtils.isPastDay (startCalendar.getTime())){
@@ -288,11 +288,11 @@ public class CustomCalendarView extends LinearLayout {
                         dayView.mTitle.setTextColor(dayOfWeekTextColor);
                         dayView.mSubtitle.setTextColor(dayOfWeekTextColor);
                         dayView.mSubtitle2.setTextColor(dayOfWeekTextColor);
-                        set_data(dayView,startCalendar ,calendardata);
+
                         dayView.decorate();
 
                         //Set the current day color
-                        markDayAsCurrentDay(startCalendar);
+
                         dayView.closed.setVisibility(GONE);
 
                         dayView.preview.setBackgroundColor(aval_day);
@@ -305,11 +305,13 @@ public class CustomCalendarView extends LinearLayout {
                         dayView.mSubtitle2.setTextColor(dayOfWeekTextColor);
                         dayView.mSubtitle2.setBackgroundColor(aval_day);
 
-
+                        set_data(dayView,startCalendar ,calendardata);
+                        markDayAsCurrentDay(startCalendar);
                     }
 
                 }
                 else {
+                    dayView.setBackgroundColor(not_aval_day);
                     if (CalendarUtils.isPastDay (startCalendar.getTime()))
                     {
                         dayOfMonthContainer.setOnClickListener(null);
@@ -333,7 +335,7 @@ public class CustomCalendarView extends LinearLayout {
                         dayView.setBackgroundColor(disabledDayTextColor);
                         dayView.preview.setBackgroundColor(disabledDayTextColor);
                         dayView.mTitle.setTextColor(dayOfWeekTextColor);
-                        dayView.mTitle.setBackgroundColor(disabledDayTextColor);
+//                        dayView.mTitle.setBackgroundColor(disabledDayTextColor);
                         dayView.mSubtitle.setTextColor(dayOfWeekTextColor);
                         dayView.mSubtitle.setBackgroundColor(disabledDayTextColor);
                         dayView.mSubtitle2.setTextColor(dayOfWeekTextColor);
@@ -372,18 +374,18 @@ public class CustomCalendarView extends LinearLayout {
 //
 
 
-            } else {
-                dayView.setBackgroundColor(disabledDayBackgroundColor);
-                dayView.mTitle.setTextColor(dayOfWeekTextColor);
-                markDayAsCurrentDay(startCalendar);
-
-//                dayView.closed.setVisibility(VISIBLE);
-                if (!isOverflowDateVisible())
-                    dayView.setVisibility(View.GONE);
-                else if (i >= 36 && ((float) monthEndIndex / 7.0f) >= 1) {
-                    dayView.setVisibility(View.GONE);
-                }
-            }
+//            } else {
+//                dayView.setBackgroundColor(disabledDayBackgroundColor);
+//                dayView.mTitle.setTextColor(dayOfWeekTextColor);
+//                markDayAsCurrentDay(startCalendar);
+//
+////                dayView.closed.setVisibility(VISIBLE);
+//                if (!isOverflowDateVisible())
+//                    dayView.setVisibility(View.GONE);
+//                else if (i >= 36 && ((float) monthEndIndex / 7.0f) >= 1) {
+//                    dayView.setVisibility(View.GONE);
+//                }
+//            }
 //            dayView.decorate();
 
 
@@ -402,27 +404,32 @@ public class CustomCalendarView extends LinearLayout {
     }
 
     private void set_data(DayView dayView, Calendar startCalendar, List<ActivityCalenderModel> calendardata) {
+
+        int ngroubs=0,remender =0,total=0;
         for (int i = 0; i < calendardata.size(); i++) {
             if (CalendarUtils.is_in_between(startCalendar,calendardata.get(i).getActivityStartDate(),calendardata.get(i).getActivityEndDate()))
             {
 
                 if(calendardata.get(i).getIsForGroup()==1)
                 {
+                    ngroubs++;
                     dayView.setBackgroundColor(aval_day);
-                    dayView.mSubtitle.setText("group");
-                    dayView.mSubtitle.setTextColor(red);
-                    dayView.mSubtitle.setBackgroundColor(aval_day);
+                    dayView.mSubtitle2.setText(ngroubs+" group");
+                    dayView.mSubtitle2.setTextColor(mContext.getResources().getColor(R.color.greenyellow));
+
+
                 }
+                else
                 if (calendardata.get(i).getTotalTickets()<calendardata.get(i).getTotalCapacity())
 
                 {
-                    dayView.mSubtitle.setText(""+calendardata.get(i).getTotalTickets()+" / "+calendardata.get(i).getTotalCapacity());
-                    dayView.mSubtitle.setTextColor(red);
-                    dayView.mSubtitle.setBackgroundColor(aval_day);
+                    remender+=calendardata.get(i).getTotalTickets();
+                    total+=calendardata.get(i).getTotalCapacity();
+                    dayView.mSubtitle.setText(""+remender+" / "+total+" \n Booking");
+                    dayView.mSubtitle.setTextColor(mContext.getResources().getColor(R.color.red));
 
-                    dayView.mSubtitle2.setText("Booking");
-                    dayView.mSubtitle2.setTextColor(red);
-                    dayView.mSubtitle2.setBackgroundColor(aval_day);
+
+
                 }
 
             }
@@ -549,7 +556,7 @@ public class CustomCalendarView extends LinearLayout {
         if (calendar != null && CalendarUtils.isToday(calendar)) {
             DayView dayOfMonth = getDayOfMonthText(calendar);
             dayOfMonth.mTitle.setTextColor(currentDayOfMonth);
-            dayOfMonth.setBackground( mContext.getResources().getDrawable(R.drawable.calender_selected_border));
+//            dayOfMonth.setBackground( mContext.getResources().getDrawable(R.drawable.calender_selected_border));
         }
     }
 

@@ -4,9 +4,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:paddingTop="@dimen/_20sdp"
+    android:paddingTop="@dimen/_5sdp"
     android:paddingRight="@dimen/_15sdp"
-    android:paddingBottom="@dimen/_20sdp"
+    android:paddingBottom="@dimen/_5sdp"
     android:layout_height="wrap_content">
 
 
@@ -17,6 +17,7 @@
         android:id="@+id/name"
         app:layout_constraintStart_toStartOf="parent"
         android:gravity="start"
+        android:textSize="@dimen/med_text_size"
         android:text="name "
         />
 
@@ -25,6 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="capacity "
+        android:textSize="@dimen/med_text_size"
         android:gravity="end|center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

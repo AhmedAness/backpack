@@ -159,6 +159,7 @@ public class Info extends Fragment {
             switch (activityDetails.getActivityOption().get(i).getId()){
                 case 1 :
                     TextView textView = new TextView(getActivity(), null, android.R.style.TextAppearance_Large);
+//                    GridLayout.LayoutParams layoutParams = new GridLayout.LayoutParams();
                     GridLayout.LayoutParams layoutParams = new GridLayout.LayoutParams();
                     layoutParams.setGravity(Gravity.FILL);
                     textView.setText(activityDetails.getActivityOption().get(i).getName());
@@ -169,7 +170,10 @@ public class Info extends Fragment {
                         drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
                     }
                     layoutParams.setMargins(0, 0, (int) getResources().getDimension(R.dimen._5sdp), (int) getResources().getDimension(R.dimen._5sdp));
+
                     textView.setLayoutParams(layoutParams);
+
+
 
                     textView.setCompoundDrawables(drawable, null, null, null);
                     textView.setId(View.generateViewId());

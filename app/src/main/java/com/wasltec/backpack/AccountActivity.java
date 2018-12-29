@@ -110,12 +110,15 @@ public class AccountActivity extends AppCompatActivity {
         int height = LinearLayout.LayoutParams.WRAP_CONTENT;
         popupWindow = new PopupWindow(view, width, height, false);
         User user=Session.getInstance(this).getUser();
+    try {
         user_name.setText(user.getName());
         user_email.setText(user.getMail());
         user_phone.setText(user.getMobile());
 
         Glide.with(this).load(user.getUserPhotoUrl()).apply(new RequestOptions().error(R.drawable.backpack_icon_gray_watermark)).into(profile_img);
+    }catch (Exception e){
 
+    }
         preset = Session.getInstance(AccountActivity.this).getCompleteInt();
 
 

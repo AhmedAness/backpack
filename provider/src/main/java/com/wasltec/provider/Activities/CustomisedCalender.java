@@ -5,9 +5,13 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.Toolbar;
+import android.support.v7.widget.Toolbar;
 
 
 import com.androidnetworking.AndroidNetworking;
@@ -15,6 +19,7 @@ import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONArrayRequestListener;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.victor.loading.rotate.RotateLoading;
 import com.wasltec.provider.CalenderLib.CalendarListener;
 import com.wasltec.provider.CalenderLib.CustomCalendarView;
 import com.wasltec.provider.MapsActivity;
@@ -43,13 +48,31 @@ public class CustomisedCalender extends AppCompatActivity {
     List<ActivityCalenderModel> activityCalenderModelList;
 
     CustomCalendarView calendarView;
+    private Toolbar toolbar;
+    private RotateLoading mrotateloading;
+    private TextView mtitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customised_calender);
 
+        toolbar = findViewById(R.id.toolbar);
 
+
+        setSupportActionBar(toolbar);
+        mrotateloading = findViewById(R.id.rotateloading);
+        mtitle = findViewById(R.id.title);
+        toolbar.setTitle(getResources().getString(R.string.calender));
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+
+        if(getIntent().hasExtra("title")){
+            mtitle.setText(getIntent().getStringExtra("title"));
+        }
+        else
+            mtitle.setVisibility(View.GONE);
 
         //Initialize CustomCalendarView from layout
         calendarView = (CustomCalendarView) findViewById(R.id.calendar_view);
@@ -133,6 +156,8 @@ public class CustomisedCalender extends AppCompatActivity {
         //Setting custom font
 
 
+        mrotateloading.start();
+
         AndroidNetworking.get(URLManger.getInstance().getCalenderReservation(activity_id))
                 .addHeaders("Authorization", "bearer " + SharedPreferencesManager.getInstance(CustomisedCalender.this).getToken())
                 .build()
@@ -148,22 +173,56 @@ public class CustomisedCalender extends AppCompatActivity {
                         calendarView.setcalendardata(activityCalenderModelList);
                         calendarView.refreshCalendar(currentCalendar);
 
+
+                        if (mrotateloading.isStart())
+                            mrotateloading.stop();
                     }
 
                     @Override
                     public void onError(ANError anError) {
 
+                        if (mrotateloading.isStart())
+                            mrotateloading.stop();
                     }
                 });
 
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.more_tab_menu, menu);
+
+        menu.findItem(R.id.settings).setVisible(true);
+        menu.findItem(R.id.add_item).setVisible(false);
+        menu.findItem(R.id.individual_item).setVisible(false);
+        menu.findItem(R.id.calender).setVisible(false);
+        menu.findItem(R.id.delete_activity).setVisible(false);
+        menu.findItem(R.id.delete_activity).setCheckable(false);
+
+        return super.onCreateOptionsMenu(menu);
+
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // handle arrow click here
-        if (item.getItemId() == android.R.id.home) {
-            finish(); // close this activity and return to preview activity (if there is any)
+
+
+        switch (item.getItemId()) {
+
+
+
+            case R.id.settings:
+                break;
+
+
+            case android.R.id.home:
+                onBackPressed();
+                finish();
+                break;
+            default:
+                return super.onOptionsItemSelected(item);
         }
-        return super.onOptionsItemSelected(item);
+        return true;
     }
 }

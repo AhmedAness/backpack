@@ -1,34 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+
+
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loader"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingHorizontal="@dimen/_12sdp"
-    android:fitsSystemWindows="true"
-    android:orientation="vertical"
-    android:background="@color/bg_color" >
+    android:layout_height="match_parent">
+    <LinearLayout
 
-
-
-
-    <com.wasltec.provider.CalenderLib.CustomCalendarView
-        android:id="@+id/calendar_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/Platinum"
-        app:calendarBackgroundColor="@color/Platinum"
-        app:calendarTitleTextColor="@color/black"
-        app:currentDayOfMonthColor="@color/blue"
-        app:dayOfMonthTextColor="@color/black"
-        app:dayOfWeekTextColor="@color/black"
-        app:disabledDayBackgroundColor="@color/Platinum"
-        app:disabledDayTextColor="@color/gray"
-        app:aval_day="@color/white"
-        app:not_aval_day="@color/gray"
-        app:red="@color/red"
-        app:selectedDayBackgroundColor="@color/blue"
-        app:titleLayoutBackgroundColor="@color/white"
-        app:weekLayoutBackgroundColor="@color/white"/>
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        android:background="@color/white" >
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:id="@+id/appbar"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                app:title=" "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
+
+        </android.support.design.widget.AppBarLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_large"
+            android:text="title"
+            android:id="@+id/title"
+            android:layout_margin="10dp"
+            android:gravity="start"
+            android:textAlignment="viewStart"
+            android:textStyle="bold"
+            />
+
+
+        <com.wasltec.provider.CalenderLib.CustomCalendarView
+            android:id="@+id/calendar_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Platinum"
+            app:calendarBackgroundColor="@color/Platinum"
+            app:calendarTitleTextColor="@color/black"
+            app:currentDayOfMonthColor="@color/blue"
+            app:dayOfMonthTextColor="@color/black"
+            app:dayOfWeekTextColor="@color/black"
+            app:disabledDayBackgroundColor="@color/Platinum"
+            app:disabledDayTextColor="@color/gray"
+            app:aval_day="@color/white"
+            app:not_aval_day="#69696969"
+            app:red="@color/red"
+            app:selectedDayBackgroundColor="@color/blue"
+            app:titleLayoutBackgroundColor="@color/white"
+            app:weekLayoutBackgroundColor="@color/white"/>
+    </LinearLayout>
+    <com.victor.loading.rotate.RotateLoading
+        android:id="@+id/rotateloading"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        app:loading_speed="11"
+        app:loading_color="@color/colorPrimary"
+        app:loading_width="5dp" />
+</RelativeLayout>

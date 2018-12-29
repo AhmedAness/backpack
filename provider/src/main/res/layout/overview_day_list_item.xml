@@ -48,6 +48,8 @@
                     android:id="@+id/number_of_views"
                     android:textColor="@color/bg_color"
                     android:gravity="left"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="@dimen/med_text_size"
                     android:text="@string/view_all"
                     android:layout_height="wrap_content" />
                 <LinearLayout
@@ -60,6 +62,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="@dimen/_10sdp"
                         android:gravity="left"
+                        android:textSize="@dimen/med_text_size"
+                        android:layout_gravity="center_vertical"
                         android:textColor="#979797"
                         android:text="@string/massageall"
                         android:id="@+id/sencMessage"

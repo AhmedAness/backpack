@@ -118,7 +118,7 @@ public class Activity_list_overview extends RecyclerView.Adapter<Activity_list_o
     @Override
     public void onItemClick(View view, int position) {
 //        Toast.makeText(context, "Hi", Toast.LENGTH_SHORT).show();
-        clickedposition_date=listdate.get(position);
+//        clickedposition_date=listdate.get(position);
 
 //
 //        Intent intent=new Intent(context, Calender.class);

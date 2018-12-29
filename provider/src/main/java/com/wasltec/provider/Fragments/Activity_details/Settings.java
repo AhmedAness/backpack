@@ -318,7 +318,7 @@ public class Settings extends Fragment {
 
                     textView.setCompoundDrawables(drawable, null, null, null);
                     textView.setId(View.generateViewId());
-
+                textView.setTextSize(11);
                     availability_list.addView(textView);
                 }
                 else{
@@ -340,7 +340,7 @@ public class Settings extends Fragment {
 
                     textView1.setCompoundDrawables(drawable1, null, null, null);
                     textView1.setId(View.generateViewId());
-
+                textView1.setTextSize(11);
                     availability_list.addView(textView1);
                 }
 

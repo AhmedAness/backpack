@@ -41,6 +41,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="@dimen/_20sdp"
         android:gravity="center"
+        android:visibility="gone"
         android:text="@string/confirm_by_ticket_number"
         android:textColor="@color/white"
         android:textSize="@dimen/text_large" />

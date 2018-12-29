@@ -95,11 +95,9 @@ public class Session {
 
 
     public void logout() {
-        SharedPreferences sharedPreferences = context.getSharedPreferences("mol", Context.MODE_PRIVATE);
-        if (user!=null)
-            sharedPreferences.edit().putString("file", "").apply();
-        else
-            sharedPreferences.edit().putString("file", new Gson().toJson(new User())).apply();
+
+   setToken("");
+        setisFirstTime(true);
 
     }
 

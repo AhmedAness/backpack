@@ -89,11 +89,19 @@
 
             <GridLayout
                 android:id="@+id/types_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:orientation="horizontal"
                 android:columnCount="2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:columnWidth="@dimen/_200sdp"
+                android:numColumns="2"
+                android:minWidth="@dimen/_400sdp"
+                android:verticalSpacing="10dp"
+                android:horizontalSpacing="10dp"
+                android:stretchMode="columnWidth"
+                android:gravity="fill_horizontal"
+
                 />
 
 
@@ -105,11 +113,10 @@
                 android:gravity="start"
                 android:layout_height="wrap_content"
                 android:text="@string/dummy_desc"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                 android:textColor="@color/footer_color_text"
                 app:trimCollapsedText="Read more"
                app:trimLines="4"
-              android:textSize="@dimen/min_text_size"
+              android:textSize="@dimen/med_text_size"
                 android:layout_marginBottom="@dimen/_5sdp"
                />
 
@@ -463,7 +470,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginBottom="@dimen/_10sdp"
                 android:background="@color/gray">

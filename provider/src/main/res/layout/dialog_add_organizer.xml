@@ -35,7 +35,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:background="@color/gray"
-            android:layout_height="2dp">
+            android:layout_height="1dp">
         </LinearLayout>
         <EditText
             android:backgroundTint="@color/background_transparent"

@@ -10,6 +10,7 @@
         android:layout_height="match_parent"
 
         app:shadowMarginBottom="1dp"
+
         app:shadowMarginTop=".5dp"
 
 
@@ -27,39 +28,45 @@
 
                 <TextView
                     android:id="@+id/title"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
                     android:textColor="@color/white"
-                    android:textSize="12sp"
-                    tools:text="Female only" />
+                    android:textSize="6dp"
+                    tools:text="only" />
 
                 <TextView
                     android:id="@+id/subtitle"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:layout_below="@id/title"
-                    android:textSize="8sp"
+                    android:textSize="6dp"
+                    android:text="test"
+                    android:gravity="center"
                     android:padding="2dp"
                     tools:ignore="SmallSp" />
                 <TextView
                     android:id="@+id/subtitle2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:text="15"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:layout_below="@id/subtitle"
-                    android:textSize="8sp"
+                    android:textSize="6dp"
                     android:padding="2dp"
                     tools:ignore="SmallSp" />
 
                 <ImageView
                     android:id="@+id/closed"
                     android:visibility="gone"
-                    android:background="@color/day_disabled_text_color"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:src="@drawable/empty_cell"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/slash"
                     />
 
             </RelativeLayout>

@@ -189,12 +189,15 @@ public class Step3 extends Fragment {
                                 editText.getText().toString(), ""
                         );
                         activityAddOn.setSelected(true);
+                        activityAddOn.setIntial(true);
+
 //                        dialogAdapter.addItem(activityAddOn);
 //                        list.add(activityAddOn);
-                        list.add(4,activityAddOn);
+                        list.add(activityAddOn);
 
                         dialogAdapter = new AddonesDialogAdapter(list, false,false, getActivity());
                         recyclerView.setAdapter(dialogAdapter);
+                        recyclerView.scrollToPosition(dialogAdapter.getItemCount()-1);
 // dialogAdapter.notifyDataSetChanged();
 
                         editText.setText("");
