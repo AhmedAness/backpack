@@ -176,8 +176,9 @@ public class Customer_details extends AppCompatActivity {
         }
 
         recyclerView.setAdapter( new AddonesDialogAdapter(addons_data, false,true, Customer_details.this));
-        if (Add_new_activity.dialog!=null)
-        Add_new_activity.dialog.hide();
+        if (Add_new_activity.loader!=null)
+            if (Add_new_activity.loader.isStart())
+                Add_new_activity.loader.stop();
         dialog.show();
 
         Add_addons_btn.setText(getResources().getString(R.string.ok));

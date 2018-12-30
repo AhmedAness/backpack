@@ -28,6 +28,7 @@ import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
 import com.google.gson.Gson;
+import com.victor.loading.rotate.RotateLoading;
 import com.wasltec.provider.Activities.Add_new_activity;
 import com.wasltec.provider.Activities.Home;
 import com.wasltec.provider.Adopters.ActivityAvailability_adobter;
@@ -59,6 +60,7 @@ public class Settings extends Fragment {
     private TextView mPricingEditBtn;
     private TextView mOrganisersEditBtn;
     private ImageButton mBalanceSwitch;
+    RotateLoading loader;
 
 
     @Override
@@ -85,6 +87,9 @@ public class Settings extends Fragment {
                 valid= String.valueOf("Are you sure you want to take make activity offline ?");
             }
 
+            loader = (RotateLoading) view.findViewById(R.id.rotateloading);
+            loader.start();
+
             builder.setTitle("Change Status")
                     .setMessage(valid)
                     .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
@@ -98,13 +103,16 @@ public class Settings extends Fragment {
                                         public void onResponse(JSONObject response) {
 
                                             Toast.makeText(getActivity(),response.toString(),Toast.LENGTH_LONG).show();
-
+                                            if (loader.isStart())
+                                                loader.stop();
                                         }
 
                                         @Override
                                         public void onError(ANError anError) {
 
                                             Toast.makeText(getActivity(),anError.getMessage(),Toast.LENGTH_LONG).show();
+                                            if (loader.isStart())
+                                                loader.stop();
                                         }
                                     });
                         }
@@ -130,6 +138,7 @@ public class Settings extends Fragment {
                 if (activityDetails.getStatus()){
                     valid= String.valueOf("Are you sure you want to take your activity offline ?");
                 }
+                loader.start();
                 builder.setTitle("Change Status")
                         .setMessage(valid)
                         .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
@@ -143,13 +152,16 @@ public class Settings extends Fragment {
                                             public void onResponse(JSONObject response) {
 
                                                 Toast.makeText(getActivity(),response.toString(),Toast.LENGTH_LONG).show();
-
+                                                if (loader.isStart())
+                                                    loader.stop();
                                             }
 
                                             @Override
                                             public void onError(ANError anError) {
 
                                                 Toast.makeText(getActivity(),anError.getMessage(),Toast.LENGTH_LONG).show();
+                                                if (loader.isStart())
+                                                    loader.stop();
                                             }
                                         });
                             }
@@ -212,6 +224,8 @@ public class Settings extends Fragment {
         set_price_per_individual_list();
 
         activityDetails.getIndividualCategories();
+
+
     }
 
     private void set_organizers() {
@@ -370,6 +384,7 @@ public class Settings extends Fragment {
             i.putExtra("step",7);
             i.putExtra("Activity_id",getArguments().getInt("id"));
             i.putExtra("activityDetails",(new Gson ()).toJson(activityDetails));
+
             startActivity(i);
         });
         mLengthAndCapacityEditBtn.setOnClickListener(v -> {

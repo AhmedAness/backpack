@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
+import com.victor.loading.rotate.RotateLoading;
 import com.wasltec.provider.Activities.Add_new_activity;
 import com.wasltec.provider.Adopters.ActivityAddon_adobter;
 import com.wasltec.provider.Adopters.ActivityPhoto_adobter;
@@ -34,6 +35,7 @@ public class Info extends Fragment {
     TextView  title_edit_btn,photo_edit_btn,location_edit_btn,rulesandrequirment_edit_btn,add_ones_edit_btn;
     RecyclerView ac_photos_list,activity_addons,activity_rules;
     GridLayout activity_Option;
+    RotateLoading loader;
 
 
 

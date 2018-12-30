@@ -57,7 +57,8 @@ public class Step5 extends Fragment {
                              Bundle savedInstanceState) {
 
         add_new_toolbar.setTitle(getActivity().getResources().getString(R.string.rulesandrequirment));
-        Add_new_activity.dialog.hide();
+        if (Add_new_activity.loader.isStart())
+            Add_new_activity.loader.stop();
         setHasOptionsMenu(true);
         view = inflater.inflate(R.layout.add_activity_step5, container, false);
 rules_adopter=new RulesAdapter();
@@ -190,7 +191,8 @@ rules_adopter=new RulesAdapter();
         if (mRequirements.getText().toString().length() < 1) {
             mRequirements.setError(getActivity().getResources().getString(R.string.this_field_is_required));
             mRequirements.requestFocus();
-            Add_new_activity.dialog.hide();
+            if (Add_new_activity.loader.isStart())
+                Add_new_activity.loader.stop();
         } else {
 
             JSONObject jsonObject = new JSONObject();
@@ -235,7 +237,8 @@ rules_adopter=new RulesAdapter();
                         @Override
                         public void onError(ANError anError) {
                             Toast.makeText(getContext(), anError.getErrorDetail(), Toast.LENGTH_SHORT).show();
-                            Add_new_activity.dialog.hide();
+                            if (Add_new_activity.loader.isStart())
+                                Add_new_activity.loader.stop();
 
                         }
                     });

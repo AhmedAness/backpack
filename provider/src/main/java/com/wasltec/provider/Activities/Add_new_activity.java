@@ -19,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
+import com.victor.loading.rotate.RotateLoading;
 import com.wasltec.provider.Fragments.Add_new_Activity.Step1;
 import com.wasltec.provider.Fragments.Add_new_Activity.Step10;
 import com.wasltec.provider.Fragments.Add_new_Activity.Step2;
@@ -42,7 +43,7 @@ public class Add_new_activity extends AppCompatActivity {
     public static int step_number = 1;
     public static TextView next_step;
     public static ImageView steper;
-    public static ACProgressPie dialog;
+//    public static ACProgressPie dialog;
     public static Context activity;
     boolean next = false;
 
@@ -61,6 +62,7 @@ public class Add_new_activity extends AppCompatActivity {
     public static int mode = 1;
     boolean inComplete;
     public static ActivityDetailsReturnObj activityDetails;
+    public static RotateLoading loader;
 
     static Context context  ;
     @Override
@@ -70,11 +72,14 @@ public class Add_new_activity extends AppCompatActivity {
 
         context =Add_new_activity.this;
         activity = this.getApplicationContext();
-        dialog = new ACProgressPie.Builder(this)
-                .ringColor(Color.WHITE)
-                .pieColor(Color.MAGENTA)
-                .updateType(ACProgressConstant.PIE_AUTO_UPDATE)
-                .build();
+//        dialog = new ACProgressPie.Builder(this)
+//                .ringColor(Color.WHITE)
+//                .pieColor(Color.MAGENTA)
+//                .updateType(ACProgressConstant.PIE_AUTO_UPDATE)
+//                .build();
+
+        loader = (RotateLoading) findViewById(R.id.rotateloading);
+//        loader.start();
         add_new_toolbar = findViewById(R.id.toolbar);
         next_step = findViewById(R.id.next_step);
         steper = findViewById(R.id.steper);
@@ -130,8 +135,8 @@ public class Add_new_activity extends AppCompatActivity {
 
 
     public void next_fn() {
-        dialog.show();
-
+//        dialog.show();
+        loader.start();
         if (inComplete) {
             inComplete = false;
             show_fn();

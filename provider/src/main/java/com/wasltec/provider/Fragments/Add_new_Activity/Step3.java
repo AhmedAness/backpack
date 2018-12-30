@@ -65,7 +65,8 @@ public class Step3 extends Fragment {
         setHasOptionsMenu(true);
         list = new ArrayList<>();
         views = new ArrayList<>();
-        Add_new_activity.dialog.hide();
+        if (Add_new_activity.loader.isStart())
+            Add_new_activity.loader.stop();
         view = inflater.inflate(R.layout.add_activity_step3, container, false);
         checkBoxes = new ArrayList<>();
         LinearLayout Add_addons = view.findViewById(R.id.Add_addons);
@@ -107,7 +108,8 @@ public class Step3 extends Fragment {
                     list = response;
                     dialogAdapter = new AddonesDialogAdapter(list, false,false, getActivity());
                     recyclerView.setAdapter(dialogAdapter);
-                    Add_new_activity.dialog.hide();
+                    if (Add_new_activity.loader.isStart())
+                        Add_new_activity.loader.stop();
                     dialog.show();
 
                 }
@@ -122,7 +124,8 @@ public class Step3 extends Fragment {
 
             dialogAdapter = new AddonesDialogAdapter(list, false,false, getActivity());
             recyclerView.setAdapter(dialogAdapter);
-            Add_new_activity.dialog.hide();
+            if (Add_new_activity.loader.isStart())
+                Add_new_activity.loader.stop();
             dialog.show();
         }
         dialog.setOnDismissListener(dialog1 -> {
@@ -235,12 +238,14 @@ public class Step3 extends Fragment {
             if (desc.getText().length() <= 0) {
                 desc.setError(getString(R.string.error_empty_field));
                 desc.requestFocus();
-                Add_new_activity.dialog.hide();
+                if (Add_new_activity.loader.isStart())
+                    Add_new_activity.loader.stop();
                 return;
             } else if (price.getText().length() <= 0) {
                 price.setError(getString(R.string.error_empty_field));
                 price.requestFocus();
-                Add_new_activity.dialog.hide();
+                if (Add_new_activity.loader.isStart())
+                    Add_new_activity.loader.stop();
                 return;
             } else {
                 try {
@@ -295,7 +300,8 @@ public class Step3 extends Fragment {
                             @Override
                             public void onError(ANError anError) {
                                 Toast.makeText(getContext(), anError.getErrorDetail(), Toast.LENGTH_SHORT).show();
-                                Add_new_activity.dialog.hide();
+                                if (Add_new_activity.loader.isStart())
+                                    Add_new_activity.loader.stop();
 
                             }
                         });

@@ -51,7 +51,8 @@ public class Step6 extends Fragment {
         add_new_toolbar.setTitle(getActivity().getResources().getString(R.string.booking_prefrences));
         setHasOptionsMenu(true);
         view = inflater.inflate(R.layout.add_activity_step6, container, false);
-        Add_new_activity.dialog.hide();
+        if (Add_new_activity.loader.isStart())
+            Add_new_activity.loader.stop();
 
 
         spinner = view.findViewById(R.id.booking_window_spinner);
@@ -216,7 +217,8 @@ public class Step6 extends Fragment {
                     @Override
                     public void onError(ANError anError) {
                         Toast.makeText(getContext(), anError.getErrorDetail(), Toast.LENGTH_SHORT).show();
-                        Add_new_activity.dialog.hide();
+                        if (Add_new_activity.loader.isStart())
+                            Add_new_activity.loader.stop();
 
                     }
                 });

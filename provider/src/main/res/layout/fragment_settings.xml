@@ -8,8 +8,11 @@
     android:paddingEnd="@dimen/_20sdp"
     android:background="@color/white"
     android:paddingTop="@dimen/_10sdp"
-    android:paddingBottom="@dimen/_10sdp"
-    >
+    android:paddingBottom="@dimen/_10sdp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -735,4 +738,16 @@
 
     </RelativeLayout>
 
+        <com.victor.loading.rotate.RotateLoading
+            android:id="@+id/rotateloading"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_150sdp"
+            android:layout_centerInParent="true"
+            app:loading_speed="11"
+            app:loading_color="@color/colorPrimary"
+            app:loading_width="5dp" />
+
+    </FrameLayout>
 </ScrollView>

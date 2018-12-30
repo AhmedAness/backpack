@@ -80,7 +80,8 @@ public class Step2 extends Fragment implements View.OnClickListener {
         add_new_toolbar.setTitle(getActivity().getResources().getString(R.string.photos));
         imagesUriArrayList = new ArrayList<>();
         setHasOptionsMenu(true);
-        Add_new_activity.dialog.hide();
+        if (Add_new_activity.loader.isStart())
+            Add_new_activity.loader.stop();
         mArrayUri = new ArrayList<>();
         photos = new ArrayList<>();
 
@@ -93,7 +94,8 @@ public class Step2 extends Fragment implements View.OnClickListener {
             mImages.setAdapter(img_adopter);
 
         }else {
-            Add_new_activity.dialog.show();
+
+                Add_new_activity.loader.start();
 
 
             AndroidNetworking.get(URLManger.getInstance().getGetActivityDetails(String.valueOf(ActivityID)))
@@ -102,7 +104,8 @@ public class Step2 extends Fragment implements View.OnClickListener {
                     .getAsJSONArray(new JSONArrayRequestListener() {
                         @Override
                         public void onResponse(JSONArray response) {
-                            Add_new_activity.dialog.hide();
+                            if (Add_new_activity.loader.isStart())
+                                Add_new_activity.loader.stop();
                             Gson gson = new Gson();
                             Type listType = new TypeToken<ActivityDetailsReturnObj>() {
                             }.getType();
@@ -131,7 +134,8 @@ public class Step2 extends Fragment implements View.OnClickListener {
 
                         @Override
                         public void onError(ANError anError) {
-                            Add_new_activity.dialog.hide();
+                            if (Add_new_activity.loader.isStart())
+                                Add_new_activity.loader.stop();
                             Log.d(TAG, "onError: " + anError.getMessage());
                         }
                     });
@@ -167,18 +171,22 @@ public class Step2 extends Fragment implements View.OnClickListener {
         if (tmp.size()<1){
 //            Toast.makeText(getActivity(),"you must load at least one image",Toast.LENGTH_LONG).show();
             Add_new_activity.showDialog( R.string.photos_less_warning,R.string.warning);
-            Add_new_activity.dialog.hide();
+            if (Add_new_activity.loader.isStart())
+                Add_new_activity.loader.stop();
         }else if (tmp.size()>6){
             Add_new_activity.showDialog( R.string.photos_more_warning,R.string.warning);
-            Add_new_activity.dialog.hide();
+            if (Add_new_activity.loader.isStart())
+                Add_new_activity.loader.stop();
 
         }else if(!hascover)
         {
             Add_new_activity.showDialog( R.string.no_cover_photos_warning,R.string.warning);
-            Add_new_activity.dialog.hide();
+            if (Add_new_activity.loader.isStart())
+                Add_new_activity.loader.stop();
         }
         else {
-            Add_new_activity.dialog.show();
+
+                Add_new_activity.loader.start();
             JSONObject jsonObject = new JSONObject();
             try {
                 JSONArray jsonElements = new JSONArray();
@@ -213,7 +221,8 @@ public class Step2 extends Fragment implements View.OnClickListener {
                         @Override
                         public void onResponse(JSONObject response) {
 
-                            Add_new_activity.dialog.hide();
+                            if (Add_new_activity.loader.isStart())
+                                Add_new_activity.loader.stop();
                             if (mode == 2) {
                                 Add_new_activity.step_number = 1;
                                 mode = 1;
@@ -231,7 +240,8 @@ public class Step2 extends Fragment implements View.OnClickListener {
                         @Override
                         public void onError(ANError anError) {
 
-                            Add_new_activity.dialog.hide();
+                            if (Add_new_activity.loader.isStart())
+                                Add_new_activity.loader.stop();
 
                             Toast.makeText(getContext(), anError.getErrorDetail(), Toast.LENGTH_SHORT).show();
 

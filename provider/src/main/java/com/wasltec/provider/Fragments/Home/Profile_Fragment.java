@@ -42,6 +42,7 @@ import com.androidnetworking.interfaces.OkHttpResponseListener;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.squareup.picasso.Picasso;
+import com.victor.loading.rotate.RotateLoading;
 import com.wasltec.provider.Activities.Add_new_activity;
 import com.wasltec.provider.R;
 import com.wasltec.provider.Utils.SharedPreferencesManager;
@@ -96,11 +97,12 @@ public class Profile_Fragment  extends Fragment {
     private TextView mEditUserPhone;
     private TextView mEditEmail;
     private CircleImageView mProfileImg;
-    private ImageButton mEditImage;
+    private CircleImageView mEditImage;
     private ImageView mProgress;
     private EditText mUserName;
     private EditText mUserPhone;
     private EditText mUserEmail;
+    RotateLoading loader;
 
     @SuppressLint("ResourceAsColor")
     @Override
@@ -162,6 +164,9 @@ public class Profile_Fragment  extends Fragment {
                 Intent i = new Intent(Intent.ACTION_PICK,
                         MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                 i.setType("image/*");
+                loader = (RotateLoading) view.findViewById(R.id.rotateloading);
+                loader.start();
+
 
                 startActivityForResult(i, RESULT_LOAD_IMAGE);
             }
@@ -178,6 +183,10 @@ public class Profile_Fragment  extends Fragment {
                     e.printStackTrace();
                 }
 
+                loader = (RotateLoading) view.findViewById(R.id.rotateloading);
+                loader.start();
+
+
                 AndroidNetworking.post(URLManger.getInstance().getEditProfile())
                         .addHeaders("Authorization", "bearer "+ SharedPreferencesManager.getInstance(getActivity()).getToken())
                         .addJSONObjectBody(jsonObject)
@@ -188,12 +197,14 @@ public class Profile_Fragment  extends Fragment {
                                 Session.getInstance().setEmail(mUserEmail.getText().toString());
                                 Session.getInstance().saveToFile(getActivity());
                                 Toast.makeText(getActivity(),"mail updated ",Toast.LENGTH_SHORT).show();
-                            }
+                                if (loader.isStart())
+                                    loader.stop();                 }
 
                             @Override
                             public void onError(ANError anError) {
                                 Toast.makeText(getActivity(),"mail don't updated try again ",Toast.LENGTH_SHORT).show();
-                            }
+                                if (loader.isStart())
+                                    loader.stop();             }
                         });
 
             }
@@ -208,6 +219,8 @@ public class Profile_Fragment  extends Fragment {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
+                loader = (RotateLoading) view.findViewById(R.id.rotateloading);
+                loader.start();
 
                 AndroidNetworking.post(URLManger.getInstance().getEditProfile())
                         .addHeaders("Authorization", "bearer "+ SharedPreferencesManager.getInstance(getActivity()).getToken())
@@ -219,12 +232,14 @@ public class Profile_Fragment  extends Fragment {
                                 Session.getInstance().setUserName(mUserName.getText().toString());
                                 Session.getInstance().saveToFile(getActivity());
                                 Toast.makeText(getActivity(),"user_name updated ",Toast.LENGTH_SHORT).show();
-                            }
+                                if (loader.isStart())
+                                    loader.stop();        }
 
                             @Override
                             public void onError(ANError anError) {
                                 Toast.makeText(getActivity(),"user_name don't updated try again ",Toast.LENGTH_SHORT).show();
-                            }
+                                if (loader.isStart())
+                                    loader.stop();        }
                         });
 
 
@@ -240,6 +255,8 @@ public class Profile_Fragment  extends Fragment {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
+                loader = (RotateLoading) view.findViewById(R.id.rotateloading);
+                loader.start();
 
                 AndroidNetworking.post(URLManger.getInstance().getEditProfile())
                         .addHeaders("Authorization", "bearer "+ SharedPreferencesManager.getInstance(getActivity()).getToken())
@@ -251,12 +268,14 @@ public class Profile_Fragment  extends Fragment {
                                 Session.getInstance().setPhone(mUserPhone.getText().toString());
                                 Session.getInstance().saveToFile(getActivity());
                                 Toast.makeText(getActivity(),"mobile updated ",Toast.LENGTH_SHORT).show();
-                            }
+                                if (loader.isStart())
+                                    loader.stop();            }
 
                             @Override
                             public void onError(ANError anError) {
                                 Toast.makeText(getActivity(),"mobile don't updated try again ",Toast.LENGTH_SHORT).show();
-                            }
+                                if (loader.isStart())
+                                    loader.stop();           }
                         });
 
 
@@ -328,7 +347,8 @@ public class Profile_Fragment  extends Fragment {
 //                                    Session.getInstance().saveToFile(getActivity());
                                     Log.d("photo_res", "onResponse: "+response.toString());
                                     Toast.makeText(getActivity(), "response ok "+ response.toString() , Toast.LENGTH_SHORT).show();
-
+                                if (loader.isStart())
+                                    loader.stop();
 
 
                             }
@@ -338,7 +358,8 @@ public class Profile_Fragment  extends Fragment {
                                 Log.d("photo_res", "onResponse: "+anError.getMessage());
 
                                 Toast.makeText(getActivity(), "response erroe "+ anError.getMessage(), Toast.LENGTH_SHORT).show();
-
+                                if (loader.isStart())
+                                    loader.stop();
                             }
                         });
 //                        .getAsOkHttpResponse(new OkHttpResponseListener() {
@@ -361,8 +382,12 @@ public class Profile_Fragment  extends Fragment {
 //                        });
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
+                if (loader.isStart())
+                    loader.stop();
             } catch (JSONException e) {
                 e.printStackTrace();
+                if (loader.isStart())
+                    loader.stop();
             }
 
         }

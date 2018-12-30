@@ -27,6 +27,7 @@ import com.androidnetworking.interfaces.JSONObjectRequestListener;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
+import com.victor.loading.rotate.RotateLoading;
 import com.wasltec.provider.Adopters.AddonesDialogAdapter;
 import com.wasltec.provider.R;
 import com.wasltec.provider.Utils.SharedPreferencesManager;
@@ -89,6 +90,7 @@ public class Book_new extends AppCompatActivity {
     LinearLayout mgroup_contamer;
     LinearLayout book_for_group;
     Typeface myfont;
+    RotateLoading loader;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -250,7 +252,8 @@ public class Book_new extends AppCompatActivity {
 //            }
 //        });
 
-
+        loader = (RotateLoading) findViewById(R.id.rotateloading);
+        loader.start();
 
         AndroidNetworking.get(URLManger.getInstance().getGetActivityDetails(""+Activtity_id))
                 .addHeaders("Authorization", "bearer " + SharedPreferencesManager.getInstance(Book_new.this).getToken())
@@ -279,14 +282,16 @@ public class Book_new extends AppCompatActivity {
                             e.printStackTrace();
                         }
                         dialog.hide();
-
+                        if (loader.isStart())
+                            loader.stop();
                     }
 
                     @Override
                     public void onError(ANError anError) {
                         Log.d(TAG, "onError: " + anError.getMessage());
                         dialog.hide();
-                    }
+                        if (loader.isStart())
+                            loader.stop();    }
                 });
 
 
@@ -366,6 +371,7 @@ public class Book_new extends AppCompatActivity {
         }
 
 
+        loader.start();
         AndroidNetworking.post(URLManger.getInstance().getCreateBooking())
                 .addHeaders("Authorization", "bearer " + SharedPreferencesManager.getInstance(Book_new.this).getToken())
                 .addJSONObjectBody(jsonObject)
@@ -373,7 +379,8 @@ public class Book_new extends AppCompatActivity {
                 .getAsJSONObject(new JSONObjectRequestListener() {
                     @Override
                     public void onResponse(JSONObject response) {
-
+                        if (loader.isStart())
+                            loader.stop();
                         Toast.makeText(Book_new.this,"Done " +response.toString(),Toast.LENGTH_LONG).show();
                         finish();
                     }
@@ -382,6 +389,8 @@ public class Book_new extends AppCompatActivity {
                     public void onError(ANError anError) {
 
                         Toast.makeText(Book_new.this,anError.getMessage(),Toast.LENGTH_LONG).show();
+                        if (loader.isStart())
+                            loader.stop();
 //                        finish();
                     }
                 });

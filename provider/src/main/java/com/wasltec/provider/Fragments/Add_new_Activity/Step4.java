@@ -76,7 +76,8 @@ public class Step4 extends Fragment {
         setHasOptionsMenu(true);
         view = inflater.inflate(R.layout.add_activity_step4, container, false);
         initView(view);
-        Add_new_activity.dialog.hide();
+        if (Add_new_activity.loader.isStart())
+            Add_new_activity.loader.stop();
         mMapBtn.setOnClickListener(v -> startActivityForResult(new Intent(getActivity(), MapsActivity.class), 0));
         mMeetingBtn.setOnClickListener(v -> startActivityForResult(new Intent(getActivity(), MapsActivity.class), 1));
 
@@ -224,7 +225,8 @@ public class Step4 extends Fragment {
                     @Override
                     public void onError(ANError anError) {
                         Toast.makeText(getContext(), anError.getErrorDetail(), Toast.LENGTH_SHORT).show();
-                        Add_new_activity.dialog.hide();
+                        if (Add_new_activity.loader.isStart())
+                            Add_new_activity.loader.stop();
 
                     }
                 });

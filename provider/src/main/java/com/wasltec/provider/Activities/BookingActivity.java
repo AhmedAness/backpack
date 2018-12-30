@@ -25,6 +25,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.victor.loading.rotate.RotateLoading;
 import com.wasltec.provider.Adopters.Activity_list_overview;
 import com.wasltec.provider.Adopters.Booking_dateAdapter;
 import com.wasltec.provider.MapsActivity;
@@ -68,6 +69,7 @@ public class BookingActivity extends AppCompatActivity {
     private Gson gson;
     private Map<String,List<OverviewReturnOpj>> dataSet;
     String SelectedDate;
+    RotateLoading loader;
 
     OverviewReturnOpj curr_activity;
     @Override
@@ -172,6 +174,7 @@ public class BookingActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String date = dates.get(position);
+                loader.start();
                 AndroidNetworking.get(URLManger.getInstance().getGetReservations(Activtity_id,dates2.get(position)))
 //                AndroidNetworking.get(URLManger.getInstance().getGetReservations(Activtity_id ))
                         .addHeaders("Authorization", "bearer " + SharedPreferencesManager.getInstance(BookingActivity.this).getToken())
@@ -183,12 +186,14 @@ public class BookingActivity extends AppCompatActivity {
                                 reservations2=new ArrayList<>();
                                 bookingAdapter = new Booking_dateAdapter(reservations, BookingActivity.this);
                                 recyclerView.setAdapter(bookingAdapter);
-                            }
+                                if (loader.isStart())
+                                    loader.stop();       }
 
                             @Override
                             public void onError(ANError anError) {
                                 Toast.makeText(getApplicationContext(), anError.getErrorDetail(), Toast.LENGTH_SHORT).show();
-
+                                if (loader.isStart())
+                                    loader.stop();
                             }
                         });
             }
@@ -210,6 +215,10 @@ public class BookingActivity extends AppCompatActivity {
     }
 
     private void fulldata() {
+
+        loader = (RotateLoading) findViewById(R.id.rotateloading);
+        loader.start();
+
         AndroidNetworking.get(URLManger.getInstance().getUpcomingActivity())
                 .addHeaders("Authorization", "bearer "+ SharedPreferencesManager.getInstance(BookingActivity.this).getToken())
                 .build()
@@ -289,12 +298,15 @@ public class BookingActivity extends AppCompatActivity {
                         mDates.setAdapter(new ArrayAdapter<>(BookingActivity.this, android.R.layout.simple_list_item_1, dates));
 
                         mDates.setSelection(dates.indexOf(SelectedDate));
+                        if (loader.isStart())
+                            loader.stop();
                     }
 
                     @Override
                     public void onError(ANError anError) {
                         Log.d(TAG, "onError: "+anError.getMessage());
-
+                        if (loader.isStart())
+                            loader.stop();
                     }
                 });
 

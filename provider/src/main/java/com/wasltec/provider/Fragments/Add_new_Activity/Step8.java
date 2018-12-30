@@ -101,7 +101,8 @@ public class Step8 extends Fragment {
         setHasOptionsMenu(true);
         view = inflater.inflate(R.layout.add_activity_step8, container, false);
         initViews(view);
-        Add_new_activity.dialog.hide();
+        if (Add_new_activity.loader.isStart())
+            Add_new_activity.loader.stop();
 
         mMaxMinGroup = view.findViewById(R.id.max_min_group);
         time_spinner = view.findViewById(R.id.time_spinner);
@@ -111,7 +112,8 @@ public class Step8 extends Fragment {
         li3=view.findViewById(R.id.li3);
         li4=view.findViewById(R.id.li4);
 
-        Add_new_activity.dialog.show();
+
+            Add_new_activity.loader.start();
         AndroidNetworking.get(URLManger.getInstance().getGetActivityDetails(String.valueOf(ActivityID)))
                 .addHeaders("Authorization", "bearer " + SharedPreferencesManager.getInstance(getActivity()).getToken())
                 .build().getAsJSONArray(new JSONArrayRequestListener() {
@@ -132,13 +134,15 @@ public class Step8 extends Fragment {
                     e.printStackTrace();
                 }
 
-                Add_new_activity.dialog.hide();
+                if (Add_new_activity.loader.isStart())
+                    Add_new_activity.loader.stop();
 
             }
 
             @Override
             public void onError(ANError anError) {
-                Add_new_activity.dialog.hide();
+                if (Add_new_activity.loader.isStart())
+                    Add_new_activity.loader.stop();
                 Toast.makeText(getActivity(),anError.getErrorDetail(),Toast.LENGTH_SHORT).show();
             }
         });
@@ -395,7 +399,8 @@ public class Step8 extends Fragment {
         if (mTimeTxt.getText().toString().length() < 1) {
             mTimeTxt.setError(getString(R.string.this_field_is_required));
             mTimeTxt.requestFocus();
-            Add_new_activity.dialog.hide();
+            if (Add_new_activity.loader.isStart())
+                Add_new_activity.loader.stop();
             return;
 
         }
@@ -404,17 +409,20 @@ public class Step8 extends Fragment {
             if (mMaxNumberGroup.getText().toString().length() < 1) {
                 mMaxNumberGroup.setError(getString(R.string.this_field_is_required));
                 mMaxNumberGroup.requestFocus();
-                Add_new_activity.dialog.hide();
+                if (Add_new_activity.loader.isStart())
+                    Add_new_activity.loader.stop();
                 return;
             } else if (mMinNumberGroup.getText().toString().length() < 1) {
                 mMinNumberGroup.setError(getString(R.string.this_field_is_required));
                 mMinNumberGroup.requestFocus();
-                Add_new_activity.dialog.hide();
+                if (Add_new_activity.loader.isStart())
+                    Add_new_activity.loader.stop();
 
                 return;
             } else if (Integer.parseInt(mMaxNumberGroup.getText().toString()) <= Integer.parseInt(mMinNumberGroup.getText().toString())) {
                 Add_new_activity.showDialog( R.string.max_notes, R.string.warning);
-                Add_new_activity.dialog.hide();
+                if (Add_new_activity.loader.isStart())
+                    Add_new_activity.loader.stop();
                 return;
 
 
@@ -491,7 +499,8 @@ public class Step8 extends Fragment {
 
 
                         Toast.makeText(getContext(), anError.getErrorDetail(), Toast.LENGTH_SHORT).show();
-                        Add_new_activity.dialog.hide();
+                        if (Add_new_activity.loader.isStart())
+                            Add_new_activity.loader.stop();
                     }
                 });
 

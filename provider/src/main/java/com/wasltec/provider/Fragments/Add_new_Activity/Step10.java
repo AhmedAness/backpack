@@ -66,7 +66,8 @@ public class Step10 extends Fragment {
         add_new_toolbar.setTitle(getActivity().getResources().getString(R.string.orgnizers));
         setHasOptionsMenu(true);
         view = inflater.inflate(R.layout.add_activity_step10, container, false);
-        Add_new_activity.dialog.hide();
+        if (Add_new_activity.loader.isStart())
+            Add_new_activity.loader.stop();
         List<String> strings = new ArrayList<>();
         strings.add("999");
         Add_new_activity.next_step.setText(R.string.save_btn);
@@ -268,7 +269,8 @@ public class Step10 extends Fragment {
 
                     @Override
                     public void onError(ANError anError) {
-                        Add_new_activity.dialog.hide();
+                        if (Add_new_activity.loader.isStart())
+                            Add_new_activity.loader.stop();
                         Toast.makeText(getActivity(), anError.getErrorDetail(), Toast.LENGTH_SHORT).show();
                         Add_new_activity.next_step.setText(R.string.next_txt);
 

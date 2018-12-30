@@ -73,14 +73,6 @@ public class Activities_Fragment extends Fragment  {
         setHasOptionsMenu(true);
         actoinbar.setDisplayHomeAsUpEnabled(false);
         actoinbar.setDisplayShowHomeEnabled(true);
-
-
-
-
-
-
-
-
         gson= new Gson();
 
         toolbar.setTitle(R.string.activities);

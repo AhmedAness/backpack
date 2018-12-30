@@ -65,7 +65,7 @@ public class Step1 extends Fragment {
         checkBoxes = new ArrayList<>();
         activity_title = view.findViewById(R.id.activity_title);
         initView(view);
-        Add_new_activity.dialog.show();
+        Add_new_activity.loader.start();
 
         if(mode==2){
             activity_title.setText(activityDetails.getTitle());
@@ -97,17 +97,19 @@ public class Step1 extends Fragment {
                         e.printStackTrace();
                     }
                 }
-                Add_new_activity.dialog.hide();
+                if (Add_new_activity.loader.isStart())
+                    Add_new_activity.loader.stop();
             }
 
             @Override
             public void onError(ANError anError) {
-                Add_new_activity.dialog.hide();
+                if (Add_new_activity.loader.isStart())
+                    Add_new_activity.loader.stop();
                 Log.d(TAG, "getGetActivityTypes error: " + anError.getMessage());
             }
         });
         final int[] start = {8};
-        Add_new_activity.dialog.show();
+            Add_new_activity.loader.start();
         AndroidNetworking.get(URLManger.getInstance().getGetOptions())//"http://backpackapis.wasltec.org/Api/Activity/GetOptions"
                 .addHeaders("Authorization", "bearer " + SharedPreferencesManager.getInstance(getActivity()).getToken())
                 .build().getAsJSONArray(new JSONArrayRequestListener() {
@@ -164,10 +166,12 @@ public class Step1 extends Fragment {
                         mContainer.addView(view, start[0], params);
                         start[0]++;
                         checkBoxes.add(view);
-                        Add_new_activity.dialog.hide();
+                        if (Add_new_activity.loader.isStart())
+                            Add_new_activity.loader.stop();
                     } catch (JSONException e) {
                         Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
-                        Add_new_activity.dialog.hide();
+                        if (Add_new_activity.loader.isStart())
+                            Add_new_activity.loader.stop();
 
                     }
                 }
@@ -176,7 +180,8 @@ public class Step1 extends Fragment {
             @Override
             public void onError(ANError anError) {
                 Toast.makeText(getContext(), anError.getErrorDetail(), Toast.LENGTH_SHORT).show();
-                Add_new_activity.dialog.hide();
+                if (Add_new_activity.loader.isStart())
+                    Add_new_activity.loader.stop();
                 Log.d(TAG, "getGetOptions: " + anError.getMessage());
 
             }
@@ -198,16 +203,19 @@ public class Step1 extends Fragment {
         if (activity_title.getText().toString().length() < 1) {
             activity_title.setError(getActivity().getResources().getString(R.string.this_field_is_required));
             activity_title.requestFocus();
-            Add_new_activity.dialog.hide();
+            if (Add_new_activity.loader.isStart())
+                Add_new_activity.loader.stop();
 
         } else if (mDisc.getText().toString().length() < 1) {
             mDisc.setError(getActivity().getResources().getString(R.string.this_field_is_required));
             mDisc.requestFocus();
 
-            Add_new_activity.dialog.hide();
+            if (Add_new_activity.loader.isStart())
+                Add_new_activity.loader.stop();
 
         } else {
-            Add_new_activity.dialog.show();
+
+                Add_new_activity.loader.start();
 
             current_Activity.setTitle(activity_title.getText().toString());
             String description = mDisc.getText().toString();
@@ -240,7 +248,8 @@ public class Step1 extends Fragment {
                             else {
                                 mAgeFrom.setError(getString(R.string.this_field_is_required));
                                 mAgeFrom.requestFocus();
-                                Add_new_activity.dialog.hide();
+                                if (Add_new_activity.loader.isStart())
+                                    Add_new_activity.loader.stop();
                                 return;
                             }
                             if (mAgeTo.getText().toString().length()>0){
@@ -252,13 +261,15 @@ public class Step1 extends Fragment {
                             else {
                                 mAgeTo.setError(getString(R.string.this_field_is_required));
                                 mAgeTo.requestFocus();
-                                Add_new_activity.dialog.hide();
+                                if (Add_new_activity.loader.isStart())
+                                    Add_new_activity.loader.stop();
                                 return;
                             }
                             if (!fromAge.equals("")&&!toAge.equals(""))
                                 if (Integer.parseInt(fromAge)>=Integer.parseInt(toAge)){
                                     Toast.makeText(getActivity(), R.string.age_verfiy_error,Toast.LENGTH_SHORT).show();
-                                    Add_new_activity.dialog.hide();
+                                    if (Add_new_activity.loader.isStart())
+                                        Add_new_activity.loader.stop();
 
                                     return;
                                 }
@@ -297,14 +308,16 @@ public class Step1 extends Fragment {
                                 getActivity().getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container1, Add_new_activity.step2).commit();
                                 Add_new_activity.step_number = 2;
                             }
-                            Add_new_activity.dialog.hide();
+                            if (Add_new_activity.loader.isStart())
+                                Add_new_activity.loader.stop();
 
                         }
 
                         @Override
                         public void onError(ANError anError) {
                             Toast.makeText(getContext(), anError.getErrorDetail(), Toast.LENGTH_SHORT).show();
-                            Add_new_activity.dialog.hide();
+                            if (Add_new_activity.loader.isStart())
+                                Add_new_activity.loader.stop();
 
                         }
                     });

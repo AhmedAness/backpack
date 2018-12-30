@@ -29,6 +29,7 @@ import com.androidnetworking.interfaces.OkHttpResponseListener;
 import com.androidnetworking.interfaces.StringRequestListener;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.victor.loading.rotate.RotateLoading;
 import com.wasltec.provider.Fragments.Activity_details.Info;
 import com.wasltec.provider.Fragments.Activity_details.Settings;
 import com.wasltec.provider.R;
@@ -63,7 +64,7 @@ public class Activity_details extends AppCompatActivity {
     LinearLayout selector_info, selector_settings;
     Info info_opj;
     Settings settings_opj;
-    boolean flag_fragment = true;
+//    boolean flag_fragment = true;
     public static Toolbar toolbar_details;
 
     private Gson gson;
@@ -72,6 +73,9 @@ public class Activity_details extends AppCompatActivity {
     public static ActivityDetailsReturnObj activityDetails;
     int activity_id;
     private String TAG = "ActivityDetails";
+    public static int sett=-1;
+    RotateLoading loader;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,7 +117,7 @@ public class Activity_details extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         res = getResources();
         info_opj = new Info();
-        flag_fragment = true;
+//        flag_fragment = true;
         update_select();
         Bundle bundle = new Bundle();
         bundle.putInt("id", activity_id);
@@ -121,12 +125,21 @@ public class Activity_details extends AppCompatActivity {
         settings_opj = new Settings();
         settings_opj.setArguments(bundle);
         callserver();
+        if (sett==0){
+//            getSupportFragmentManager().beginTransaction().replace(R.id.container1, settings_opj).commit();
+//            flag_fragment = false;
+            update_select();
+        }
 
     }
 
     private void callserver() {
         info.setClickable(false);
         settings.setClickable(false);
+
+        loader = (RotateLoading) findViewById(R.id.rotateloading);
+        loader.start();
+
         AndroidNetworking.get(URLManger.getInstance().getGetActivityDetails(""+myactivity.getId()))
                 .addHeaders("Authorization", "bearer " + SharedPreferencesManager.getInstance(Activity_details.this).getToken())
                 .build()
@@ -148,20 +161,27 @@ public class Activity_details extends AppCompatActivity {
                             e.printStackTrace();
                         }
                         try {
+                            if (sett==0){
+                                getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container1, settings_opj).commit();
 
-
-                            getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container1, info_opj).commit();
-                        }
+                            }else {
+                                getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container1, info_opj).commit();
+                            }
+                            }
                         catch (Exception c){
                             Log.d(TAG, "onResponse: "+c.getMessage());
 
                         }
-                        flag_fragment = true;
+                        if (loader.isStart())
+                            loader.stop();
+//                        flag_fragment = true;
                     }
 
                     @Override
                     public void onError(ANError anError) {
                         Log.d(TAG, "onError: " + anError.getMessage());
+                        if (loader.isStart())
+                            loader.stop();
                     }
                 });
 
@@ -173,34 +193,36 @@ public class Activity_details extends AppCompatActivity {
         info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!flag_fragment) {
+//                if (!flag_fragment) {
+                    sett=1;
                     getSupportFragmentManager().beginTransaction().replace(R.id.container1, info_opj).commit();
-                    flag_fragment = true;
+//                    flag_fragment = true;
                     update_select();
-                }
+//                }
 
             }
         });
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (flag_fragment) {
-
+//                if (flag_fragment) {
+                    sett=0;
                     getSupportFragmentManager().beginTransaction().replace(R.id.container1, settings_opj).commit();
-                    flag_fragment = false;
+//                    flag_fragment = false;
                     update_select();
-                }
+//                }
             }
         });
     }
 
     private void update_select() {
-        if (flag_fragment) {
-            selector_info.setVisibility(View.VISIBLE);
-            selector_settings.setVisibility(View.GONE);
-        } else {
+        if (sett==0) {
             selector_info.setVisibility(View.GONE);
             selector_settings.setVisibility(View.VISIBLE);
+
+        } else {
+            selector_info.setVisibility(View.VISIBLE);
+            selector_settings.setVisibility(View.GONE);
         }
     }
 
@@ -332,14 +354,6 @@ public class Activity_details extends AppCompatActivity {
             dialog.dismiss();
         });
         dialog.show();
-
-
-
-
-
-
-
-
     }
 
 

@@ -83,7 +83,8 @@ public class Step9 extends Fragment {
         mRadiogroup = view.findViewById(R.id.radiogroup);
         group_price = view.findViewById(R.id.group_price);
 
-        Add_new_activity.dialog.hide();
+        if (Add_new_activity.loader.isStart())
+            Add_new_activity.loader.stop();
         price_per_individual_Recycler.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
         mDiscountList.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
 
@@ -96,13 +97,15 @@ public class Step9 extends Fragment {
                 for (Price_per_individual price_per_individual : response) {
                     strings.add(price_per_individual.getName());
                 }
-                Add_new_activity.dialog.hide();
+                if (Add_new_activity.loader.isStart())
+                    Add_new_activity.loader.stop();
             }
 
             @Override
             public void onError(ANError anError) {
                 Toast.makeText(getContext(), anError.getErrorDetail(), Toast.LENGTH_SHORT).show();
-                Add_new_activity.dialog.hide();
+                if (Add_new_activity.loader.isStart())
+                    Add_new_activity.loader.stop();
 
             }
         });
@@ -245,11 +248,13 @@ public class Step9 extends Fragment {
 
         if (strings.size()>0){
             Toast.makeText(getActivity(), "You have to add Price per individual", Toast.LENGTH_SHORT).show();
-            Add_new_activity.dialog.hide();
+            if (Add_new_activity.loader.isStart())
+                Add_new_activity.loader.stop();
             return;
         }else if (group_price.getText().toString().length()<=0){
             group_price.setError(getString(R.string.this_field_is_required));
-            Add_new_activity.dialog.hide();
+            if (Add_new_activity.loader.isStart())
+                Add_new_activity.loader.stop();
             return;
         } else {
             JSONObject jsonObject = new JSONObject();
@@ -295,7 +300,8 @@ public class Step9 extends Fragment {
                 @Override
                 public void onError(ANError anError) {
                     Toast.makeText(getActivity(), anError.getErrorDetail(), Toast.LENGTH_SHORT).show();
-                    Add_new_activity.dialog.hide();
+                    if (Add_new_activity.loader.isStart())
+                        Add_new_activity.loader.stop();
                 }
             });
         }

@@ -81,7 +81,8 @@ public class Step7 extends Fragment implements View.OnClickListener {
         LinearLayout Add_addons = view.findViewById(R.id.Add_availability);
 
 
-        Add_new_activity.dialog.hide();
+        if (Add_new_activity.loader.isStart())
+            Add_new_activity.loader.stop();
         booking_data = new Availability_Adopter();
         recyclerView = view.findViewById(R.id.availability_Recycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
@@ -309,7 +310,8 @@ public class Step7 extends Fragment implements View.OnClickListener {
 
                     @Override
                     public void onError(ANError anError) {
-                        Add_new_activity.dialog.hide();
+                        if (Add_new_activity.loader.isStart())
+                            Add_new_activity.loader.stop();
 
                         Toast.makeText(getContext(), anError.getErrorDetail(), Toast.LENGTH_SHORT).show();
                     }

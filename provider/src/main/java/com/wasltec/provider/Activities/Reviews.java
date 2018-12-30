@@ -21,6 +21,7 @@ import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONArrayRequestListener;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.victor.loading.rotate.RotateLoading;
 import com.wasltec.provider.Fragments.reviews.Critical;
 import com.wasltec.provider.Fragments.reviews.Good;
 import com.wasltec.provider.R;
@@ -57,6 +58,7 @@ public class Reviews extends AppCompatActivity {
     List<Post_item> pastes =new ArrayList<>();
     private ActionBar actoinbar;
     private Gson gson;
+    RotateLoading loader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -122,7 +124,8 @@ public class Reviews extends AppCompatActivity {
     }
 
     private void callserver(int activity_id) {
-
+        loader = (RotateLoading) findViewById(R.id.rotateloading);
+        loader.start();
         AndroidNetworking.get(URLManger.getInstance().getGetActivityReview(activity_id))
                 .addHeaders("Authorization", "bearer "+ SharedPreferencesManager.getInstance(Reviews.this).getToken())
                 .build()
@@ -145,13 +148,15 @@ public class Reviews extends AppCompatActivity {
                                 Log.d(TAG, "onResponse:"+e.getMessage());
                             }
 
-
+                            if (loader.isStart())
+                                loader.stop();
                         }
 
                         @Override
                         public void onError(ANError anError) {
                             Log.d(TAG, "onResponse:"+anError.getMessage());
-                        }
+                            if (loader.isStart())
+                                loader.stop();   }
                     });
 //        pastes =get_activity_postes(activity_id);
 

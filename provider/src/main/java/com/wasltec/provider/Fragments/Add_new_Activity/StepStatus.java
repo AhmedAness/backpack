@@ -47,7 +47,8 @@ public class StepStatus extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        Add_new_activity.dialog.hide();
+        if (Add_new_activity.loader.isStart())
+            Add_new_activity.loader.stop();
         Add_new_activity.add_new_toolbar.setTitle(getString(R.string.add_new_activity));
         Add_new_activity.next_step.setText(R.string.continue_txt);
         mCompleteFlag = view.findViewById(R.id.complete_flag);

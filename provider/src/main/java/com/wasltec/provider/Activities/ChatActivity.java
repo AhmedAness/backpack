@@ -12,6 +12,7 @@ import com.androidnetworking.interfaces.OkHttpResponseListener;
 import com.anychart.core.annotations.PlotController;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.victor.loading.rotate.RotateLoading;
 import com.wasltec.provider.R;
 import com.wasltec.provider.Utils.SharedPreferencesManager;
 import com.wasltec.provider.Utils.URLManger;
@@ -32,6 +33,7 @@ import okhttp3.Response;
 
 
 public class ChatActivity extends AppCompatActivity {
+    RotateLoading loader;
 
     ArrayList<com.wasltec.provider.model.ChatMessage> chatMessages;
     @Override
@@ -45,6 +47,8 @@ public class ChatActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(getIntent().getStringExtra("chatname"));
 
             if (getIntent().getIntExtra("ChatId",1)>=0){
+                loader = (RotateLoading) findViewById(R.id.rotateloading);
+                loader.start();
                 AndroidNetworking.get(URLManger.getInstance().getUser_Chat(getIntent().getIntExtra("ChatId", 1)))
                         .addHeaders("Authorization", "bearer " + SharedPreferencesManager.getInstance(ChatActivity.this).getToken())
                         .build()
@@ -80,12 +84,14 @@ public class ChatActivity extends AppCompatActivity {
                                     }
                                 }
 
-
+                                if (loader.isStart())
+                                    loader.stop();
                             }
 
                             @Override
                             public void onError(ANError anError) {
-
+                                if (loader.isStart())
+                                    loader.stop();
                             }
                         });
             }else {

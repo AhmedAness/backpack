@@ -57,11 +57,12 @@ public class Messages_Fragment extends Fragment {
         mContainer = (LinearLayout) view.findViewById(R.id.container);
         empty_msg = (LinearLayout) view.findViewById(R.id.empty_msg);
         inbox_list = (RecyclerView) view.findViewById(R.id.inbox_list);
-        loader = (RotateLoading) view.findViewById(R.id.rotateloading);
-        loader.start();
 
         empty_msg.setVisibility(View.GONE);
         mContainer.setVisibility(View.GONE);
+
+        loader = (RotateLoading) view.findViewById(R.id.rotateloading);
+        loader.start();
 
         AndroidNetworking.get(URLManger.getInstance().getInbox())
                 .addHeaders("Authorization", "bearer "+ SharedPreferencesManager.getInstance(getActivity()).getToken())
