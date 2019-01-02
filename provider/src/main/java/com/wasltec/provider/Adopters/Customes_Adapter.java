@@ -1,12 +1,15 @@
 package com.wasltec.provider.Adopters;
 
+import android.app.ActionBar;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.wasltec.provider.R;
@@ -77,6 +80,12 @@ public class Customes_Adapter extends RecyclerView.Adapter<Customes_Adapter.View
         holder.name.setText(data.get(position).getName());
         holder.number.setText("" + data.get(position).getTicketNumber());
         holder.note.setText("");
+
+        if (data.size()<=1){
+            ViewGroup.LayoutParams layoutParams = holder.container_item.getLayoutParams();
+            layoutParams.width= ActionBar.LayoutParams.MATCH_PARENT;
+            holder.container_item.setLayoutParams(layoutParams);
+        }
     }
 
     // total number of rows
@@ -89,6 +98,7 @@ public class Customes_Adapter extends RecyclerView.Adapter<Customes_Adapter.View
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         ImageView image;
         TextView name, note, number;
+        LinearLayout container_item;
 
         ViewHolder(View itemView) {
             super(itemView);
@@ -96,6 +106,7 @@ public class Customes_Adapter extends RecyclerView.Adapter<Customes_Adapter.View
             name = itemView.findViewById(R.id.customer_name);
             note = itemView.findViewById(R.id.customer_note);
             number = itemView.findViewById(R.id.customer_num);
+            container_item=itemView.findViewById(R.id.container_item);
             itemView.setOnClickListener(this);
         }
 

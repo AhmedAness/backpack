@@ -417,6 +417,7 @@
     <string name="hours_notice">hours notice</string>
     <string name="Warning_title">Warning</string>
     <string name="Warning_msg">Careful this will case to restart the application</string>
+    <string name="verify_msg">Are you sure to verify this ticket</string>
 
 
 </resources>

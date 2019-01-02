@@ -92,7 +92,7 @@
                 android:layout_marginBottom="10dp"
                 android:orientation="horizontal"
                 android:columnCount="2"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="fill_parent"
                 android:columnWidth="@dimen/_200sdp"
                 android:numColumns="2"
@@ -107,18 +107,17 @@
 
             <com.borjabravo.readmoretextview.ReadMoreTextView
                 android:id="@+id/ac__description"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_marginTop="@dimen/_15sdp"
                 android:layout_gravity="start"
                 android:gravity="start"
                 android:layout_height="wrap_content"
                 android:text="@string/dummy_desc"
-                android:textColor="@color/footer_color_text"
+                android:textColor="@color/bg_color_text"
                 app:trimCollapsedText="Read more"
-               app:trimLines="4"
-              android:textSize="@dimen/med_text_size"
-                android:layout_marginBottom="@dimen/_5sdp"
-               />
+                app:trimLines="5"
+                android:textSize="@dimen/med_text_size"
+                android:layout_marginBottom="@dimen/_5sdp" />
 
 
             <View
@@ -458,15 +457,18 @@
                 android:gravity="start"
                 android:textStyle="bold" />
 
-            <TextView
+            <com.borjabravo.readmoretextview.ReadMoreTextView
                 android:id="@+id/ac_Requirments"
                 android:layout_gravity="start"
                 android:textColor="@color/bg_color_text"
                 android:layout_marginTop="@dimen/_12sdp"
                 android:gravity="start"
                 android:layout_width="match_parent"
+                app:trimCollapsedText="Read more"
+                app:trimLines="5"
                 android:layout_height="wrap_content"
                 android:text="@string/data" />
+
 
             <LinearLayout
                 android:layout_width="match_parent"

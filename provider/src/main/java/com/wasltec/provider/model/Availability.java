@@ -92,7 +92,7 @@ public class Availability {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        SimpleDateFormat outFormat = new SimpleDateFormat("EEEE h a");
+        SimpleDateFormat outFormat = new SimpleDateFormat("EE h a");
         String goal = outFormat.format(date);
 
         String goal2 = outFormat.format(date2);

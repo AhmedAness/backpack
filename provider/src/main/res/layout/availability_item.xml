@@ -16,8 +16,8 @@
             android:layout_weight="10"
             android:layout_gravity="center"
             android:id="@+id/delete_item"
-
-            android:src="@android:drawable/ic_delete"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/close_gray"
             android:layout_height="30dp" />
         <TextView
             android:layout_width="0dp"
@@ -27,6 +27,7 @@
             android:layout_gravity="center"
             android:textColor="@color/bg_color_text"
             android:gravity="center"
+            android:maxLines="1"
             android:text="Friday 4 pm - Friday 10 pm"
             android:layout_height="wrap_content"
             tools:ignore="RtlCompat" />

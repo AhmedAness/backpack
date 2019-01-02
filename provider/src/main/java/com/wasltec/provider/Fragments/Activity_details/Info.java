@@ -163,11 +163,11 @@ public class Info extends Fragment {
                     TextView textView = new TextView(getActivity(), null, android.R.style.TextAppearance_Large);
 //                    GridLayout.LayoutParams layoutParams = new GridLayout.LayoutParams();
                     GridLayout.LayoutParams layoutParams = new GridLayout.LayoutParams();
-                    layoutParams.setGravity(Gravity.FILL);
+                    layoutParams.setGravity(Gravity.START);
                     textView.setText(activityDetails.getActivityOption().get(i).getName());
 
                     textView.setCompoundDrawablePadding((int) getResources().getDimension(R.dimen._5sdp));
-                    Drawable drawable = ContextCompat.getDrawable(getActivity(), R.drawable.male_icon);
+                    Drawable drawable = ContextCompat.getDrawable(getActivity(), R.drawable.female_icon);
                     if (drawable != null) {
                         drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
                     }
@@ -182,6 +182,8 @@ public class Info extends Fragment {
 
                     activity_Option.addView(textView);
                     break;
+
+
                     case 2 :
                     TextView textView1 = new TextView(getActivity(), null, android.R.style.TextAppearance_Large);
                     GridLayout.LayoutParams layoutParams1 = new GridLayout.LayoutParams();
@@ -189,11 +191,12 @@ public class Info extends Fragment {
                     textView1.setText(activityDetails.getActivityOption().get(i).getName());
 
                     textView1.setCompoundDrawablePadding((int) getResources().getDimension(R.dimen._5sdp));
-                    Drawable drawable1 = ContextCompat.getDrawable(getActivity(), R.drawable.female_icon);
+                    Drawable drawable1 = ContextCompat.getDrawable(getActivity(), R.drawable.male_icon);
                     if (drawable1 != null) {
                         drawable1.setBounds(0, 0, drawable1.getIntrinsicWidth(), drawable1.getIntrinsicHeight());
                     }
-                    layoutParams1.setMargins(0, 0, (int) getResources().getDimension(R.dimen._5sdp), (int) getResources().getDimension(R.dimen._5sdp));
+                    layoutParams1.setMargins(0, 0, (int) getResources().getDimension(R.dimen._25sdp), (int) getResources().getDimension(R.dimen._5sdp));
+                    layoutParams1.setGravity(Gravity.END);
                     textView1.setLayoutParams(layoutParams1);
 
                     textView1.setCompoundDrawables(drawable1, null, null, null);
@@ -201,10 +204,12 @@ public class Info extends Fragment {
 
                     activity_Option.addView(textView1);
                     break;
+
+
                     default:
                         TextView textView2 = new TextView(getActivity(), null, android.R.style.TextAppearance_Large);
                         GridLayout.LayoutParams layoutParams2 = new GridLayout.LayoutParams();
-                        layoutParams2.setGravity(Gravity.FILL);
+                        layoutParams2.setGravity(Gravity.START);
                         int from = 0 , to = 0;
                         if (activityDetails.getActivityOption().get(i).getFromAge()==0&&
                                 activityDetails.getActivityOption().get(i).getToAge()==0)
@@ -215,7 +220,7 @@ public class Info extends Fragment {
                                     activityDetails.getActivityOption().get(i).getToAge()+" ) ");
 
                         textView2.setCompoundDrawablePadding((int) getResources().getDimension(R.dimen._5sdp));
-                        Drawable drawable2 = ContextCompat.getDrawable(getActivity(), R.drawable.male_icon);
+                        Drawable drawable2 = ContextCompat.getDrawable(getActivity(), R.drawable.family_icon);
                         if (drawable2 != null) {
                             drawable2.setBounds(0, 0, drawable2.getIntrinsicWidth(), drawable2.getIntrinsicHeight());
                         }

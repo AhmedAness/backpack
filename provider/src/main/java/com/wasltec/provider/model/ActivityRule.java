@@ -16,9 +16,16 @@ public class ActivityRule {
         this.selected = selected;
     }
 
-    public ActivityRule(String id, String description) {
+    public ActivityRule(String id, String description,boolean selected) {
         this.id = id;
         this.description = description;
+        this.selected = selected;
+    }
+    public ActivityRule(String id, String description,boolean selected,boolean intial) {
+        this.id = id;
+        this.description = description;
+        this.selected = selected;
+        this.intial = intial;
     }
 
 

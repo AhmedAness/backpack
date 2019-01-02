@@ -20,7 +20,10 @@ import com.wasltec.provider.R;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
@@ -77,6 +80,17 @@ public class Availability_Adopter extends RecyclerView.Adapter<Availability_Adop
     @Override
     public void onBindViewHolder(Availability_Adopter.MyViewHolder holder, int position) {
         Availability item = availability_Items.get(position);
+
+//        SimpleDateFormat format = new SimpleDateFormat("dddddd HH - ");
+//        try {
+//            Date date = format.parse(item.toString());
+//            System.out.println(date);
+//        } catch (ParseException e) {
+//            e.printStackTrace();
+//        }
+
+
+
         holder.name.setText(item.toString());
 
         if (item.getIsForGroup() == 1)

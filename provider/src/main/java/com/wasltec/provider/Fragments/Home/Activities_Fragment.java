@@ -1,5 +1,6 @@
 package com.wasltec.provider.Fragments.Home;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -15,6 +16,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
@@ -116,7 +118,9 @@ public class Activities_Fragment extends Fragment  {
                 search=true;
                 mclose_searsh.setVisibility(View.VISIBLE);
                 msearch_icon.setVisibility(View.GONE);
-                    msearch_text.setFocusable(true);
+                    msearch_text.requestFocus();
+                    InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.showSoftInput(msearch_text, InputMethodManager.SHOW_IMPLICIT);
 
                 }
             }

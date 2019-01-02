@@ -6,10 +6,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -199,7 +201,13 @@ public class Customer_details extends AppCompatActivity {
         if (!booking_item.getBookingTicketDetails().get(index).isUserverified())
             Sataus.setText(  getResources().getString(R.string.verify) );
         else
-            Sataus.setText(  getResources().getString(R.string.check_in) );
+            Sataus.setText(getResources().getString(R.string.check_in));
+
+        if (booking_item.isPaid){
+            notpaid.setText(R.string.paid);
+        }else {
+            notpaid.setText(R.string.notpaid);
+        }
         adapter.setClickListener((view, position) -> {
             try {
                 index=position;
@@ -319,31 +327,56 @@ public class Customer_details extends AppCompatActivity {
 
                if (Sataus.getText().toString().equals( getResources().getString(R.string.verify)))
                {
-                   AndroidNetworking.get(URLManger.getInstance().getUser_Verified_Ticket(""+booking_item.getBookingTicketDetails().get(index).getId()))
-                           .addHeaders("Authorization", "bearer "+ SharedPreferencesManager.getInstance(Customer_details.this).getToken())
-                           .build()
-                           .getAsJSONObject(new JSONObjectRequestListener() {
-                               @Override
-                               public void onResponse(JSONObject response) {
+                   final Dialog dialog = new Dialog(Customer_details.this); // Context, this, etc.
+                   View view = LayoutInflater.from(Customer_details.this).inflate(R.layout.alert_dialog, null, false);
+                   dialog.setContentView(view);
+                   dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+
+                   Toolbar bar = view.findViewById(R.id.toolbar);
+                   bar.setTitle(getString(R.string.Warning_title));
+                   TextView textView = view.findViewById(R.id.msg);
+                   textView.setText(getString(R.string.verify_msg));
+                   view.findViewById(R.id.ok_btn).setOnClickListener(new View.OnClickListener() {
+                       @Override
+                       public void onClick(View view) {
 
 
-                                   Sataus.setText( getResources().getString(R.string.check_in));
-                                   booking_item.getBookingTicketDetails().get(index).setUserverified(true);
-                                   Toast.makeText(Customer_details.this,"done "+response.toString(),Toast.LENGTH_LONG).show();
-                               }
 
-                               @Override
-                               public void onError(ANError anError) {
-                                   Toast.makeText(Customer_details.this,""+anError.toString(),Toast.LENGTH_LONG).show();
+                           AndroidNetworking.get(URLManger.getInstance().getUser_Verified_Ticket(""+booking_item.getBookingTicketDetails().get(index).getId()))
+                                   .addHeaders("Authorization", "bearer "+ SharedPreferencesManager.getInstance(Customer_details.this).getToken())
+                                   .build()
+                                   .getAsJSONObject(new JSONObjectRequestListener() {
+                                       @Override
+                                       public void onResponse(JSONObject response) {
 
-                               }
-                           });
+
+                                           Sataus.setText( getResources().getString(R.string.check_in));
+                                           booking_item.getBookingTicketDetails().get(index).setUserverified(true);
+                                           Toast.makeText(Customer_details.this,"done "+response.toString(),Toast.LENGTH_LONG).show();
+                                           dialog.dismiss();
+
+                                       }
+
+                                       @Override
+                                       public void onError(ANError anError) {
+                                           Toast.makeText(Customer_details.this,""+anError.toString(),Toast.LENGTH_LONG).show();
+                                           dialog.dismiss();
+                                       }
+                                   });
+                       }
+                   });
+                   dialog.show();
+
+
+
 
                }
                else if(Sataus.getText().toString().equals( getResources().getString(R.string.check_in)))
                {
                    if (booking_item.getBookingTicketDetails().get(index).isTicketCheckedIn()){
                        Toast.makeText(Customer_details.this,"Ticket is already checked in ",Toast.LENGTH_LONG).show();
+                   }else if (!booking_item.isPaid){
+                       Toast.makeText(Customer_details.this,"You have to pay first ",Toast.LENGTH_LONG).show();
                    }
                    else
                    {

@@ -27,21 +27,30 @@ import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONArrayRequestListener;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
 import com.androidnetworking.interfaces.ParsedRequestListener;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.wasltec.provider.Activities.Add_new_activity;
+import com.wasltec.provider.Adopters.ActivityAddon_adobter;
+import com.wasltec.provider.Adopters.AddonesAdapter;
 import com.wasltec.provider.Adopters.AddonesDialogAdapter;
+import com.wasltec.provider.Adopters.RulesAdapter;
 import com.wasltec.provider.R;
 import com.wasltec.provider.Utils.SharedPreferencesManager;
 import com.wasltec.provider.Utils.URLManger;
 import com.wasltec.provider.model.ActivityAddOn;
+import com.wasltec.provider.model.ActivityDetailsReturnObj;
+import com.wasltec.provider.model.ActivityRule;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
 import static com.wasltec.provider.Activities.Add_new_activity.ActivityID;
+import static com.wasltec.provider.Activities.Add_new_activity.activityDetails;
 import static com.wasltec.provider.Activities.Add_new_activity.add_new_toolbar;
 import static com.wasltec.provider.Activities.Add_new_activity.mode;
 import static com.wasltec.provider.Activities.Add_new_activity.step4;
@@ -57,6 +66,9 @@ public class Step3 extends Fragment {
     List<ActivityAddOn> list;
     List<View> views;
     RecyclerView recyclerView;
+    private Gson gson;
+    private List<ActivityAddOn> addons_data=new ArrayList<ActivityAddOn>();
+    private ActivityAddon_adobter addons_adopter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -70,6 +82,7 @@ public class Step3 extends Fragment {
         view = inflater.inflate(R.layout.add_activity_step3, container, false);
         checkBoxes = new ArrayList<>();
         LinearLayout Add_addons = view.findViewById(R.id.Add_addons);
+        getSavedAddons();
 
         Add_addons.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,6 +93,54 @@ public class Step3 extends Fragment {
         initView(view);
 
         return view;
+    }
+
+    private void getSavedAddons() {
+
+        AndroidNetworking.get(URLManger.getInstance().getGetActivityDetails(""+ActivityID))
+                .addHeaders("Authorization", "bearer " + SharedPreferencesManager.getInstance(getActivity()).getToken())
+                .build()
+                .getAsJSONArray(new JSONArrayRequestListener() {
+                    @Override
+                    public void onResponse(JSONArray response) {
+                        gson = new Gson();
+                        Type listType = new TypeToken<ActivityDetailsReturnObj>() {
+                        }.getType();
+                        try {
+                            activityDetails = gson.fromJson(response.get(0).toString(), listType);
+//                            addOnList= activityDetails.getActivityRules();
+                            addons_data = (List<ActivityAddOn>) activityDetails.getActivityAddOns();
+
+//                            if (mode==2)
+//                                for (int i = 0; i < addons_data.size(); i++) {
+//                                    for (int j = 0; j < activityDetails.getActivityAddOns().size(); j++) {
+//
+//                                    }
+//                                }
+//
+//                            addons_adopter = new ActivityAddon_adobter(getActivity(), (ArrayList<ActivityAddOn>) addons_data);
+//                            recyclerView.setAdapter(addons_adopter);
+
+                        } catch (JSONException e) {
+                            activityDetails = new ActivityDetailsReturnObj();
+                            e.printStackTrace();
+                        } catch (Exception e) {
+                            activityDetails = new ActivityDetailsReturnObj();
+                            e.printStackTrace();
+                        }
+
+                        if (Add_new_activity.loader.isStart())
+                            Add_new_activity.loader.stop();
+                    }
+
+                    @Override
+                    public void onError(ANError anError) {
+                        Log.d("ruleserr", "onError: " + anError.getMessage());
+                        if (Add_new_activity.loader.isStart())
+                            Add_new_activity.loader.stop();
+                    }
+                });
+
     }
 
     private void initView(@NonNull final View itemView) {

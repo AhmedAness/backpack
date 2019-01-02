@@ -185,38 +185,6 @@ public class Step7 extends Fragment implements View.OnClickListener {
                     } catch (ParseException e) {
                         e.printStackTrace();
                     }
-//                    JSONObject jsonObject = new JSONObject();
-//                    try {
-//                        jsonObject.put("activity_id", ActivityID);
-//                        jsonObject.put("activity_Start", startD.getText().toString() + " " + startT.getText().toString());
-//                        jsonObject.put("activity_End", endD.getText().toString() + " " + endT.getText().toString());
-//                        jsonObject.put("isForGroup", mPrivateBox.isChecked() ? 1 : 0);
-//                        jsonObject.put("group_Price", price.getText().toString());
-//
-//                    } catch (JSONException e) {
-//                        e.printStackTrace();
-//                    }
-//
-//                    AndroidNetworking.post(URLManger.getInstance().getAddAvalibilty())
-//                            .addHeaders("Authorization", "bearer " + SharedPreferencesManager.getInstance(getActivity()).getToken())
-//                            .addJSONObjectBody(jsonObject).build().getAsJSONObject(new JSONObjectRequestListener() {
-//                        @Override
-//                        public void onResponse(JSONObject response) {
-//
-//                        }
-//
-//                        @Override
-//                        public void onError(ANError anError) {
-//                            Toast.makeText(getActivity(),anError.getErrorDetail(),Toast.LENGTH_LONG).show();
-//                        }
-//                    });
-
-
-
-
-
-
-
                     if (mIndividualBox.isChecked()) {
                         availability_data.add(
                                 new Availability(
@@ -231,12 +199,6 @@ public class Step7 extends Fragment implements View.OnClickListener {
                                         startD.getText().toString() + " " + startT.getText().toString(),
                                         endD.getText().toString() + " " + endT.getText().toString(), 1,
                                         0)
-
-//                                availability_data.add(
-//                                new Availability(
-//                                        startD.getText().toString() + " " + startT.getText().toString(),
-//                                        endD.getText().toString() + " " + endT.getText().toString(), 1,
-//                                        Integer.parseInt( price.getText().toString()))
                         );
                     }
 

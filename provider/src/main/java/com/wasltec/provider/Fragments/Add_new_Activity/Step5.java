@@ -7,6 +7,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,26 +18,26 @@ import android.widget.Toast;
 
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.error.ANError;
+import com.androidnetworking.interfaces.JSONArrayRequestListener;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
 import com.androidnetworking.interfaces.ParsedRequestListener;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.wasltec.provider.Activities.Add_new_activity;
 import com.wasltec.provider.Adopters.RulesAdapter;
-import com.wasltec.provider.Adopters.Rules_Adopter;
 import com.wasltec.provider.R;
 import com.wasltec.provider.Utils.SharedPreferencesManager;
 import com.wasltec.provider.Utils.URLManger;
+import com.wasltec.provider.model.ActivityDetailsReturnObj;
 import com.wasltec.provider.model.ActivityRule;
-import com.wasltec.provider.model.User_res;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.CountDownLatch;
 
 import static com.wasltec.provider.Activities.Add_new_activity.ActivityID;
 import static com.wasltec.provider.Activities.Add_new_activity.activityDetails;
@@ -49,19 +50,21 @@ public class Step5 extends Fragment {
     RecyclerView recyclerView;
     private EditText mRequirements;
     List<ActivityRule> rules_data = new ArrayList<>();
+    List<ActivityRule> rules_data2 = new ArrayList<>();
     RulesAdapter rules_adopter;
-
+    private Gson gson;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         add_new_toolbar.setTitle(getActivity().getResources().getString(R.string.rulesandrequirment));
-        if (Add_new_activity.loader.isStart())
-            Add_new_activity.loader.stop();
+
         setHasOptionsMenu(true);
+        if (!Add_new_activity.loader.isStart())
+            Add_new_activity.loader.start();
         view = inflater.inflate(R.layout.add_activity_step5, container, false);
-rules_adopter=new RulesAdapter();
+        rules_adopter=new RulesAdapter();
         recyclerView = view.findViewById(R.id.rules_Recycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
 
@@ -89,7 +92,8 @@ rules_adopter=new RulesAdapter();
                             public void onResponse(JSONObject response) {
                                 try {
                                     rules_data.add(
-                                            new ActivityRule(String.valueOf(response.getInt("rule_id")), rule.getText().toString()));
+                                            new ActivityRule(String.valueOf(response.getInt("rule_id")), rule.getText().toString(),true));
+
                                 } catch (JSONException e) {
                                     e.printStackTrace();
                                 }
@@ -128,7 +132,7 @@ rules_adopter=new RulesAdapter();
                                 @Override
                                 public void onResponse(JSONObject response) {
                                     try {
-                                        rules_data.add(new ActivityRule(String.valueOf(response.getInt("rule_id")), rule.getText().toString()));
+                                        rules_data.add(new ActivityRule(String.valueOf(response.getInt("rule_id")), rule.getText().toString(),true,false));
                                     } catch (JSONException e) {
                                         e.printStackTrace();
                                     }
@@ -142,13 +146,13 @@ rules_adopter=new RulesAdapter();
 
                                 }
                             });
-
-
                 }
 
             }
             return true;
         });
+
+
 
 
         AndroidNetworking.get(URLManger.getInstance().getAllRules())
@@ -162,13 +166,57 @@ rules_adopter=new RulesAdapter();
                         for (int i = 0; i < rules_data.size(); i++) {
                             for (int j = 0; j < activityDetails.getActivityRules().size(); j++) {
                                 if (rules_data.get(i).getId() .equals(activityDetails.getActivityRules().get(j).getId()) ){
-                                    rules_data.get(i).setSelected(true);
+                                    rules_data.get(i).setSelected(false);
                                 }
                             }
                         }
-                        rules_adopter = new RulesAdapter(rules_data);
-                        recyclerView.setAdapter(rules_adopter);
+                        AndroidNetworking.get(URLManger.getInstance().getGetActivityDetails(""+ActivityID))
+                                .addHeaders("Authorization", "bearer " + SharedPreferencesManager.getInstance(getActivity()).getToken())
+                                .build()
+                                .getAsJSONArray(new JSONArrayRequestListener() {
+                                    @Override
+                                    public void onResponse(JSONArray response) {
+                                        gson = new Gson();
+                                        Type listType = new TypeToken<ActivityDetailsReturnObj>() {
+                                        }.getType();
+                                        try {
+                                            activityDetails = gson.fromJson(response.get(0).toString(), listType);
+//                            addOnList= activityDetails.getActivityRules();
+                                            rules_data2 = (List<ActivityRule>) activityDetails.getActivityRules();
 
+                                            if (mode==2)
+                                                for (int i = 0; i < rules_data2.size(); i++) {
+                                                    for (int j = 0; j < activityDetails.getActivityRules().size(); j++) {
+                                                        if (rules_data2.get(i).getId() .equals(activityDetails.getActivityRules().get(j).getId()) ){
+                                                            rules_data2.get(i).setSelected(true);
+                                                        }
+                                                    }
+                                                }
+
+                                            rules_data.addAll(rules_data2);
+                                            rules_adopter = new RulesAdapter(rules_data);
+                                            recyclerView.setAdapter(rules_adopter);
+
+
+                                        } catch (JSONException e) {
+                                            activityDetails = new ActivityDetailsReturnObj();
+                                            e.printStackTrace();
+                                        } catch (Exception e) {
+                                            activityDetails = new ActivityDetailsReturnObj();
+                                            e.printStackTrace();
+                                        }
+
+                                        if (Add_new_activity.loader.isStart())
+                                            Add_new_activity.loader.stop();
+                                    }
+
+                                    @Override
+                                    public void onError(ANError anError) {
+                                        Log.d("ruleserr", "onError: " + anError.getMessage());
+                                        if (Add_new_activity.loader.isStart())
+                                            Add_new_activity.loader.stop();
+                                    }
+                                });
                     }
 
                     @Override
@@ -176,8 +224,22 @@ rules_adopter=new RulesAdapter();
 
                         Toast.makeText(getActivity(), anError.getErrorDetail(), Toast.LENGTH_SHORT).show();
 
+                        if (Add_new_activity.loader.isStart())
+                            Add_new_activity.loader.stop();
                     }
                 });
+
+
+
+
+
+
+        //////////////////////
+
+
+
+
+
 
 
         return view;

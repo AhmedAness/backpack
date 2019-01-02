@@ -69,6 +69,7 @@ public class Scaner extends AppCompatActivity {
 
         barcodeView = findViewById(R.id.barcode_scanner);
         barcodeView.setStatusText("");
+        setTitle("Scan");
 
 
 //        Collection<BarcodeFormat> formats = Arrays.asList(BarcodeFormat.CODE_128,BarcodeFormat.CODE_93,BarcodeFormat.UPC_A,BarcodeFormat.UPC_E,BarcodeFormat.EAN_13,BarcodeFormat.EAN_8,BarcodeFormat.ITF,BarcodeFormat.CODE_39,BarcodeFormat.CODABAR);
@@ -217,26 +218,30 @@ public class Scaner extends AppCompatActivity {
         });
         mAddAddonsBtn.setOnClickListener(v -> {
 
-            AndroidNetworking.get(URLManger.getInstance().getUser_Verified_Ticket(""+bookingTicketDetail.getId()))
-                    .addHeaders("Authorization", "bearer "+ SharedPreferencesManager.getInstance(Scaner.this).getToken())
-                    .build()
-                    .getAsJSONObject(new JSONObjectRequestListener() {
-                        @Override
-                        public void onResponse(JSONObject response) {
+            if (!isPaid){
+                Toast.makeText(this, "You have to pay first", Toast.LENGTH_SHORT).show();
+            }else {
 
-                            Scaner.this.finish();
-                            dialog.dismiss();
+                AndroidNetworking.get(URLManger.getInstance().getUser_Verified_Ticket("" + bookingTicketDetail.getId()))
+                        .addHeaders("Authorization", "bearer " + SharedPreferencesManager.getInstance(Scaner.this).getToken())
+                        .build()
+                        .getAsJSONObject(new JSONObjectRequestListener() {
+                            @Override
+                            public void onResponse(JSONObject response) {
 
-                            Toast.makeText(Scaner.this,"done "+response.toString(),Toast.LENGTH_LONG).show();
-                        }
+                                Scaner.this.finish();
+                                dialog.dismiss();
 
-                        @Override
-                        public void onError(ANError anError) {
-                            Toast.makeText(Scaner.this,"done "+anError.toString(),Toast.LENGTH_LONG).show();
+                                Toast.makeText(Scaner.this, "done " + response.toString(), Toast.LENGTH_LONG).show();
+                            }
 
-                        }
-                    });
+                            @Override
+                            public void onError(ANError anError) {
+                                Toast.makeText(Scaner.this, "done " + anError.toString(), Toast.LENGTH_LONG).show();
 
+                            }
+                        });
+            }
         });
 
         dialog.show();

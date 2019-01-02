@@ -109,19 +109,11 @@ public class Add_new_activity extends AppCompatActivity {
             if (getIntent().hasExtra("type")) {
                 steper.setVisibility(View.VISIBLE);
                 show_fn2();
-
             } else {
-
                 mode = 2;
-
                 steper.setVisibility(View.GONE);
-
-
                 activityDetails = (new Gson()).fromJson(getIntent().getStringExtra("activityDetails"),ActivityDetailsReturnObj.class);
                 Add_new_activity.next_step.setText("Save");
-
-
-
                 show_fn();
             }
 
@@ -234,10 +226,7 @@ public class Add_new_activity extends AppCompatActivity {
                 Add_new_activity.steper.setImageDrawable(this.getResources().getDrawable(R.drawable.step5));
                 getSupportFragmentManager().beginTransaction().replace(R.id.container1, Add_new_activity.step10, "d").addToBackStack(null).commit();
                 break;
-
         }
-
-
     }
 
 

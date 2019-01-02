@@ -59,7 +59,7 @@ public class Step1 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        add_new_toolbar.setTitle(getActivity().getResources().getString(R.string.titleandtypeanddescription));
+        add_new_toolbar.setTitle(getActivity().getResources().getString(R.string.add_new_activity));
         setHasOptionsMenu(true);
         view = inflater.inflate(R.layout.add_activity_step1, container, false);
         checkBoxes = new ArrayList<>();

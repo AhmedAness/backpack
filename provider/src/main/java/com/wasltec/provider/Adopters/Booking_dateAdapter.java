@@ -174,12 +174,15 @@ public class Booking_dateAdapter extends RecyclerView.Adapter<Booking_dateAdapte
                 {
                     holder.reservatoin_teckits.setVisibility(View.VISIBLE);
                     holder.reservatoin_teckits.setAdapter(new Booking_dateAdapter_item(Booking_items.get(position),activity));
-                    holder.ticket_details.setBackground(activity.getResources().getDrawable(R.drawable.collaps_tickets));
+//                    holder.ticket_details.setBackground(activity.getResources().getDrawable(R.drawable.collaps_tickets));
+                    holder.ticket_details.setImageResource(R.drawable.collaps_tickets);
 
                 }else
                 {
                     holder.reservatoin_teckits.setVisibility(View.GONE);
-                    holder.ticket_details.setBackground(activity.getResources().getDrawable(R.drawable.expand_tickets));
+//                    holder.ticket_details.setBackground(activity.getResources().getDrawable(R.drawable.expand_tickets));
+                    holder.ticket_details.setImageResource(R.drawable.expand_tickets);
+
                 }
 
             }

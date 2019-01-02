@@ -415,5 +415,6 @@
     <string name="tickets_left">"%d//%d التذاكر المتاحه"</string>
     <string name="Warning_title">تحزير</string>
     <string name="Warning_msg">هذا سيؤدي الي اعاده تشغيل التطبيق</string>
+    <string name="verify_msg">هل انت متاكد من تاكيد هذه التذكره</string>
 
 </resources>
