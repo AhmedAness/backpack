@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,15 +10,13 @@
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/_200sdp"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:theme="@style/AppTheme.PopupOverlay3">
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:layout_width="wrap_content"
             android:layout_height="@dimen/_200sdp"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:contentScrim="@color/colorPrimary"
-
-            >
+            app:contentScrim="@color/colorPrimary">
 
             <ImageView
                 android:id="@+id/activity_img"
@@ -25,17 +24,15 @@
                 android:layout_height="match_parent"
                 android:scaleType="fitXY"
                 app:layout_collapseMode="parallax"
-                app:srcCompat="@drawable/ic_launcher_background"
-
-                />
+                app:srcCompat="@drawable/ic_launcher_background" />
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?android:attr/actionBarSize"
                 app:layout_collapseMode="pin"
-
-                app:popupTheme="@style/AppTheme.PopupOverlay" />
+                app:popupTheme="@style/AppTheme.PopupOverlay3"
+                android:background="@color/zxing_transparent" />
 
 
         </android.support.design.widget.CollapsingToolbarLayout>

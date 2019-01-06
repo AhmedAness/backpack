@@ -15,10 +15,9 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@android:color/white"
             app:navigationIcon="@drawable/ic_close2"
             app:title="When you wanna go ?"
-            app:titleTextColor="@android:color/black"
+            app:titleTextColor="@color/bg_text_color"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>

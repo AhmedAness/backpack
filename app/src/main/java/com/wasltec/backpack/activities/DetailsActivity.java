@@ -109,6 +109,7 @@ public class DetailsActivity extends AppCompatActivity {
         tmp_savedInstanceState = savedInstanceState;
         setContentView(R.layout.activity_details);
         toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         mMap = findViewById(R.id.map);
 
         mMap.getMapAsync(googleMap -> {

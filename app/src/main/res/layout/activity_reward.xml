@@ -16,16 +16,15 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:popupTheme="@style/AppTheme.backbuttonwhite"
-            app:title="" />
+            app:title="."
+            app:popupTheme="@style/AppTheme.PopupOverlay3"
+            app:titleTextColor="@color/white"/>
 
         <ImageView
             android:layout_width="@dimen/_56sdp"
             android:layout_height="@dimen/_57sdp"
             android:layout_gravity="center"
-            android:src="@drawable/rewards_icon_burgermenu"
-
-            />
+            android:src="@drawable/rewards_icon_burgermenu" />
 
         <TextView
             android:layout_marginTop="14px"

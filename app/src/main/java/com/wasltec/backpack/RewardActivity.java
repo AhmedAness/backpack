@@ -11,11 +11,9 @@ public class RewardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reward);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("");
         setSupportActionBar(toolbar);
-
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 
 }

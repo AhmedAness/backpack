@@ -11,12 +11,11 @@
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"
         android:layout_alignParentTop="true"
-        android:background="@android:color/white"
         app:navigationIcon="@drawable/ic_close2"
         app:popupTheme="@style/AppTheme.PopupOverlay"
 
         app:title="Times Available"
-        app:titleTextColor="@android:color/black" />
+        app:titleTextColor="@color/bg_text_color" />
 
     <TextView
         android:id="@+id/date_txt"

@@ -17,8 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="?android:attr/actionBarSize"
             app:layout_collapseMode="pin"
-            app:titleTextColor="#fff"
-
+            app:titleTextColor="#9B9B9B"
             android:theme="@style/AppTheme.AppBarOverlay2"
             app:titleTextAppearance="@style/Base.TextAppearance.AppCompat.Small"
             app:layout_scrollFlags="scroll|exitUntilCollapsed" />

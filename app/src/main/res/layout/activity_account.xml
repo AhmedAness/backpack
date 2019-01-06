@@ -14,13 +14,15 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/_150sdp"
         android:background="@drawable/white_pattern"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        >
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
+            android:theme="@style/AppTheme.PopupOverlay_red"
             android:layout_height="?attr/actionBarSize"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            android:background="@color/zxing_transparent"
+            app:titleTextColor="@color/white" />
     </android.support.design.widget.AppBarLayout>
 
     <include layout="@layout/content_account" />

@@ -20,9 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:layout_weight="1"
-            app:titleTextColor="#000"
-
-            android:background="?attr/colorPrimary"
+            app:titleTextColor="@color/bg_text_color"
             app:layout_scrollFlags="scroll|enterAlways"
             app:popupTheme="@style/AppTheme.PopupOverlay"
             app:title="@string/app_name">
