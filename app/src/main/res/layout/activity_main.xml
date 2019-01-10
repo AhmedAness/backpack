@@ -29,7 +29,7 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_main"
-        android:background="@color/colorPrimary"
+        android:background="#FF5B4B"
         app:itemTextColor="#fff"
         app:itemIconTint="#fff"
         app:menu="@menu/activity_main_drawer">
@@ -37,7 +37,7 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_gravity="bottom"
-            android:background="#FF5252"
+            android:background="#99FF8E82"
             android:layout_marginBottom="@dimen/_50sdp"
             android:layout_height="wrap_content">
 
@@ -57,13 +57,11 @@
             android:id="@+id/app_version"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
+            android:layout_gravity="bottom|center"
             android:layout_marginBottom="@dimen/_20sdp"
-            android:layout_marginEnd="@dimen/_5sdp"
             android:text="Backpack v 1.0.0"
-            android:textColor="@color/gray"
-
-            />
+            android:textColor="#FFFFFF"
+            android:alpha=".52" />
 
     </android.support.design.widget.NavigationView>
 

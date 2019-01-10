@@ -7,7 +7,7 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_activities"
-            android:icon="@drawable/backpack_icon_gray_watermark"
+            android:icon="@drawable/your_activities_burgermenu"
             android:title="@string/backbag_menu" />
         <item
             android:id="@+id/nav_messages"
@@ -16,16 +16,16 @@
 
         <item
             android:id="@+id/nav_favourite"
-            android:icon="@drawable/favorites_icon"
+            android:icon="@drawable/favorites_icon_burgermenu"
             android:title="@string/favourites_menu" />
         <item
             android:id="@+id/nav_payment"
-            android:icon="@drawable/payments_icon"
+            android:icon="@drawable/payments_icon_burgermenu"
             android:title="@string/payments_menu" />
 
         <item
             android:id="@+id/nav_redeem"
-            android:icon="@drawable/rewards_icon"
+            android:icon="@drawable/rewards_icon_burgermenu"
             android:title="@string/rewards_menu" />
         <item
             android:id="@+id/nav_logout"

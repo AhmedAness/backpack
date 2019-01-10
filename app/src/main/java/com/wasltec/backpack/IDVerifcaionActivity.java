@@ -2,6 +2,7 @@ package com.wasltec.backpack;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -28,6 +29,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.text.SimpleDateFormat;
@@ -94,7 +96,7 @@ public class IDVerifcaionActivity extends AppCompatActivity {
 
                     @Override
                     public void onError(ANError anError) {
-
+                        Log.d("verification", "onError: "+anError.getErrorBody());
                     }
                 });
 
@@ -149,6 +151,31 @@ public class IDVerifcaionActivity extends AppCompatActivity {
                         });
             }
         });
+
+
+        FillData();
+
+    }
+
+    private void FillData() {
+
+
+        AndroidNetworking.post(URLManager.getInstance().getVerificationId())
+                .addHeaders("Authorization", "bearer " + Session.getInstance(this).getToken())
+                .build()
+                .getAsJSONObject(new JSONObjectRequestListener() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        Log.d("onResponse", "hi man");
+                    }
+
+                    @Override
+                    public void onError(ANError anError) {
+                        Log.d("ANError", "error man");
+                    }
+                });
+
+
     }
 
     private void createTimePickerDialogue(EditText editText) {
@@ -191,9 +218,19 @@ public class IDVerifcaionActivity extends AppCompatActivity {
             try {
                 final Uri imageUri = data.getData();
                 final InputStream imageStream = getContentResolver().openInputStream(imageUri);
-                 img = BitmapFactory.decodeStream(imageStream);
+                img = BitmapFactory.decodeStream(imageStream);
                 id_image.setImageBitmap(img);
 
+                String[] filePathColumn = { MediaStore.Images.Media.DATA };
+                Cursor cursor = getContentResolver().query(imageUri,
+                        filePathColumn, null, null, null);
+                cursor.moveToFirst();
+                int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
+                String picturePath = cursor.getString(columnIndex);
+                cursor.close();
+                File f = new File(picturePath);
+                String imageName = f.getName();
+                mloadphoto.setText(imageName);
 //                JSONObject jsonObject= new JSONObject();
 //                jsonObject.put("id",Session.getInstance(this).getUser().getId());
 //                jsonObject.put("customerphoto64",convert(img));

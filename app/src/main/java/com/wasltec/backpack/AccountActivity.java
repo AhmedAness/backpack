@@ -94,6 +94,7 @@ public class AccountActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 //        setdata();
         setCheckBoxs();
+
     }
 
     @Override
@@ -110,19 +111,25 @@ public class AccountActivity extends AppCompatActivity {
         int height = LinearLayout.LayoutParams.WRAP_CONTENT;
         popupWindow = new PopupWindow(view, width, height, false);
         User user=Session.getInstance(this).getUser();
-    try {
+        preset = Session.getInstance(AccountActivity.this).getCompleteInt();
+        try {
         user_name.setText(user.getName());
         user_email.setText(user.getMail());
         user_phone.setText(user.getMobile());
+        preset=2;
 
-        Glide.with(this).load(user.getUserPhotoUrl()).apply(new RequestOptions().error(R.drawable.backpack_icon_gray_watermark)).into(profile_img);
+
+        if (user.getUserPhotoUrl().length()>1) {
+            Glide.with(this).load(user.getUserPhotoUrl()).apply(new RequestOptions().error(R.drawable.user)).into(profile_img);
+            preset=3;
+        }else {
+            Glide.with(this).load(getResources().getDrawable(R.drawable.user)).apply(new RequestOptions().error(R.drawable.user)).into(profile_img);
+//            Glide.with(this).load(user.getUserPhotoUrl()).apply(new RequestOptions().error(R.drawable.backpack_icon_gray_watermark)).into(profile_img);
+        }
     }catch (Exception e){
 
     }
-        preset = Session.getInstance(AccountActivity.this).getCompleteInt();
-
-
-//        showPopup();
+        showPopup();
 
     }
 
@@ -130,7 +137,7 @@ public class AccountActivity extends AppCompatActivity {
         if (preset != 5)
             new Handler().postDelayed(() -> popupWindow.showAtLocation(view, Gravity.TOP, 0, (int) getResources().getDimension(R.dimen._60sdp)), 1000);
 
-        // dismiss the popup window when touched
+        // dismiss the popup window when touched'
 
         mProgressDialogDismiss = view.findViewById(R.id.progress_dialog_dismiss);
         mProgressDialodTitle = view.findViewById(R.id.progress_dialod_title);
@@ -334,8 +341,12 @@ public class AccountActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-                            if (response.get("status").equals("1"))
+                            if (response.get("status").equals("1")) {
                                 checck_id_verify.setImageResource(R.drawable.check_mark);
+                                checck_id_verify.setVisibility(View.VISIBLE);
+                                preset=4;
+                                showPopup();
+                            }
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -345,6 +356,7 @@ public class AccountActivity extends AppCompatActivity {
                     public void onError(ANError anError) {
                         anError.printStackTrace();
                     }
+
                 });
 
         AndroidNetworking.get(URLManager.getInstance().getCheckUserDeclaration())
@@ -354,8 +366,12 @@ public class AccountActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-                            if (response.get("status").equals("1"))
+                            if (response.get("status").equals("1")) {
                                 check_deceleration_verify.setImageResource(R.drawable.check_mark);
+                                checck_id_verify.setVisibility(View.VISIBLE);
+                                preset=5;
+                                showPopup();
+                            }
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -366,7 +382,6 @@ public class AccountActivity extends AppCompatActivity {
                         anError.printStackTrace();
                     }
                 });
-
         // TODO: 10/25/2018 check_license_verify
     }
 

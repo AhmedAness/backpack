@@ -194,7 +194,12 @@ public class MainActivity extends AppCompatActivity
                 name2.setText(session.getUser().getName());
             else
                 name2.setText("Login/Register");
+            if (session.getUser().getUserPhotoUrl().length()>1) {
             Glide.with(this).load(session.getUser().getUserPhotoUrl()).apply(new RequestOptions().error(R.drawable.backpack_icon_gray_watermark)).into(img);
+//                Glide.with(this).load(session.getUser().getUserPhotoUrl()).apply(new RequestOptions().error(R.drawable.user)).into(img);
+            }else {
+                Glide.with(this).load(getResources().getDrawable(R.drawable.user)).apply(new RequestOptions().error(R.drawable.user)).into(img);
+            }
         }catch (Exception e){
             name2.setText("Login/Register");
             Glide.with(this).load(getResources().getDrawable(R.drawable.user)).apply(new RequestOptions().error(R.drawable.user)).into(img);
