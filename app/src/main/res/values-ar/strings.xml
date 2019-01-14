@@ -69,7 +69,7 @@
     <string name="save_btn">حفظ</string>
     <string name="counter_holder">للفرد د</string>
     <string name="activity_period_holder"> فترة النشاط %s ساعه %s </string>
-    <string name="rating_num_holder">تقييمات %s</string>
+    <string name="rating_num_holder">تقييم %s</string>
     <string name="included_txt">شمل</string>
     <string name="currency">ريال سعودى</string>
     <string name="view_all_reviews_holder">عرض الكل %d الآراء</string>
@@ -140,6 +140,8 @@
     <string name="Warning_title">تحذير </string>
     <string name="Warning_msg">هذا سيؤدي الي اعاده تشغيل التطبيق</string>
     <string name="log_out">تسجيل الخروج </string>
+    <string name="title_activity_important_rules">الشروط</string>
+    <string name="By">بواسطه </string>
 
     <string-array name="gender_array">
         <item>الذكر</item>

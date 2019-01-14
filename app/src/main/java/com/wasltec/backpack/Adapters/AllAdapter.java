@@ -165,9 +165,6 @@ public class AllAdapter extends RecyclerView.Adapter<com.wasltec.backpack.Adapte
                             });
                     Toast.makeText(itemView.getContext(), R.string.added_to_favourite, Toast.LENGTH_SHORT).show();
                 }
-
-
-
             });
             itemView.setOnClickListener(v -> {
                 Intent i = new Intent(v.getContext(), DetailsActivity.class);

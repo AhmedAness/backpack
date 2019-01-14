@@ -3,6 +3,7 @@ package com.wasltec.backpack.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -41,6 +42,7 @@ public class ReviewRulesActivity extends AppCompatActivity {
     private TextView mItemPrice2;
     private TextView mCounter;
     private Button mConfirmBtn;
+    private CardView card;
     JSONObject obj;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +56,15 @@ public class ReviewRulesActivity extends AppCompatActivity {
         mRulesList = findViewById(R.id.rules_list);
         mItemPrice2 = findViewById(R.id.item_price2);
         mCounter = findViewById(R.id.counter);
+        card=findViewById(R.id.card);
+        card.setVisibility(View.VISIBLE);
+        try {
+        if (getIntent().getExtras().getBoolean("From")){
+            card.setVisibility(View.INVISIBLE);
+        }
+        }catch (Exception e){
+            card.setVisibility(View.VISIBLE);
+        }
         mConfirmBtn = findViewById(R.id.Confirm_btn);
         mConfirmBtn.setOnClickListener(v ->
 

@@ -69,7 +69,7 @@
     <string name="save_btn">Save</string>
     <string name="counter_holder">For %d individual</string>
     <string name="activity_period_holder">Activity period %s Hours %s mints</string>
-    <string name="rating_num_holder">%s Ratings</string>
+    <string name="rating_num_holder">%s Rate</string>
     <string name="included_txt">included</string>
     <string name="currency">SR</string>
     <string name="view_all_reviews_holder">View All %d Reviews</string>
@@ -147,6 +147,8 @@
     <string name="upload_your_id">upload your ID</string>
     <string name="view_ticket">View Ticket</string>
     <string name="ticket_no">Ticket No.</string>
+    <string name="title_activity_important_rules">Important Rules</string>
+    <string name="By">By </string>
     <string-array name="gender_array">
         <item>Male</item>
         <item>Female</item>

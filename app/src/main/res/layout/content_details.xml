@@ -14,15 +14,12 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         android:layout_marginBottom="@dimen/_55sdp"
         android:fillViewport="true">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingEnd="@dimen/_16sdp"
-            android:paddingStart="@dimen/_16sdp"
             tools:context=".activities.DetailsActivity"
             tools:showIn="@layout/activity_details">
 
@@ -31,6 +28,8 @@
                 android:id="@+id/item_name"
                 android:gravity="left"
                 android:layout_width="match_parent"
+                android:paddingEnd="@dimen/_16sdp"
+                android:paddingStart="@dimen/_16sdp"
                 android:layout_height="wrap_content"
                 android:textColor="#4A4A4A"
                 android:textSize="@dimen/_18ssp"
@@ -39,6 +38,8 @@
             <TextView
                 android:id="@+id/item_price"
                 android:layout_width="match_parent"
+                android:paddingEnd="@dimen/_16sdp"
+                android:paddingStart="@dimen/_16sdp"
                 android:layout_height="wrap_content"
                 android:gravity="left"
                 android:layout_below="@id/item_name"
@@ -51,6 +52,8 @@
                 android:id="@+id/t"
                 android:layoutDirection="ltr"
                 android:gravity="left"
+                android:paddingEnd="@dimen/_16sdp"
+                android:paddingStart="@dimen/_16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/item_price"
@@ -85,6 +88,7 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/orgination_img"
                 android:layout_width="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_16sdp"
                 android:layoutDirection="ltr"
                 android:layout_alignParentLeft="true"
                 android:layout_height="@dimen/_50sdp"
@@ -93,7 +97,7 @@
                 android:paddingTop="@dimen/nav_header_vertical_spacing"
                 android:layout_marginBottom="@dimen/_10sdp"
                 android:src="@mipmap/ic_launcher_round"
-                app:civ_border_color="#FFF"
+                app:civ_border_color="#9B9B9B"
                 app:civ_border_overlay="true"
                 app:civ_border_width="2dp" />
 
@@ -101,6 +105,7 @@
                 android:id="@+id/location"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/_16sdp"
                 android:layout_alignParentRight="true"
                 android:gravity="right"
                 android:layoutDirection="ltr"
@@ -115,18 +120,18 @@
                 android:id="@+id/location_country"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/_16sdp"
                 android:textColor="#9B9B9B"
                 android:visibility="gone"
                 android:layout_alignParentEnd="true"
                 android:layout_below="@+id/location"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-                />
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
 
             <TextView
                 android:id="@+id/activity_owner"
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/_16sdp"
                 android:layout_alignParentRight="true"
                 android:layout_toEndOf="@+id/orgination_img"
                 android:textColor="#9B9B9B"
@@ -139,6 +144,8 @@
             <GridLayout
                 android:id="@+id/types_container"
                 android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/orgination_img"
                 android:rowCount="2"
@@ -146,19 +153,21 @@
 
             <com.borjabravo.readmoretextview.ReadMoreTextView
                 android:id="@+id/item_description"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
                 android:layout_width="wrap_content"
+                app:trimMode="trimModeLength"
                 android:layout_height="wrap_content"
                 android:textColor="#bbb"
-
+                android:text="Description"
                 app:trimCollapsedText="Read more"
-                app:trimExpandedText="@string/read_less"
-                app:trimLength="3"
-                android:layout_below="@+id/types_container"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-                />
+                app:trimLength="28"
+                android:layout_below="@+id/types_container"/>
 
             <View
                 android:id="@+id/line"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_below="@+id/item_description"
@@ -168,6 +177,8 @@
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/activity_feature"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/line" />
@@ -175,6 +186,8 @@
             <View
                 android:id="@+id/line2"
                 android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
                 android:layout_height="1dp"
                 android:layout_below="@+id/activity_feature"
                 android:layout_marginBottom="@dimen/_5sdp"
@@ -198,6 +211,8 @@
             <TextView
                 android:id="@+id/activity_period"
                 android:drawablePadding="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
                 android:layout_marginTop="6dp"
                 android:paddingStart="@dimen/_5sdp"
                 android:layout_below="@+id/line2"
@@ -220,11 +235,13 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/review_profile_pic"
                 android:layout_width="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
                 android:layout_height="@dimen/_50sdp"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/map"
                 android:src="@mipmap/ic_launcher_round"
-                app:civ_border_color="#FFF"
+                app:civ_border_color="#9B9B9B"
                 app:civ_border_overlay="true"
                 app:civ_border_width="2dp" />
 
@@ -252,6 +269,8 @@
                 android:id="@+id/review_rating"
                 style="@style/Widget.AppCompat.RatingBar.Small"
                 android:layout_width="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/map"
@@ -265,17 +284,22 @@
 
             <com.borjabravo.readmoretextview.ReadMoreTextView
                 android:id="@+id/review_desc"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                app:trimMode="trimModeLength"
                 android:layout_below="@+id/review_profile_pic"
                 android:textColor="#bbb"
                 app:trimCollapsedText="Read more"
                 app:trimExpandedText="@string/read_less"
-                app:trimLength="3"
+                app:trimLength="19"
 
                 />
             <TextView
                 android:id="@+id/view_reviews"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/review_desc"
@@ -283,6 +307,8 @@
 
             <View
                 android:id="@+id/line3"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_below="@+id/view_reviews"
@@ -292,6 +318,8 @@
 
             <TextView
                 android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/line3"
                 android:drawableEnd="@drawable/ic_arrow_right"
@@ -308,6 +336,8 @@
                 android:id="@+id/line4"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
                 android:layout_below="@+id/trip_rules"
                 android:layout_marginBottom="@dimen/_5sdp"
                 android:layout_marginTop="@dimen/_5sdp"
@@ -318,14 +348,14 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/line4"
                 android:drawableEnd="@drawable/ic_arrow_right"
-
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
                 android:paddingBottom="@dimen/_5sdp"
                 android:paddingTop="@dimen/_5sdp"
                 android:textColor="#9B9B9B"
                 android:text="@string/important_notes"
                 android:id="@+id/important_notes"
                 android:textSize="@dimen/_14ssp"
-
                 android:layout_marginTop="@dimen/_5sdp"
                 android:layout_marginBottom="@dimen/_5sdp" />
 
@@ -334,6 +364,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_below="@+id/important_notes"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
                 android:layout_marginBottom="@dimen/_5sdp"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:background="#bbb" />
@@ -341,10 +373,11 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
                 android:layout_below="@+id/line5"
                 android:visibility="gone"
                 android:drawableEnd="@drawable/ic_arrow_right"
-
                 android:paddingBottom="@dimen/_5sdp"
                 android:paddingTop="@dimen/_5sdp"
                 android:textColor="#bbb"
@@ -361,6 +394,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:visibility="gone"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
                 android:layout_below="@+id/add_ones"
                 android:layout_marginBottom="@dimen/_5sdp"
                 android:layout_marginTop="@dimen/_5sdp"
@@ -372,6 +407,8 @@
                 android:layout_below="@+id/line6"
                 android:text="@string/similar_activities"
                 android:textColor="#9B9B9B"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
 
                 android:id="@+id/Similar_activities_none"
                 android:layout_marginTop="@dimen/_5sdp"
@@ -379,6 +416,8 @@
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/Similar_activities"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/Similar_activities_none"

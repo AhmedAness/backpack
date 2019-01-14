@@ -27,84 +27,122 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_alignParentTop="true"
-            android:id="@+id/container"
-            >
-
-        </LinearLayout>
 
         <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/line3"
-            android:layout_below="@id/container"
-            android:layout_marginBottom="@dimen/_5sdp"
-            android:layout_marginTop="@dimen/_5sdp">
+            android:layout_above="@+id/footer"
+            android:id="@+id/con2"
+            android:layout_height="match_parent">
 
-            <LinearLayout
-                android:id="@+id/user_info"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_11sdp"
-                android:layout_marginStart="@dimen/_11sdp"
-                android:orientation="vertical" />
+                android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:layout_alignParentTop="true"
+                        android:id="@+id/container">
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/line4"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/container"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:background="#3B979797" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/line4"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <LinearLayout
+                            android:id="@+id/user_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_11sdp"
+                            android:layout_marginStart="@dimen/_11sdp"
+                            android:orientation="vertical" />
+                    </RelativeLayout>
+
+            </RelativeLayout>
+
         </android.support.v4.widget.NestedScrollView>
 
-        <Button
-            android:id="@+id/save_btn"
-            android:layout_width="@dimen/_150sdp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_below="@id/line3"
-            android:layout_marginBottom="@dimen/_5sdp"
-            android:layout_marginEnd="@dimen/_10sdp"
-            android:layout_marginStart="@dimen/_25sdp"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:background="@drawable/filter_btn"
-            android:padding="@dimen/_10sdp"
-            android:paddingEnd="@dimen/_20sdp"
-            android:paddingStart="@dimen/_20sdp"
-            android:text="@string/save_btn"
-            android:textColor="#fff"
-            />
-
-        <View
-            android:id="@+id/line3"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-
-            android:layout_alignTop="@+id/item_price"
-            android:layout_marginTop="@dimen/_2sdp"
-            android:background="#444" />
-
-
-        <TextView
-            android:id="@+id/item_price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/counter"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="@dimen/_25sdp"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:paddingTop="@dimen/_10sdp"
-            android:text="@string/dummy_price"
-            android:textColor="@color/colorPrimary"
-            android:textSize="@dimen/_14ssp"
-
-            />
-
-        <TextView
-            android:id="@+id/counter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <com.loopeer.shadow.ShadowView
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="@dimen/_25sdp"
-            android:paddingBottom="@dimen/_10sdp"
-            android:text="@string/dummy_count"
-            android:textColor="@color/colorPrimary" />
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="70dp"
+            app:shadowMarginTop="@dimen/_4sdp"
+            app:shadowColor="#4a000000"
+            app:cornerRadius="6dp"
+            app:shadowRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/item_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/_25sdp"
+                    android:text="@string/dummy_price"
+                    android:textColor="#FF5B4B"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/counter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_25sdp"
+                    android:textSize="@dimen/_10ssp"
+                    android:text="@string/dummy_count"
+                    android:textColor="#FF5B4B" />
+            </LinearLayout>
+            <com.loopeer.shadow.ShadowView
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="wrap_content"
+                android:elevation="70dp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_gravity="center_vertical"
+                app:shadowMarginBottom="@dimen/_4sdp"
+                app:shadowMarginLeft="@dimen/_2sdp"
+                app:shadowMarginRight="@dimen/_1sdp"
+                app:shadowColor="#4a000000"
+                app:shadowRadius="20dp">
+                <Button
+                    android:id="@+id/save_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/filter_btn"
+                    android:padding="@dimen/_10sdp"
+                    android:textSize="@dimen/_19sdp"
+                    android:text="@string/save_btn"
+                    android:textColor="#DEFFFFFF" />
+            </com.loopeer.shadow.ShadowView>
+
+
+        </LinearLayout>
+        </com.loopeer.shadow.ShadowView>
+
     </RelativeLayout>
 </android.support.design.widget.CoordinatorLayout>

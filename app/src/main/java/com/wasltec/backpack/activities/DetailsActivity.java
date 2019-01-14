@@ -1,5 +1,6 @@
 package com.wasltec.backpack.activities;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -12,9 +13,11 @@ import android.graphics.drawable.LayerDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.view.menu.ActionMenuItemView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -49,11 +52,13 @@ import com.wasltec.backpack.Session;
 import com.wasltec.backpack.models.ActivityDetails.ActivityDetail;
 import com.wasltec.backpack.models.ActivityDetails.ActivityOption;
 import com.wasltec.backpack.models.ActivityDetails.CustomerActivitiesDetailsModel;
+import com.wasltec.backpack.models.ActivityDetails.Review;
 import com.wasltec.backpack.models.ActivityPhoto;
 import com.wasltec.backpack.models.SimilarActivitiesResponse;
 import com.wasltec.backpack.utils.URLManager;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.lang.reflect.Type;
@@ -62,6 +67,8 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+
+import static android.support.test.InstrumentationRegistry.getContext;
 
 public class DetailsActivity extends AppCompatActivity {
 
@@ -149,6 +156,7 @@ public class DetailsActivity extends AppCompatActivity {
 
     }
 
+    @SuppressLint({"RestrictedApi", "StringFormatMatches"})
     private void setdata() {
 
         toolbar.setTitle(object.getTitle());
@@ -192,7 +200,7 @@ public class DetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), ReviewRulesActivity.class);
-
+                i.putExtra("From",true);
                 v.getContext().startActivity(i);
 
             }
@@ -200,16 +208,20 @@ public class DetailsActivity extends AppCompatActivity {
         mImportantNotes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Dialog dialog = new Dialog(DetailsActivity.this); // Context, this, etc.
-                View view = LayoutInflater.from(DetailsActivity.this).inflate(R.layout.msg_dialog, null, false);
-                dialog.setContentView(view);
-                dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
-                TextView textView = view.findViewById(R.id.msg);
-                textView.setText(object.getRequirements());
-                view.findViewById(R.id.dismiss).setOnClickListener(v2 -> {
-                    dialog.dismiss();
-                });
-                dialog.show();
+//                final Dialog dialog = new Dialog(DetailsActivity.this); // Context, this, etc.
+//                View view = LayoutInflater.from(DetailsActivity.this).inflate(R.layout.msg_dialog, null, false);
+//                dialog.setContentView(view);
+//                dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+//                TextView textView = view.findViewById(R.id.msg);
+//                textView.setText(object.getRequirements());
+//
+//                view.findViewById(R.id.dismiss).setOnClickListener(v2 -> {
+//                    dialog.dismiss();
+//                });
+//                dialog.show();
+
+                startActivity(new Intent(DetailsActivity.this,Important_Notes.class).putExtra("Notes",object.getRequirements()));
+
             }
         });
         mCheckOut.setOnClickListener(v -> {
@@ -231,7 +243,7 @@ public class DetailsActivity extends AppCompatActivity {
         mItemPrice.setText(String.format(getString(R.string.price_holder), object.getFirstIndividualPrice()));
         mItemPrice2.setText(String.format(getString(R.string.price_holder), object.getFirstIndividualPrice()));
         mRatingCount.setText(String.format(getString(R.string.rating_num_holder), object.getRate()));
-        mRatingCount2.setText(String.format(getString(R.string.rating_num_holder), object.getRate()));
+        mRatingCount2.setText(String.format(getString(R.string.rating_num_holder), object.getReviewsCount()));
         if (object.getReviews().size()>0) {
             mReviewDesc.setText(object.getReviews().get(0).getReview());
             mReviewDate.setText(object.getReviews().get(0).getDate_trim(object.getReviews().get(0).getDate()));
@@ -254,11 +266,19 @@ public class DetailsActivity extends AppCompatActivity {
         mItemRating2.setRating(object.getRate());
         mLocation.setText(object.getActivityLocation());
 //        mLocationCountry.setText(object.getLocationCountry());
-        mActivityOwner.setText(object.getProvider().getUserName());
+        mActivityOwner.setText(getResources().getString(R.string.By)+" "+object.getProvider().getUserName());
         mActivityFeature.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         mActivityFeature.setAdapter(new AddonesAdapter(object.getActivityAddOns()));
 
         mViewReviews.setText(String.format(getString(R.string.view_all_reviews_holder), object.getReviews().size()));
+        mViewReviews.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                object.getReviews();
+//                startActivity(new Intent(DetailsActivity.this,ReviewActivity.class));
+
+            }
+        });
 
 //        Log.v("Detail", object.getDate().toString());
         mSimilarActivities.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
@@ -418,6 +438,8 @@ public class DetailsActivity extends AppCompatActivity {
         } else
             stars.getDrawable(2).setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_ATOP);
         mItemRating2.setProgressDrawable(stars);
+        invalidateOptionsMenu();
+
 
     }
 
@@ -530,11 +552,108 @@ public class DetailsActivity extends AppCompatActivity {
     }
 
     @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        MenuItem fave = menu.findItem(R.id.favourite);
+
+        try {
+            if (object.getFavActivity()){
+                fave.setIcon(getResources().getDrawable(R.drawable.favorite_selected_white));
+            }else {
+                fave.setIcon(getResources().getDrawable(R.drawable.favorite_deselected_white));
+            }
+
+        }catch (Exception e){
+            Log.d("Error", "onPrepareOptionsMenu: "+e.getMessage());
+        }
+
+        return true;
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.favourite) {
-            Toast.makeText(this, "Added to favourite", Toast.LENGTH_SHORT).show();
-        } else if (item.getItemId() == R.id.share) {
+//            Toast.makeText(this, "Added to favourite", Toast.LENGTH_SHORT).show();
 
+                JSONObject jsonObject =new JSONObject();
+                try {
+                    jsonObject.put("activity_id",""+ object.getId());
+                    jsonObject.put("user_id",""+ Session.getInstance(getApplicationContext()).getUser().getId());
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+                if (object.getFavActivity()){
+                    AndroidNetworking.post(URLManager.getInstance().getRemoveFromFavourite())
+                            .addHeaders("Authorization", "bearer "+ Session.getInstance(getApplicationContext()).getToken())
+                            .addJSONObjectBody(jsonObject)
+                            .build()
+                            .getAsJSONObject(new JSONObjectRequestListener() {
+                                @Override
+                                public void onResponse(JSONObject response) {
+                                    int state=0;
+                                    try {
+                                        state=  response.getInt("status");
+                                        Toast.makeText(getApplicationContext(),
+                                                response.getString("message"),
+                                                Toast.LENGTH_SHORT).show();
+                                        item.setIcon(R.drawable.favorite_deselected_white);
+                                    } catch (JSONException e) {
+                                        e.printStackTrace();
+                                    }
+
+                                    if (state==1)
+                                        object.setFavActivity((!object.getFavActivity()));
+                                }
+
+                                @Override
+                                public void onError(ANError anError) {
+                                    Toast.makeText(getApplicationContext(),
+                                            anError.getMessage(),
+                                            Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                    Toast.makeText(getApplicationContext(), R.string.added_to_favourite, Toast.LENGTH_SHORT).show();
+                }else {
+
+                    AndroidNetworking.post(URLManager.getInstance().getAddToFavourite())
+                            .addHeaders("Authorization", "bearer "+ Session.getInstance(getApplicationContext()).getToken())
+                            .addJSONObjectBody(jsonObject)
+                            .build()
+                            .getAsJSONObject(new JSONObjectRequestListener() {
+                                @Override
+                                public void onResponse(JSONObject response) {
+                                    int state=0;
+                                    try {
+                                        state=  response.getInt("status");
+                                        Toast.makeText(getApplicationContext(),
+                                                response.getString("message"),
+                                                Toast.LENGTH_SHORT).show();
+                                        item.setIcon(R.drawable.favorite_selected_white);
+                                    } catch (JSONException e) {
+                                        e.printStackTrace();
+                                    }
+
+                                    if (state==1)
+                                        object.setFavActivity((!object.getFavActivity()));
+                                }
+
+                                @Override
+                                public void onError(ANError anError) {
+                                    Toast.makeText(getApplicationContext(),
+                                            anError.getMessage(),
+                                            Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                    Toast.makeText(getApplicationContext(), R.string.added_to_favourite, Toast.LENGTH_SHORT).show();
+                }
+
+
+
+
+
+
+
+        } else if (item.getItemId() == R.id.share) {
             Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show();
         } else
             super.onBackPressed();

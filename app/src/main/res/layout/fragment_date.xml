@@ -62,9 +62,7 @@
         app:dayTextColor="@android:color/black"
         app:orientation="horizontal"
         app:selectedDayBackgroundColor="@color/colorPrimary"
-        android:layout_above="@+id/line3"
-
-        />
+        android:layout_above="@+id/line3" />
     <View
         android:id="@+id/line3"
         android:layout_width="match_parent"

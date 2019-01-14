@@ -21,15 +21,12 @@
         android:layout_height="@dimen/_50sdp"
         app:cardElevation="0dp"
         app:cardMaxElevation="0dp"
-
         android:layout_alignParentBottom="true">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/colorPrimaryDark"
-
-            >
+            android:background="@color/colorPrimaryDark">
 
 
         <com.loopeer.shadow.ShadowView
@@ -43,7 +40,6 @@
             android:elevation="70dp"
             app:shadowMarginBottom="5dp"
             app:shadowColor="#4a000000"
-
             app:cornerRadius="6dp"
             app:shadowRadius="20dp">
 

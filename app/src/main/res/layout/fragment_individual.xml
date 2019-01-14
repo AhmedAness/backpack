@@ -13,7 +13,6 @@
         android:layout_marginBottom="@dimen/_5sdp"
         android:background="@android:color/transparent"
         android:drawableEnd="@drawable/calender_gray"
-
         android:gravity="start|center_vertical"
         android:paddingEnd="@dimen/_16sdp"
         android:paddingStart="@dimen/_16sdp"
