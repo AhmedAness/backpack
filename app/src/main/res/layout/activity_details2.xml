@@ -73,6 +73,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
+                android:layoutDirection="ltr"
                 android:layout_height="match_parent"
                 android:background="@color/colorPrimaryDark"
 
@@ -93,8 +94,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
-                        android:paddingEnd="@dimen/_5sdp"
-                        android:paddingStart="@dimen/_5sdp"
+                        android:layout_gravity="left"
+                        android:gravity="left"
+                        android:paddingRight="@dimen/_5sdp"
+                        android:paddingLeft="@dimen/_5sdp"
                         android:weightSum="2">
 
 
@@ -126,12 +129,12 @@
                     android:id="@+id/Confirm_btn"
                     android:layout_width="@dimen/_150sdp"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="@dimen/_25sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/_25sdp"
                     android:layout_marginTop="@dimen/_5sdp"
                     android:background="@android:color/transparent"
-                    android:paddingEnd="@dimen/_20sdp"
-                    android:paddingStart="@dimen/_20sdp"
+                    android:paddingRight="@dimen/_20sdp"
+                    android:paddingLeft="@dimen/_20sdp"
                     android:text="@string/accept_btn"
                     android:textSize="24dp"
                     android:textColor="#DEFFFFFF"

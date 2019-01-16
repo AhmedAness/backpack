@@ -55,8 +55,8 @@ public class IndividualFragment extends Fragment {
 //        if (cart.getAdultCount() + cart.getChildCount() > 0)
 //            mTicketsCount.setText(String.format(getString(R.string.tickets_details_holder), cart.getAdultCount(), cart.getChildCount()));
         try {
-            mTimeBtn.setText(String.format("Time: %s", Cart.getInstance().getAvaliablityID() != null ? new SimpleDateFormat("hh:mm a").format(new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss").parse(Cart.getInstance().getAvaliablityID().getActivityStart())) :
-                    "No Date Selected"));
+            mTimeBtn.setText(String.format(getString(R.string.Time)+" %s", Cart.getInstance().getAvaliablityID() != null ? new SimpleDateFormat("hh:mm a").format(new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss").parse(Cart.getInstance().getAvaliablityID().getActivityStart())) :
+                    getString(R.string.No_Time_Selected)));
         } catch (ParseException e) {
             e.printStackTrace();
         }

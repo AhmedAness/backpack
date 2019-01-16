@@ -142,6 +142,8 @@
     <string name="log_out">تسجيل الخروج </string>
     <string name="title_activity_important_rules">الشروط</string>
     <string name="By">بواسطه </string>
+    <string name="No_Time_Selected">لم يتم تحديد الوقت</string>
+    <string name="Time">الوقت :</string>
 
     <string-array name="gender_array">
         <item>الذكر</item>

@@ -91,7 +91,7 @@
             android:paddingStart="@dimen/_16ssp"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
 
-            android:textSize="@dimen/_14ssp"
+            android:textSize="@dimen/big_text_size"
             tools:text="150 SR " />
 
         <TextView
@@ -106,7 +106,7 @@
             android:textColor="#9B9B9B"
             android:paddingStart="@dimen/_16ssp"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-            android:textSize="@dimen/_10ssp"
+            android:textSize="@dimen/med_text_size"
             tools:text="150 SR individualL" />
     </LinearLayout>
     <View

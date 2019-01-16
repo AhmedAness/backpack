@@ -62,12 +62,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="@dimen/big_text_size"
                 android:textColor="#666666"
                 android:text="Allergies/Dietary Restrictions"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
+                android:textSize="@dimen/text_small"
                 android:layout_height="wrap_content"
                 android:text="Do you have any alleries or dietary restrictions?" />
 
@@ -178,12 +180,14 @@
                 android:layout_width="match_parent"
                 android:textColor="#666666"
                 android:layout_height="wrap_content"
+                android:textSize="@dimen/big_text_size"
                 android:text="Hospitalization"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:textColor="#818181"
+                android:textSize="@dimen/text_small"
                 android:layout_height="wrap_content"
                 android:text="Have you ever undergone ang surgery or been hospitalized for observation or treatment in the past 3 years?" />
 
@@ -274,12 +278,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:textColor="#666666"
+                android:textSize="@dimen/big_text_size"
                 android:layout_height="wrap_content"
                 android:text="Medication"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
+                android:textSize="@dimen/text_small"
                 android:textColor="#818181"
                 android:layout_height="wrap_content"
                 android:text="Are you on medication at the moment?" />
@@ -389,6 +395,7 @@
 
         <Button
             android:id="@+id/save_btn"
+            android:textSize="@dimen/text_large"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="save"

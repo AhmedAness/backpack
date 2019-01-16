@@ -23,8 +23,6 @@ public class AddNewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_new);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mTextView5 = findViewById(R.id.textView5);
         mSpinner = findViewById(R.id.spinner);

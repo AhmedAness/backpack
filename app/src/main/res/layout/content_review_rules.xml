@@ -25,6 +25,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
+            android:layoutDirection="ltr"
             android:layout_height="match_parent"
             android:background="@color/colorPrimaryDark">
 
@@ -47,8 +48,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:paddingEnd="@dimen/_5sdp"
-                    android:paddingStart="@dimen/_5sdp"
+                    android:gravity="left"
+                    app:layout_gravity="left"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_5sdp"
                     android:weightSum="2">
 
 
@@ -80,7 +83,7 @@
                 android:id="@+id/Confirm_btn"
                 android:layout_width="@dimen/_150sdp"
                 android:layout_height="match_parent"
-                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
                 android:background="@android:color/transparent"
                 android:text="@string/accept_btn2"
                 android:textSize="@dimen/_20sdp"

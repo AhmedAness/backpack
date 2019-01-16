@@ -149,6 +149,8 @@
     <string name="ticket_no">Ticket No.</string>
     <string name="title_activity_important_rules">Important Rules</string>
     <string name="By">By </string>
+    <string name="No_Time_Selected">No Time Selected</string>
+    <string name="Time">Time :</string>
     <string-array name="gender_array">
         <item>Male</item>
         <item>Female</item>
