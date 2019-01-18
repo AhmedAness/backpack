@@ -89,6 +89,7 @@
             app:shadowRadius="20dp">
 
         <LinearLayout
+            android:layoutDirection="ltr"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_60sdp">
 
@@ -103,8 +104,7 @@
                     android:id="@+id/item_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="@dimen/_25sdp"
+                    android:layout_marginLeft="@dimen/_25sdp"
                     android:text="@string/dummy_price"
                     android:textColor="#FF5B4B"
                     android:textSize="@dimen/_12ssp"
@@ -113,7 +113,7 @@
                     android:id="@+id/counter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_25sdp"
+                    android:layout_marginLeft="@dimen/_25sdp"
                     android:textSize="@dimen/_10ssp"
                     android:text="@string/dummy_count"
                     android:textColor="#FF5B4B" />
@@ -122,7 +122,7 @@
                 android:layout_width="@dimen/_150sdp"
                 android:layout_height="wrap_content"
                 android:elevation="70dp"
-                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
                 android:layout_gravity="center_vertical"
                 app:shadowMarginBottom="@dimen/_4sdp"
                 app:shadowMarginLeft="@dimen/_2sdp"

@@ -90,7 +90,7 @@
                         android:paddingStart="@dimen/_16ssp"
 
                         android:textColor="#4A4A4A"
-                        android:textSize="@dimen/_18ssp"
+                        android:textSize="@dimen/text_large"
                         tools:text="Heking in Heluis" />
 
                     <TextView
@@ -103,7 +103,7 @@
                         android:paddingStart="@dimen/_16ssp"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
                         android:textColor="#9B9B9B"
-                        android:textSize="@dimen/_14ssp"
+                        android:textSize="@dimen/med_text_size"
                         android:text="@string/dummy_location" />
 
                     <TextView
@@ -115,7 +115,7 @@
                         android:paddingEnd="@dimen/_16ssp"
                         android:paddingStart="@dimen/_16ssp"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-                        android:textSize="@dimen/_12ssp"
+                        android:textSize="@dimen/med_text_size"
                         android:text="@string/dummy_country_locatio" />
                     <TextView
                         android:id="@+id/organization_name"
@@ -127,7 +127,7 @@
                         android:paddingStart="@dimen/_16ssp"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
 
-                        android:textSize="@dimen/_12ssp"
+                        android:textSize="@dimen/text_small"
                         android:text="@string/dummy_povider" />
                 </RelativeLayout>
             </LinearLayout>

@@ -45,7 +45,7 @@
                 android:layout_below="@id/item_name"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
                 android:textColor="#4A4A4A"
-                android:textSize="@dimen/_10ssp"
+                android:textSize="@dimen/med_text_size"
                 android:text="@string/dummy_price" />
 
             <LinearLayout
@@ -89,6 +89,7 @@
                 android:id="@+id/orgination_img"
                 android:layout_width="@dimen/_50sdp"
                 android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
                 android:layoutDirection="ltr"
                 android:layout_alignParentLeft="true"
                 android:layout_height="@dimen/_50sdp"
@@ -105,7 +106,7 @@
                 android:id="@+id/location"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingEnd="@dimen/_16sdp"
+                android:paddingRight="@dimen/_16sdp"
                 android:layout_alignParentRight="true"
                 android:gravity="right"
                 android:layoutDirection="ltr"
@@ -131,7 +132,7 @@
                 android:id="@+id/activity_owner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingEnd="@dimen/_16sdp"
+                android:paddingRight="@dimen/_16sdp"
                 android:layout_alignParentRight="true"
                 android:layout_toEndOf="@+id/orgination_img"
                 android:textColor="#9B9B9B"
@@ -157,6 +158,7 @@
                 android:layout_marginEnd="@dimen/_16sdp"
                 android:layout_width="wrap_content"
                 app:trimMode="trimModeLength"
+                android:gravity="start"
                 android:layout_height="wrap_content"
                 android:textColor="#bbb"
                 android:text="Description"
