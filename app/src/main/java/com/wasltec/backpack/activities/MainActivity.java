@@ -441,14 +441,6 @@ public class MainActivity extends AppCompatActivity
 
 
     public void setLocale(String lang) {
-//        final Locale loc = new Locale(lang);
-//        Locale.setDefault(loc);
-//        final Configuration cfg = new Configuration();
-//        cfg.locale = loc;
-//        getApplicationContext().getResources().updateConfiguration(cfg, null);
-
-
-
         SharedPreferences preferences =  PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
         SharedPreferences.Editor editor = preferences.edit();
         editor.clear();
@@ -456,7 +448,6 @@ public class MainActivity extends AppCompatActivity
         editor.putBoolean("langSelected", true);
         editor.apply();
         editor.commit();
-//        LocaleUtils.updateConfig(MainActivity.this,lang);
         if (editor.commit()){
             Intent mStartActivity = new Intent(getApplicationContext(), SplashActivity.class);
             int mPendingIntentId = 123456;
@@ -465,36 +456,6 @@ public class MainActivity extends AppCompatActivity
             mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 100, mPendingIntent);
             System.exit(0);
         }
-//
-//        for (int i = 1; i <0; i++) {
-//            if (editor.commit()){
-//                Intent mStartActivity = new Intent(getApplicationContext(), Splash_Screen.class);
-//                int mPendingIntentId = 123456;
-//                PendingIntent mPendingIntent = PendingIntent.getActivity(getApplicationContext(), mPendingIntentId,    mStartActivity, PendingIntent.FLAG_CANCEL_CURRENT);
-//                AlarmManager mgr = (AlarmManager)getApplicationContext().getSystemService(Context.ALARM_SERVICE);
-//                mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 100, mPendingIntent);
-//                System.exit(0);
-//            }
-//        }
-
-//        Intent intent = Home.this.getIntent();
-//        Home.this.overridePendingTransition(0, 0);
-//        Home.this.finish();
-//10027954353-38 gary 00178
-//11308271578-43 tawfeer 00178
-
-//        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-//        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//        Home.this.overridePendingTransition(0, 0);
-//        Home.this.startActivity(intent);
-
-
-
-//        new Handler().postDelayed(() -> {
-//
-//        }, 400);
-
-
 
     }
 

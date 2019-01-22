@@ -144,10 +144,28 @@
     <string name="By">بواسطه </string>
     <string name="No_Time_Selected">لم يتم تحديد الوقت</string>
     <string name="Time">الوقت :</string>
+    <string name="Notification">التنبيهات </string>
+    <string name="Price_type">نوع السعر</string>
+    <string name="Helpe" >المساعده</string>
+    <string name="Terms_0f_use">تعليمات الاستخدام</string>
+    <string name="language_setting">اللغه</string>
+    <string name="Warning_Logout_msg">هل انت متاكد من مغادره البرنامج</string>
 
     <string-array name="gender_array">
         <item>الذكر</item>
         <item>إناثا</item>
+
+    </string-array>
+
+    <string-array name="Price_Type_array">
+        <item>فردي</item>
+        <item>جماعه</item>
+
+    </string-array>
+
+    <string-array name="Language_array">
+        <item>الانجليزيه</item>
+        <item>العربيه</item>
 
     </string-array>
 

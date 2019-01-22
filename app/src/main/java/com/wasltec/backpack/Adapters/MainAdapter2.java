@@ -124,7 +124,8 @@ public class MainAdapter2 extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             recyclerView.setLayoutManager(linearLayout);
             layoutParams.topMargin = (int) itemView.getContext().getResources().getDimension(R.dimen._25sdp);
             layoutParams.bottomMargin = (int) itemView.getContext().getResources().getDimension(R.dimen._25sdp);
-            layoutParams.leftMargin = (int) itemView.getContext().getResources().getDimension(R.dimen._29sdp);
+//            recyclerView.setPadding((int) itemView.getContext().getResources().getDimension(R.dimen._29sdp),0,0,0);
+//            layoutParams.leftMargin = (int) itemView.getContext().getResources().getDimension(R.dimen._29sdp);
             recyclerView.setLayoutParams(layoutParams);
             frameLayout.addView(recyclerView);
         }

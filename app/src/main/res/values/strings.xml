@@ -151,9 +151,25 @@
     <string name="By">By </string>
     <string name="No_Time_Selected">No Time Selected</string>
     <string name="Time">Time :</string>
+    <string name="Notification">Notifications</string>
+    <string name="Price_type">Price Type</string>
+    <string name="Helpe">Helpe</string>
+    <string name="Terms_0f_use">Terms of use</string>
+    <string name="language_setting">Language</string>
+    <string name="Warning_Logout_msg">Are you sure you want to logout</string>
     <string-array name="gender_array">
         <item>Male</item>
         <item>Female</item>
+
+    </string-array>
+    <string-array name="Price_Type_array">
+        <item>Individual</item>
+        <item>Group</item>
+
+    </string-array>
+    <string-array name="Language_array">
+        <item>English</item>
+        <item>Arabic</item>
 
     </string-array>
 

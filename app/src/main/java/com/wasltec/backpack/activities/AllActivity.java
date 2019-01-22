@@ -64,7 +64,6 @@ public class AllActivity extends AppCompatActivity implements FilterDialog.Liste
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setNavigationOnClickListener(v -> {
             if (search) {
-
 //                allAdapter.setItems(DataManager.getInstance().getSpecificItems(currentCategories));
                 getactivittiesbyid();
                 search = false;

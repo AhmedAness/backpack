@@ -190,7 +190,7 @@
         android:layout_below="@+id/fL6"
         android:text="@string/upload_your_id" />
 
-    <EditText
+    <TextView
         android:id="@+id/photo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -200,8 +200,7 @@
         android:background="@null"
         android:drawableEnd="@drawable/camera_icon_profile"
         android:ems="10"
-        android:hint="pic.jbg"
-        android:inputType="date" />
+        android:hint="pic.jbg"/>
 
         <ImageView
             android:layout_width="250dp"
